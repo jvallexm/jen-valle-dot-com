@@ -317,6 +317,7 @@ iframe
 {
   width: 100%;
   min-height: 800px;
+  border-radius: 10px;
 }
 .fade-out-full
 {
@@ -446,4 +447,62 @@ iframe
 .error-border
 {
   border: solid red 2px;
+}
+.game-that
+{
+  background-color:#d0b5e2;
+  border-radius: 10px;
+}
+.game-box
+{
+  width: 15px;
+  height: 15px;
+  border: 1px #565656 solid;
+}
+.gradient
+{
+  background-color: black;
+  background: linear-gradient( #802aba,white);
+}
+.game-box-off
+{
+  background-color: black;   
+}
+.game-box-on
+{
+  background-color: none;   
+}
+.game-from-top
+{
+}
+.game-h1
+{
+  font-weight: bold;
+  font-family: 'permanent marker';
+}
+.text-shadow-white
+{
+    text-shadow: 2px 2px 2px white;
+}
+.btn-game
+{
+  background-color: #802aba;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: white;
+  font-family: "permanent marker";
+  box-shadow: 2px 2px 2px white;
+}
+.game-middle
+{
+  color: #802aba;
+}
+.game-max
+{
+  max-width: 625px;
+}
+.game-space
+{
+    height: 50px;
 }

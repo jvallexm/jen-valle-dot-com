@@ -1,4 +1,5 @@
 import React from 'react';
+import Game from './gameoflife.js';
 
 export default class SiteView extends React.Component
 {
@@ -8,6 +9,11 @@ export default class SiteView extends React.Component
     this.state = {
       loaded: false
     };
+  }
+  componentWillMount()
+  {
+    if(this.props.title == "Game of Life")
+      this.setState({loaded: true});
   }
   render()
   {
@@ -39,13 +45,20 @@ export default class SiteView extends React.Component
         <div className="section">
           {!this.state.loaded ? 
           <h1>Loading... <i className="fa fa-spinner fa-spin" /></h1>
-          :""}
-          <iframe src={this.props.url}
+          : ""}
+          { this.props.title != "Game of Life"
+            ? <iframe src={this.props.url}
                   className="web-view"
                   onLoad={()=>this.setState({loaded: true})}/>
+            : <div className="web-view">
+                 <div className="game-that">
+                  <Game />
+                 </div>  
+              </div>      
+          }        
         </div>
       </div>
      </div>   
-    )
+    );
   }
 }
