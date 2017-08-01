@@ -1,0 +1,449 @@
+body
+{
+  background-color: #d8d0e5;
+}
+#head
+{
+  margin-top: 60px;
+  max-width: 1100px;
+  box-shadow: 2px 2px 2px #bda8e0,
+              -1px 1px 1px #c9bae2,
+              1px -1px 1px #c9bae2,
+              -1px -1px 1px #c9bae2;
+  padding: 10px;
+  background-color:white;
+  background-image: url(https://68.media.tumblr.com/65304a67224e0108188ff073ed6629b7/tumblr_otrpyfBJSE1wqft2so1_1280.jpg); 
+  background-position: absolute;
+  border-radius: 5px;
+  font-family: "Permanent Marker";
+  color: white;
+  text-shadow: 2px 2px 1px black;
+  background-repeat:no-repeat;
+  background-poisition: center;
+  background-size: cover;
+}
+.middle-text
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.my-face
+{
+  max-width: 300px;
+  border-radius: 50%;
+  margin: 20px;
+  box-shadow: 2px 2px 2px white,
+              -1px 1px 1px white,
+              1px -1px 1px white,
+              -1px -1px 1px white;
+}
+.col-left
+{
+  padding-right: 0px;
+  margin-right: 0px;
+}
+.col-right
+{
+  padding-left: 0px;
+  margin-right: 0px;
+}
+.col-mid
+{
+  padding-left: 0px;
+  margin-left: 0px;
+  padding-right: 0px;
+  margin-right: 0px;
+}
+.section
+{
+  box-shadow: 2px 2px 2px #bda8e0,
+              -1px 1px 1px #c9bae2,
+              1px -1px 1px #c9bae2,
+              -1px -1px 1px #c9bae2;
+  padding: 10px;
+  background-color:white;
+  margin-top: 10px;
+  margin-bottom:10px;
+  border-radius: 5px;
+}
+.picture
+{
+  min-height: 400px;
+  box-shadow: 2px 2px 2px #bda8e0,
+              -1px 1px 1px #c9bae2,
+              1px -1px 1px #c9bae2,
+              -1px -1px 1px #c9bae2;
+  padding: 10px;
+  background-color: black;
+  margin-top: 20px;
+  margin-bottom:20px;
+  border-radius: 5px;
+  color: white;
+}
+#the-middle
+{
+  margin-top: 10px;
+  max-width: 1200px;
+}
+.grid-right
+{
+  margin-left: -5px;
+}
+.grid-left
+{
+  margin-right: -5px;
+}
+.web
+{
+  background-image: url(https://68.media.tumblr.com/0842e461fa3f4469b9dcd9d3f5e41fd0/tumblr_otrq0n3oi91wqft2so1_1280.jpg);
+  text-shadow: 3px 3px 3px black,
+              -2px 2px 2px black,
+               2px -2px 2px black,
+              -2px -2px 2px black; 
+    background-repeat:no-repeat;
+    background-position: center;
+  background-size: cover;
+}
+.web-cover
+{
+   background-size: cover; 
+}
+.ggr
+{
+    background-position: 40% 60%;
+    background-repeat:no-repeat;
+    background-image: url(https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17103607_1802194333435327_2862089288559415913_n.jpg?oh=b89e2770f357f81aa68c2922814d2642&oe=59F5ED85);
+  text-shadow: 3px 3px 3px black,
+              -2px 2px 2px black,
+               2px -2px 2px black,
+              -2px -2px 2px black; 
+   background-size: cover;
+}
+.gce
+{
+  background-position: center;
+  background-image: url(https://scontent-atl3-1.xx.fbcdn.net/v/t31.0-8/18422290_1355057527915167_5374589454185719816_o.jpg?oh=6ba6b242fea95906a0f436c425dfe713&oe=59F4F66D);
+  background-repeat:no-repeat;
+    background-size: cover;
+}
+.comix
+{
+  background-position: center;
+  background-image: url(https://68.media.tumblr.com/164f95f30fa73c006e2842705cbee3c5/tumblr_otwy3nLm9J1wqft2so1_1280.jpg);
+  background-size: cover;
+  text-shadow: 3px 3px 3px black,
+              -2px 2px 2px black,
+               2px -2px 2px black,
+              -2px -2px 2px black; 
+}
+.fade-out-left
+{
+  margin: 10px;
+  padding-right: -20px !important;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  background-color: #e5e6e8;
+  color: blue;
+  font-family: "Permanent Marker";
+  border-radius: 5px;
+  width: calc(100% - 25px);
+  height: 400px;
+  opacity: .13;
+}
+.pop-out
+{
+  z-index: 25;
+  font-family: "Permanent Marker";
+  opacity: 1 !imporant;
+  text-shadow: 3px 3px 3px black,
+              -2px 2px 2px black,
+               2px -2px 2px black,
+              -2px -2px 2px black; 
+}
+#about
+{
+  margin-top: 20px;
+  max-width: 600px;
+}
+.height-400
+{
+  min-height: 400px;
+}
+#contact
+{
+  max-width: 500px;
+}
+.width-100
+{
+  padding: 10px;
+}
+iframe
+{
+  border-radius: 5px;
+  width: 100%;
+  z-index: 2;
+}
+.bottom-text
+{
+  position: absolute;
+  bottom: 22px;
+  left: 22px;
+  color: white;
+  font-size: 75%;
+  z-index: 1;
+}
+.squeeze
+{
+  max-width: 300px;
+}
+.pintr
+{
+  font-size: 24px;
+  padding: 10px;
+  font-family: "Pacifico";
+  background-color: #b487ff;
+  text-shadow: 2px 2px 2px black;
+  color: white;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #bda8e0,
+              -1px 1px 1px #c9bae2,
+              1px -1px 1px #c9bae2,
+              -1px -1px 1px #c9bae2;
+}
+.reverse-pintr
+{
+  color: #995bff;
+  background-color: white;
+  box-shadow: 2px 2px 2px black;
+}
+.marvl
+{
+  font-size: 20px;
+  padding: 10px;
+  background-color: #6b3535;
+  text-shadow: 3px 3px 3px black;
+  font-family: "Anton";
+  color: white;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #bda8e0,
+              -1px 1px 1px #c9bae2,
+              1px -1px 1px #c9bae2,
+              -1px -1px 1px #c9bae2;
+}
+.reverse-marvl
+{
+  color: rgb(100, 1, 1);
+  background-color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+  box-shadow: 2px 2px 2px black;
+}
+.book
+{
+  font-size: 24px;
+  padding: 10px;
+  background-color: rgb(100, 1, 1);
+  text-shadow: 2px 2px 2px black;
+  font-family: "Lobster";
+  background-color: #5592c6;
+  color: white;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #bda8e0,
+              -1px 1px 1px #c9bae2,
+              1px -1px 1px #c9bae2,
+              -1px -1px 1px #c9bae2;
+}
+.reverse-book
+{
+  color: #006dcc;
+  background-color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+  box-shadow: 2px 2px 2px black;
+}
+.front
+{
+  text-shadow: 2px 2px 2px black;
+  font-family: "VT323";
+  background-color: #568756;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  font-size: 24px;
+  margin-right: 0px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #bda8e0,
+              -1px 1px 1px #c9bae2,
+              1px -1px 1px #c9bae2,
+              -1px -1px 1px #c9bae2;
+}
+.reverse-front
+{
+  color: green;
+  background-color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+  box-shadow: 2px 2px 2px black;
+  max-height: 50px;
+}
+#title
+{
+  box-shadow: 2px 2px 2px #bda8e0,
+              -1px 1px 1px #c9bae2,
+              1px -1px 1px #c9bae2,
+              -1px -1px 1px #c9bae2;
+  padding: 10px;
+  background-color: black;
+  margin-top: 10px;
+  margin-bottom:10px;
+  border-radius: 5px;
+  color: white;
+}
+.max-h
+{
+  background-size: cover;
+  background-position: top;
+  height: 70px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.web-view
+{
+  width: 100%;
+  min-height: 800px;
+}
+.fade-out-full
+{
+  margin: 10px;
+  padding-right: -20px !important;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  background-color: gray;
+  color: blue;
+  font-family: "Permanent Marker";
+  border-radius: 5px;
+  width: calc(100% - 30px);
+  height: 400px;
+  opacity: .3;
+}
+.btn-head
+{
+  background-color: white;
+  margin-right: 2px;
+  margin-left: 2px;
+  box-shadow: 2px 2px 1px black;
+}
+.btn-nav
+{
+  color: black;
+  background-color: white;
+  box-shadow: 2px 2px 1px black;
+  font-family: "Permanent Marker";
+  width: 200px;
+  box-shadow: 3px 3px 3px black,
+              -2px 2px 2px black,
+               2px -2px 2px black,
+              -2px -2px 2px black; 
+}
+.buttons
+{
+  margin-top: 20px;
+}
+.project
+{
+ background-color: rgb(100, 1, 1);
+  text-shadow: 2px 2px 2px black;
+  font-family: "Lobster";
+  background-color: #568756;
+  color: white;
+  margin: 10px;
+  height: 190px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #bda8e0,
+              -1px 1px 1px #c9bae2,
+              1px -1px 1px #c9bae2,
+              -1px -1px 1px #c9bae2;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.right
+{
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.left
+{
+  margin-right: 0px;
+  padding-right: 0px;
+}
+.no-padding
+{
+  padding: 0px !important;
+  margin: 0px !important
+}
+.transparent-section
+{
+  background-color: rgba(255,255,255,.5);
+  z-index: 2;
+  height: 319px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.grid-right-2
+{
+  margin-left: -10px;
+}
+.grid-left-2
+{
+  margin-right: -10px;
+}
+.sec-head
+{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.web-sec
+{
+  background-color: rgba(255,255,255,.6) !important;
+}
+.btn-music
+{
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: "Permanent Marker";
+  background-color: white;
+  color: black;
+  box-shadow: 2px 2px 2px black;
+}
+.inside-text
+{
+  font-family: "Permanent Marker";
+  text-shadow: 2px 2px 2px black,
+                -2px 2px 2px black,
+                2px -2px 2px black,
+               -2px -2px 2px black;
+}
+.width-100p
+{
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#contact
+{
+  font-family: "Permanent marker";
+  max-width: 600px;
+}
+.error-border
+{
+  border: solid red 2px;
+}
