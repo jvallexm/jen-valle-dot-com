@@ -506,3 +506,95 @@ iframe
 {
     height: 50px;
 }
+.dun-box
+{
+  width: 12px;
+  height: 12px;
+}
+.dun-gradient
+{
+  background-color: black;
+  overflow: hidden;
+}
+.dun-box-off
+{
+  background-color: green;   
+}
+.dun-box-on
+{
+  background-color: white;   
+}
+.start
+{
+  background-color:red;
+}
+.leak
+{
+  background-color:blue;
+}
+.item
+{
+  background-color:yellow;
+}
+.weapon
+{
+  background-color:gray;
+}
+.boss
+{
+  background-color: purple;
+}
+.dun-message
+{
+  max-width: 750px;
+  height: 80px;
+  background-color: green;
+  color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.stairs
+{
+  background-color:black;
+}
+.dun-h1
+{
+  color: white;
+}
+.dun-h4
+{
+  color:white;
+}
+.dun-body
+{
+  background-color:black;
+  font-family: 'VT323';
+  border-radius: 10px;
+}
+.dun-btn
+{
+  background-color: #d8d5b1;
+}
+.dun-col
+{
+  color: white;
+}
+.buffer
+{
+  margin: 10px;
+}
+.dun-black-out
+{
+  background-color: black;
+  color: white;
+}
+.game-over
+{
+  height: 600px;
+  width: 750px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

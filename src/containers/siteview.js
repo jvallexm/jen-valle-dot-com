@@ -1,5 +1,6 @@
 import React from 'react';
 import Game from './gameoflife.js';
+import Dungeon from './dungeonplumber.js';
 
 export default class SiteView extends React.Component
 {
@@ -12,7 +13,7 @@ export default class SiteView extends React.Component
   }
   componentWillMount()
   {
-    if(this.props.title == "Game of Life")
+    if(this.props.title == "Game of Life" || this.props.title == "Dungeon Plumber")
       this.setState({loaded: true});
   }
   render()
@@ -46,15 +47,21 @@ export default class SiteView extends React.Component
           {!this.state.loaded ? 
           <h1>Loading... <i className="fa fa-spinner fa-spin" /></h1>
           : ""}
-          { this.props.title != "Game of Life"
+          { this.props.title != "Game of Life" && this.props.title != "Dungeon Plumber"
             ? <iframe src={this.props.url}
                   className="web-view"
                   onLoad={()=>this.setState({loaded: true})}/>
-            : <div className="web-view">
+            : this.props.title == "Game of Life"
+            ? <div className="web-view">
                  <div className="game-that">
                   <Game />
                  </div>  
               </div>      
+            : <div className="web-view">
+                 <div className="dun-body">
+                  <Dungeon />
+                 </div>  
+              </div>     
           }        
         </div>
       </div>
