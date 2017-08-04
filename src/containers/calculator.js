@@ -15,6 +15,92 @@ export default class Calc extends React.Component
     this.doMath = this.doMath.bind(this);
     this.thePaper = this.thePaper.bind(this);
   }
+  componentDidMount()
+  {
+    document.addEventListener('keydown',(e)=>{
+      console.log(e.keyCode);
+      if(e.keyCode == 97 || e.keyCode == 49)
+      {
+        e.target.name = "1";
+        this.handleChange(e);
+      }
+      if(e.keyCode == 98 || e.keyCode == 50)
+      {
+        e.target.name = "2";
+        this.handleChange(e);
+      }
+      if(e.keyCode == 99 || e.keyCode == 51)
+      {
+        e.target.name = "3";
+        this.handleChange(e);
+      }
+      if(e.keyCode == 100 || e.keyCode == 52)
+      {
+        e.target.name = "4";
+        this.handleChange(e);
+      }
+      if(e.keyCode == 101 || e.keyCode == 53)
+      {
+        e.target.name = "5";
+        this.handleChange(e);
+      }
+      if(e.keyCode == 102 || e.keyCode == 54)
+      {
+        e.target.name = "6";
+        this.handleChange(e);
+      }
+      if(e.keyCode == 103 || e.keyCode == 55)
+      {
+        e.target.name = "7";
+        this.handleChange(e);
+      }
+      if(e.keyCode == 104 || e.keyCode == 56)
+      {
+        e.target.name = "8";
+        this.handleChange(e);
+      }
+      if(e.keyCode == 105 || e.keyCode == 57)
+      {
+        e.target.name = "9";
+        this.handleChange(e);
+      }
+      if(e.keyCode == 96 || e.keyCode == 48)
+      {
+        e.target.name = "0";
+        this.handleChange(e);
+      }
+      if(e.keyCode == 109)
+      {
+        e.target.name = "-";
+        this.handleChange(e);
+      }
+      if(e.keyCode == 107)
+      {
+        e.target.name = "+";
+        this.handleChange(e);
+      }
+      if(e.keyCode == 106)
+      {
+        e.target.name = "*";
+        this.handleChange(e);
+      }
+      if(e.keyCode == 111)
+      {
+        e.target.name = "/";
+        this.handleChange(e);
+      }
+      if(e.keyCode == 13)
+      {
+        e.target.name = "=";
+        this.handleChange(e);
+      }
+      if(e.keyCode == 110)
+      {
+        e.target.name = ".";
+        this.handleChange(e);
+      }
+    });
+  }
   thePaper()
   {
     let results = this.state.results;

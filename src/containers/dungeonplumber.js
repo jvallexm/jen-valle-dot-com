@@ -70,7 +70,7 @@ export default class Dungeon extends React.Component
   }
   doOver()
   {
-    console.log("do over initiated");
+    //console.log("do over initiated");
     this.state.board=Initialize();
     this.state.rooms=[];
     this.state.roomsOnly=[];
@@ -136,7 +136,7 @@ export default class Dungeon extends React.Component
         this.makeNextRoom(this.state.rooms[count]);
       count++;
     }
-   console.log("Done made all the rooms");
+   //console.log("Done made all the rooms");
    var playerStart = Math.floor(Math.random() * this.state.roomsOnly.length);
    var temp = Initialize();
    for(var aaa=0;aaa<BoardLength;aaa++)
@@ -277,7 +277,7 @@ export default class Dungeon extends React.Component
        }      
     }
     rooms.push([lat,long,size]);
-    console.log("First room: " + rooms[0]);
+    //console.log("First room: " + rooms[0]);
     this.setState({board:temp, roomsOnly: roomsOnly, rooms: rooms});    
   }
   
@@ -328,8 +328,8 @@ export default class Dungeon extends React.Component
             tempLat = lastLat;
             tempLon = lastLon-8;
         }
-        else
-         console.log("Can't go north, off the board");
+       // else
+       //  console.log("Can't go north, off the board");
       }
       
       //East
@@ -341,8 +341,8 @@ export default class Dungeon extends React.Component
             tempLat = lastLat+8
             tempLon = lastLon;
         }
-        else
-          console.log("Can't go east, off the board");
+        //else
+          //console.log("Can't go east, off the board");
       }  
       
       //South
@@ -354,8 +354,8 @@ export default class Dungeon extends React.Component
             tempLat = lastLat;
             tempLon = lastLon+8;
         }
-        else
-          console.log("Can't go south off the board");
+        //else
+          //console.log("Can't go south off the board");
       }  
       //West
       if(roomRoll==3)
@@ -366,8 +366,8 @@ export default class Dungeon extends React.Component
             tempLat = lastLat-8;
             tempLon = lastLon;
         }
-        else
-          console.log("Can't go west off the board");
+        //else
+          //console.log("Can't go west off the board");
       } 
       var roomCheck = false;
       if(tempLat>-1)
@@ -391,7 +391,7 @@ export default class Dungeon extends React.Component
         else
         {
           
-          console.log("Can't go " + nesw[roomRoll]);
+          //console.log("Can't go " + nesw[roomRoll]);
         }
       } 
       
@@ -444,7 +444,7 @@ export default class Dungeon extends React.Component
     {
       var whereLastRoom = this.state.rooms.indexOf(lastRoom);
       if(whereLastRoom>=0)
-        rooms.push(this.state.rooms[whereLastRoom-1])
+        rooms.push(this.state.rooms[whereLastRoom-1]);
       //console.log("DANGER, I can't go anywhere!");
     }
     this.setState({board:temp, rooms: rooms, roomsOnly: roomsOnly});

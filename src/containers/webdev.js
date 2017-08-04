@@ -76,7 +76,7 @@ export default class WebDev extends React.Component
                                                 <div className="front"
                                                      onClick={()=>this.props.show("Dungeon Plumber",
                                                                            "https://jen-valle-night-life.herokuapp.com/",
-                                                                           "https://github.com/jvallexm/fcc-nightlife-tracker")}>
+                                                                           "https://github.com/jvallexm/jen-valle-dot-com/blob/master/src/containers/dungeonplumber.js")}>
                                                       Dungeon Plumber
                                                 </div>
                                             </div>
@@ -84,7 +84,7 @@ export default class WebDev extends React.Component
                                                 <div className="front"
                                                      onClick={()=>this.props.show("Game of Life",
                                                                            "https://jen-valle-night-life.herokuapp.com/",
-                                                                           "https://github.com/jvallexm/fcc-nightlife-tracker")}>
+                                                                           "https://github.com/jvallexm/jen-valle-dot-com/blob/master/src/containers/gameoflife.js")}>
                                                       Game of Life
                                                 </div>
                                             </div>  
@@ -94,7 +94,7 @@ export default class WebDev extends React.Component
                                                 <div className="front"
                                                      onClick={()=>this.props.show("Calculator",
                                                                            "https://jen-valle-night-life.herokuapp.com/",
-                                                                           "https://github.com/jvallexm/fcc-nightlife-tracker")}>
+                                                                           "https://github.com/jvallexm/jen-valle-dot-com/blob/master/src/containers/calculator.js")}>
                                                       Calculator
                                                 </div>
                                             </div>

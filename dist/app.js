@@ -13104,6 +13104,9 @@ var App = function (_React$Component) {
       }, {
         name: "codepen",
         link: "https://codepen.io/phoenix-farce/"
+      }, {
+        name: "freecodecamp",
+        link: "https://www.freecodecamp.org/jvallexm"
       }]
     };
     return _this;
@@ -13424,6 +13427,79 @@ var Calc = function (_React$Component) {
   }
 
   _createClass(Calc, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      document.addEventListener('keydown', function (e) {
+        console.log(e.keyCode);
+        if (e.keyCode == 97 || e.keyCode == 49) {
+          e.target.name = "1";
+          _this2.handleChange(e);
+        }
+        if (e.keyCode == 98 || e.keyCode == 50) {
+          e.target.name = "2";
+          _this2.handleChange(e);
+        }
+        if (e.keyCode == 99 || e.keyCode == 51) {
+          e.target.name = "3";
+          _this2.handleChange(e);
+        }
+        if (e.keyCode == 100 || e.keyCode == 52) {
+          e.target.name = "4";
+          _this2.handleChange(e);
+        }
+        if (e.keyCode == 101 || e.keyCode == 53) {
+          e.target.name = "5";
+          _this2.handleChange(e);
+        }
+        if (e.keyCode == 102 || e.keyCode == 54) {
+          e.target.name = "6";
+          _this2.handleChange(e);
+        }
+        if (e.keyCode == 103 || e.keyCode == 55) {
+          e.target.name = "7";
+          _this2.handleChange(e);
+        }
+        if (e.keyCode == 104 || e.keyCode == 56) {
+          e.target.name = "8";
+          _this2.handleChange(e);
+        }
+        if (e.keyCode == 105 || e.keyCode == 57) {
+          e.target.name = "9";
+          _this2.handleChange(e);
+        }
+        if (e.keyCode == 96 || e.keyCode == 48) {
+          e.target.name = "0";
+          _this2.handleChange(e);
+        }
+        if (e.keyCode == 109) {
+          e.target.name = "-";
+          _this2.handleChange(e);
+        }
+        if (e.keyCode == 107) {
+          e.target.name = "+";
+          _this2.handleChange(e);
+        }
+        if (e.keyCode == 106) {
+          e.target.name = "*";
+          _this2.handleChange(e);
+        }
+        if (e.keyCode == 111) {
+          e.target.name = "/";
+          _this2.handleChange(e);
+        }
+        if (e.keyCode == 13) {
+          e.target.name = "=";
+          _this2.handleChange(e);
+        }
+        if (e.keyCode == 110) {
+          e.target.name = ".";
+          _this2.handleChange(e);
+        }
+      });
+    }
+  }, {
     key: "thePaper",
     value: function thePaper() {
       var results = this.state.results;
@@ -14044,7 +14120,7 @@ var Dungeon = function (_React$Component) {
   }, {
     key: 'doOver',
     value: function doOver() {
-      console.log("do over initiated");
+      //console.log("do over initiated");
       this.state.board = Initialize();
       this.state.rooms = [];
       this.state.roomsOnly = [];
@@ -14110,7 +14186,7 @@ var Dungeon = function (_React$Component) {
         if (this.state.rooms[count] != undefined) this.makeNextRoom(this.state.rooms[count]);
         count++;
       }
-      console.log("Done made all the rooms");
+      //console.log("Done made all the rooms");
       var playerStart = Math.floor(Math.random() * this.state.roomsOnly.length);
       var temp = Initialize();
       for (var aaa = 0; aaa < BoardLength; aaa++) {
@@ -14222,7 +14298,7 @@ var Dungeon = function (_React$Component) {
         }
       }
       rooms.push([lat, long, size]);
-      console.log("First room: " + rooms[0]);
+      //console.log("First room: " + rooms[0]);
       this.setState({ board: temp, roomsOnly: roomsOnly, rooms: rooms });
     }
   }, {
@@ -14266,7 +14342,9 @@ var Dungeon = function (_React$Component) {
             //console.log("Going North!");
             tempLat = lastLat;
             tempLon = lastLon - 8;
-          } else console.log("Can't go north, off the board");
+          }
+          // else
+          //  console.log("Can't go north, off the board");
         }
 
         //East
@@ -14275,7 +14353,9 @@ var Dungeon = function (_React$Component) {
             //console.log("Going East!");
             tempLat = lastLat + 8;
             tempLon = lastLon;
-          } else console.log("Can't go east, off the board");
+          }
+          //else
+          //console.log("Can't go east, off the board");
         }
 
         //South
@@ -14284,7 +14364,9 @@ var Dungeon = function (_React$Component) {
             //console.log("Going South!");
             tempLat = lastLat;
             tempLon = lastLon + 8;
-          } else console.log("Can't go south off the board");
+          }
+          //else
+          //console.log("Can't go south off the board");
         }
         //West
         if (roomRoll == 3) {
@@ -14292,7 +14374,9 @@ var Dungeon = function (_React$Component) {
             //console.log("Going West!");
             tempLat = lastLat - 8;
             tempLon = lastLon;
-          } else console.log("Can't go west off the board");
+          }
+          //else
+          //console.log("Can't go west off the board");
         }
         var roomCheck = false;
         if (tempLat > -1) {
@@ -14309,7 +14393,7 @@ var Dungeon = function (_React$Component) {
             makeRoom = true;
           } else {
 
-            console.log("Can't go " + nesw[roomRoll]);
+            //console.log("Can't go " + nesw[roomRoll]);
           }
         }
       }
@@ -15545,7 +15629,7 @@ var WebDev = function (_React$Component) {
                                                     "div",
                                                     { className: "front",
                                                         onClick: function onClick() {
-                                                            return _this2.props.show("Dungeon Plumber", "https://jen-valle-night-life.herokuapp.com/", "https://github.com/jvallexm/fcc-nightlife-tracker");
+                                                            return _this2.props.show("Dungeon Plumber", "https://jen-valle-night-life.herokuapp.com/", "https://github.com/jvallexm/jen-valle-dot-com/blob/master/src/containers/dungeonplumber.js");
                                                         } },
                                                     "Dungeon Plumber"
                                                 )
@@ -15557,7 +15641,7 @@ var WebDev = function (_React$Component) {
                                                     "div",
                                                     { className: "front",
                                                         onClick: function onClick() {
-                                                            return _this2.props.show("Game of Life", "https://jen-valle-night-life.herokuapp.com/", "https://github.com/jvallexm/fcc-nightlife-tracker");
+                                                            return _this2.props.show("Game of Life", "https://jen-valle-night-life.herokuapp.com/", "https://github.com/jvallexm/jen-valle-dot-com/blob/master/src/containers/gameoflife.js");
                                                         } },
                                                     "Game of Life"
                                                 )
@@ -15573,7 +15657,7 @@ var WebDev = function (_React$Component) {
                                                     "div",
                                                     { className: "front",
                                                         onClick: function onClick() {
-                                                            return _this2.props.show("Calculator", "https://jen-valle-night-life.herokuapp.com/", "https://github.com/jvallexm/fcc-nightlife-tracker");
+                                                            return _this2.props.show("Calculator", "https://jen-valle-night-life.herokuapp.com/", "https://github.com/jvallexm/jen-valle-dot-com/blob/master/src/containers/calculator.js");
                                                         } },
                                                     "Calculator"
                                                 )

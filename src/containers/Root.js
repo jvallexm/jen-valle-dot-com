@@ -17,6 +17,10 @@ export default class App extends React.Component
         {
           name: "codepen",
           link: "https://codepen.io/phoenix-farce/"
+        },
+        {
+          name: "freecodecamp",
+          link: "https://www.freecodecamp.org/jvallexm"
         }
       ]
     };
