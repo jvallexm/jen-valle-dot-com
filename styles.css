@@ -312,6 +312,10 @@ iframe
   height: 70px;
   border-radius: 10px;
   margin-top: 20px;
+  box-shadow: 2px 2px 2px #bda8e0,
+              -1px 1px 1px #c9bae2,
+              1px -1px 1px #c9bae2,
+              -1px -1px 1px #c9bae2;
 }
 .web-view
 {
