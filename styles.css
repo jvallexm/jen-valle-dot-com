@@ -109,7 +109,7 @@ body
               -2px -2px 2px black; 
     background-repeat:no-repeat;
     background-position: center;
-  background-size: cover;
+    background-size: cover;
 }
 .web-cover
 {
@@ -215,10 +215,7 @@ iframe
   color: white;
   margin: 10px;
   border-radius: 5px;
-  box-shadow: 2px 2px 2px #bda8e0,
-              -1px 1px 1px #c9bae2,
-              1px -1px 1px #c9bae2,
-              -1px -1px 1px #c9bae2;
+  box-shadow: 2px 2px 2px black;
 }
 .reverse-pintr
 {
@@ -236,10 +233,7 @@ iframe
   color: white;
   margin: 10px;
   border-radius: 5px;
-  box-shadow: 2px 2px 2px #bda8e0,
-              -1px 1px 1px #c9bae2,
-              1px -1px 1px #c9bae2,
-              -1px -1px 1px #c9bae2;
+  box-shadow: 2px 2px 2px black;
 }
 .reverse-marvl
 {
@@ -260,10 +254,7 @@ iframe
   color: white;
   margin: 10px;
   border-radius: 5px;
-  box-shadow: 2px 2px 2px #bda8e0,
-              -1px 1px 1px #c9bae2,
-              1px -1px 1px #c9bae2,
-              -1px -1px 1px #c9bae2;
+  box-shadow: 2px 2px 2px black;
 }
 .reverse-book
 {
@@ -284,10 +275,7 @@ iframe
   font-size: 24px;
   margin-right: 0px;
   border-radius: 5px;
-  box-shadow: 2px 2px 2px #bda8e0,
-              -1px 1px 1px #c9bae2,
-              1px -1px 1px #c9bae2,
-              -1px -1px 1px #c9bae2;
+  box-shadow: 2px 2px 2px black;
 }
 .reverse-front
 {
