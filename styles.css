@@ -203,7 +203,7 @@ iframe
 {
   font-size: 24px;
   padding: 10px;
-  font-family: "Pacifico";
+  font-family: "Permanent Marker";
   background-color: #b487ff;
   text-shadow: 2px 2px 2px black;
   color: white;
@@ -226,7 +226,7 @@ iframe
   padding: 10px;
   background-color: #6b3535;
   text-shadow: 3px 3px 3px black;
-  font-family: "Anton";
+  font-family: "Permanent Marker";
   color: white;
   margin: 10px;
   border-radius: 5px;
@@ -249,7 +249,7 @@ iframe
   padding: 10px;
   background-color: rgb(100, 1, 1);
   text-shadow: 2px 2px 2px black;
-  font-family: "Lobster";
+  font-family: "Permanent Marker";
   background-color: #5592c6;
   color: white;
   margin: 10px;
@@ -270,7 +270,7 @@ iframe
 .front
 {
   text-shadow: 2px 2px 2px black;
-  font-family: "VT323";
+  font-family: "Permanent Marker";
   background-color: #568756;
   color: white;
   padding: 10px;

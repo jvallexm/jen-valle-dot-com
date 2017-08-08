@@ -15941,7 +15941,7 @@ var WebDev = function (_React$Component) {
                                             show: function show() {
                                                 return _this2.props.show("Book Trading Club", "https://jvalle-book-swap.herokuapp.com/", "https://github.com/jvallexm/fcc-book-trading-club");
                                             } }),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "MARVEL Event Generator",
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Marvel Event Generator",
                                             projClass: "marvl",
                                             btnClass: "reverse-marvl",
                                             gh: "https://github.com/jvallexm/all-new-wheel-of-bendis",

@@ -38,7 +38,7 @@ export default class WebDev extends React.Component
                                                  show={()=>this.props.show("Book Trading Club",
                                                                            "https://jvalle-book-swap.herokuapp.com/",
                                                                            "https://github.com/jvallexm/fcc-book-trading-club")}/>
-                                       <Project name={"MARVEL Event Generator"}
+                                       <Project name={"Marvel Event Generator"}
                                                  projClass={"marvl"}
                                                  btnClass={"reverse-marvl"} 
                                                  gh={"https://github.com/jvallexm/all-new-wheel-of-bendis"}
