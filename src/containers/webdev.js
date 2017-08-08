@@ -10,15 +10,14 @@ export default class WebDev extends React.Component
     return(
     <div className="row">
        <div className="col-md-12">
-               
-               <div className="picture web">
+                    <div className="picture web">
                        <div className="sec-head">
                          <h1 className="pop-out">Web Development Projects</h1>
                        </div>
                        <div className="middle-text">
                              <div className="row">
                                   <div className="col-md-6">
-                                      <div className="transparent-section grid-left-2 middle-text web-sec">
+                                      <div className="transparent-section grid-left-2 middle-text">
                                         <h2 className="pop-out">
                                           Full Stack Projects
                                         </h2>
@@ -49,9 +48,9 @@ export default class WebDev extends React.Component
                                       </div> 
                                   </div>
                                   <div className="col-md-6">
-                                      <div className="transparent-section grid-right-2 middle-text web-sec">
+                                      <div className="transparent-section grid-right-2 middle-text">
                                         <h2 className="pop-out">
-                                          Web Development Projects
+                                          Other Projects
                                         </h2>
                                         <div className="row">
                                             <div className="col-sm-6 left">

@@ -15919,7 +15919,7 @@ var WebDev = function (_React$Component) {
                                     { className: "col-md-6" },
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                         "div",
-                                        { className: "transparent-section grid-left-2 middle-text web-sec" },
+                                        { className: "transparent-section grid-left-2 middle-text" },
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                             "h2",
                                             { className: "pop-out" },
@@ -15956,11 +15956,11 @@ var WebDev = function (_React$Component) {
                                     { className: "col-md-6" },
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                         "div",
-                                        { className: "transparent-section grid-right-2 middle-text web-sec" },
+                                        { className: "transparent-section grid-right-2 middle-text" },
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                             "h2",
                                             { className: "pop-out" },
-                                            "Web Development Projects"
+                                            "Other Projects"
                                         ),
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                             "div",
