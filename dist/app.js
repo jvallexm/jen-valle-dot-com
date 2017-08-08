@@ -14649,7 +14649,7 @@ var Dungeon = function (_React$Component) {
             { className: 'dun-h4' },
             'Level: ',
             this.state.player.level,
-            ' Pumbing Skill: ',
+            ' Plumbing Skill: ',
             this.state.player.weapon,
             ' Fatigue: ',
             100 - this.state.player.healthCurrent,
@@ -15473,7 +15473,7 @@ var Pintr = function Pintr() {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'i',
           null,
-          '(I recommend the Wayne\u2019s World tag, it\u2019s excellect.)'
+          '(I recommend the Wayne\u2019s World tag, it\u2019s excellent.)'
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
         '\u2605 Users can search by tag, title, or username and see a board made up of the results.',

@@ -107,7 +107,7 @@ const Pintr = () =>{
             <div className="beige">
                 ★ Users can click on the image of a post to see a larger version (if the image is larger than 250px wide)<br/>
                 ★ When authenticated users create a post, they can add up to three tags.<br/> 
-                ★ Users can click on post tags to view all posts with that tag. <i>(I recommend the Wayne’s World tag, it’s excellect.)</i><br/>
+                ★ Users can click on post tags to view all posts with that tag. <i>(I recommend the Wayne’s World tag, it’s excellent.)</i><br/>
                 ★ Users can search by tag, title, or username and see a board made up of the results.<br/>
                 ★ Authenticated users can Favorite <i className="fa fa-heart"/> , Reblog <i className="fa fa-exchange"/> , and view the other user interactions <i className="fa fa-comments"/> .<br/>
                 ★ React-terest also utilizes web sockets to provide live updates when new posts are added, reblogged, updated, or deleted.</div>

@@ -659,7 +659,7 @@ moveIt(event)
         <div className="game-space"/>
         <h1 className="dun-h1">Dungeon Plumber REDUX!!</h1>
         <div className="text-center container-fluid dun-message"><h3>{this.state.message}</h3>
-        <h4 className="dun-h4">Level: {this.state.player.level} Pumbing Skill: {this.state.player.weapon} Fatigue: {100 - this.state.player.healthCurrent}% 
+        <h4 className="dun-h4">Level: {this.state.player.level} Plumbing Skill: {this.state.player.weapon} Fatigue: {100 - this.state.player.healthCurrent}% 
           XP: {this.state.player.xp<1000?
                this.state.player.xp :
                Math.floor((this.state.player.xp*10)/1000)/10 + "K"
