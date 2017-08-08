@@ -13598,6 +13598,7 @@ var Calc = function (_React$Component) {
       if (e.target.name == "=") {
         var wholeThing = this.state.equation + this.state.display;
         if (/[\+\*\/-]/.test(wholeThing[wholeThing.length - 1])) return false;
+        if (wholeThing.length < 1) return false;
         this.doMath(wholeThing);
         return false;
       }
