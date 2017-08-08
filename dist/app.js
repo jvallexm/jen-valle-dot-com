@@ -13278,6 +13278,36 @@ var GeekCraftExpo = function GeekCraftExpo() {
                   'h2',
                   { className: 'pop-out' },
                   'RDU Event Coordinator'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'h4',
+                  { className: 'inside-text' },
+                  'GeekCraft Expo RDU is a twice yearly craft market that exclusively showcases handmade geek goods made by local artists.'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'h4',
+                  { className: 'inside-text' },
+                  'We\'re currently accepting exhibitor applications for our 2017 Holiday show!'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'div',
+                  null,
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'button',
+                    { className: 'btn btn-head',
+                      onClick: function onClick() {
+                        return window.open("http://www.geekcraftexpo.com/exhibitor-app-gce-rdu-2017");
+                      } },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-external-link' })
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'button',
+                    { className: 'btn btn-head',
+                      onClick: function onClick() {
+                        return window.open('https://www.facebook.com/events/191565734706576/');
+                      } },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-facebook' })
+                  )
                 )
               )
             )
@@ -15557,8 +15587,11 @@ var Vote = function Vote() {
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-external-link' })
         ),
         '.',
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-        'This full stack app allows users to create and vote on polls, as well as share links to specific polls with their friends. It also shows charts of the voting results!'
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'beige' },
+          'This full stack app allows users to create and vote on polls, as well as share links to specific polls with their friends. It also shows charts of the voting results!'
+        )
       )
     )
   );
@@ -15588,9 +15621,12 @@ var Night = function Night() {
           'Nightlife Coordination App ',
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-external-link' })
         ),
-        '. ',
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-        'Using the Yelp API users can search for bars in their area and mark themselves as \u201Cgoing\u201D or remove themselves from bars if they no longer want to go.'
+        '.',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'beige' },
+          'Using the Yelp API users can search for bars in their area and mark themselves as \u201Cgoing\u201D or remove themselves from bars if they no longer want to go.'
+        )
       )
     )
   );
@@ -15659,7 +15695,12 @@ var GameAbout = function GameAbout() {
           'Game of Life ',
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-external-link' })
         ),
-        '. Users can adjust the speed of the generations, stop, reset, or randomize the board.'
+        '.',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'beige' },
+          'Users can adjust the speed of the generations, stop, reset, or randomize the board.'
+        )
       )
     )
   );
@@ -15919,7 +15960,7 @@ var WebDev = function (_React$Component) {
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                             "h2",
                                             { className: "pop-out" },
-                                            "Front End & Data Visualiztion"
+                                            "Web Development Projects"
                                         ),
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                             "div",
@@ -15998,7 +16039,7 @@ var WebDev = function (_React$Component) {
                                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                     "div",
                                                     { className: "front" },
-                                                    "Meteor Strikes"
+                                                    "?????"
                                                 )
                                             )
                                         )

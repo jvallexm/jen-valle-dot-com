@@ -117,7 +117,22 @@ const GeekCraftExpo = () =>{
                                       <div className="transparent-section grid-right-2 middle-text">
                                         <h2 className="pop-out">
                                           RDU Event Coordinator
-                                        </h2>  
+                                        </h2> 
+                                        <h4 className="inside-text">
+                                         GeekCraft Expo RDU is a twice yearly craft market that exclusively showcases handmade geek goods made by local artists.</h4>
+                                         <h4 className="inside-text">
+                                          We're currently accepting exhibitor applications for our 2017 Holiday show!
+                                        </h4>  
+                                        <div>
+                                            <button className="btn btn-head"
+                                                    onClick={()=>window.open("http://www.geekcraftexpo.com/exhibitor-app-gce-rdu-2017")}>
+                                                    <i className="fa fa-external-link"/>
+                                            </button>
+                                            <button className="btn btn-head"
+                                                    onClick={()=>window.open('https://www.facebook.com/events/191565734706576/')}>
+                                                    <i className="fa fa-facebook"/>
+                                            </button>
+                                        </div>
                                       </div>
                                   </div>
                              </div>
