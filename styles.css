@@ -733,3 +733,28 @@ iframe
 {
   color: black !important;
 }
+.margin-0
+{
+  margin: 0 !important;
+}
+.beige
+{ 
+  border-radius: 10px;
+}
+.fa-heart
+{
+  color: red;
+}
+.fa-exchange
+{
+  color: green;
+}
+.fa-comments
+{
+  color: blue;
+}
+.proj-head
+{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

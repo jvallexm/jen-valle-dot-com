@@ -4867,7 +4867,7 @@
     },
     "nodemailer": {
       "version": "4.0.1",
-      "from": "nodemailer@latest",
+      "from": "https://registry.npmjs.org/nodemailer/-/nodemailer-4.0.1.tgz",
       "resolved": "https://registry.npmjs.org/nodemailer/-/nodemailer-4.0.1.tgz"
     },
     "normalize-package-data": {
@@ -5889,6 +5889,11 @@
       "version": "2.1.0",
       "from": "wrap-ansi@>=2.0.0 <3.0.0",
       "resolved": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-2.1.0.tgz"
+    },
+    "xoauth2": {
+      "version": "1.2.0",
+      "from": "xoauth2@latest",
+      "resolved": "https://registry.npmjs.org/xoauth2/-/xoauth2-1.2.0.tgz"
     },
     "xtend": {
       "version": "4.0.1",

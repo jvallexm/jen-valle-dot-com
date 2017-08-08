@@ -9,7 +9,8 @@ export default class SiteView extends React.Component
   {
     super(props);
     this.state = {
-      loaded: false
+      loaded: false,
+      about: false
     };
   }
   componentWillMount()
@@ -31,7 +32,8 @@ export default class SiteView extends React.Component
                   </button>
                 </div>
                 <div className="col-md-4">  
-                  <button className="btn btn-nav">
+                  <button className="btn btn-nav"
+                          onClick={()=>this.setState({about: !this.state.about})}>
                     About This Project
                   </button>  
                 </div>
@@ -43,7 +45,25 @@ export default class SiteView extends React.Component
                 </div>
             </div>                 
         </div>
-      
+        {!this.state.about ? "" :
+            this.props.title == "Pinterest Clone"
+          ? <Pintr />
+          : this.props.title == "Book Trading Club"
+          ? <Book />
+          : this.props.title == "Marvel Event Generator"
+          ? <Marvl />
+          : this.props.title == "Voting App"
+          ? <Vote />
+          : this.props.title == "Night Life Tracker"
+          ? <Night />
+          : this.props.title == "Dungeon Plumber"
+          ? <DungeonAbout />
+          : this.props.title == "Game of Life"
+          ? <GameAbout />
+          : this.props.title == "Calculator"
+          ? <CalcAbout />
+          : ""
+        }
         <div className="section">
           {!this.state.loaded ? 
           <h1>Loading... <i className="fa fa-spinner fa-spin" /></h1>
@@ -76,3 +96,155 @@ export default class SiteView extends React.Component
     );
   }
 }
+
+const Pintr = () =>{
+  return(
+            <div className="section">
+            <div className="pintr margin-0">React-terest</div>
+            <div>
+            <div className="proj-head">  
+            Part of FreeCodeCamp’s curriculum included a <strong onClick={()=>window.open("https://www.freecodecamp.org/challenges/build-a-pinterest-clone")} title="Open in New Window">Pinterest Clone <i className="fa fa-external-link"/></strong>.<br/> In addition to all of the requirements for that project, React-terest includes quite a few options:</div>
+            <div className="beige">
+                ★ Users can click on the image of a post to see a larger version (if the image is larger than 250px wide)<br/>
+                ★ When authenticated users create a post, they can add up to three tags.<br/> 
+                ★ Users can click on post tags to view all posts with that tag. <i>(I recommend the Wayne’s World tag, it’s excellect.)</i><br/>
+                ★ Users can search by tag, title, or username and see a board made up of the results.<br/>
+                ★ Authenticated users can Favorite <i className="fa fa-heart"/> , Reblog <i className="fa fa-exchange"/> , and view the other user interactions <i className="fa fa-comments"/> .<br/>
+                ★ React-terest also utilizes web sockets to provide live updates when new posts are added, reblogged, updated, or deleted.</div>
+              </div>
+          </div> 
+  );
+};
+
+const Book = () =>{
+  return(
+     <div className="section">
+            <div className="book margin-0">
+                Book Stop N' Swap
+            </div>
+            <div>
+                <div className="proj-head">  
+                 FreeCodeCamp’s curriculum included a <strong onClick={()=>window.open("https://www.freecodecamp.org/challenges/manage-a-book-trading-club")} title="Open in New Window">Book Trading Club <i className="fa fa-external-link"/></strong>. Book Stop N’ Swap has some additional exciting features:
+                </div>
+                <div className="beige">
+                    ★ Authenticated users can view their pending trades, and cancel them if they decide they don’t want to trade anymore.<br/>
+                    ★ Users get live updates when they have a new pending trade <br/>
+                    ★ Users collections will be updated live when they exchange books<br/>
+                    ★ All collections will receive live updates when a new book is added
+                </div>    
+            </div>
+      </div>     
+  );
+};
+
+const Marvl= () =>{
+  return(
+     <div className="section">
+            <div className="marvl margin-0">Marvel Event Generator</div>
+            <div>
+            <div className="proj-head">  
+		A project I made for fun, this Marvel Event Generator uses a custom database of characters I created with the help of the Marvel API to generate random events. 
+            </div>
+            <div className="beige">
+                ★ Has 9 different event templates<br/>
+                ★ Pulls from a database of over 300 characters<br/>
+                ★ Keeps a live count of how many times users have generated a random event
+            </div>    
+        </div>
+      </div>     
+  );
+};
+
+const Vote = () =>{
+  return(
+            <div className="section">
+            <div className="front margin-0">
+                Voting App
+            </div>
+            <div>
+            <div className="proj-head">  
+            Part of FreeCodeCamp’s curriculum included a <strong onClick={()=>window.open("https://www.freecodecamp.org/challenges/build-a-voting-app")} title="Open in New Window">Voting App <i className="fa fa-external-link"/></strong>.
+            <div className="beige">
+		            This full stack app allows users to create and vote on polls, as well as share links to specific polls with their friends. It also shows charts of the voting results!
+		        </div>    
+		  </div>
+    </div>
+  </div> 
+  );
+};
+
+const Night = () =>{
+  return(
+     <div className="section">
+            <div className="front margin-0">
+                Nightlife Coordination
+            </div>
+            <div>
+                <div className="proj-head">  
+                 FreeCodeCamp’s curriculum included a <strong onClick={()=>window.open("https://www.freecodecamp.org/challenges/build-a-nightlife-coordination-app")} title="Open in New Window">Nightlife Coordination App <i className="fa fa-external-link"/></strong>. 
+                  <div className="beige">
+	     Using the Yelp API users can search for bars in their area and mark themselves as “going” or remove themselves from bars if they no longer want to go.
+	                  </div>
+                </div>
+            </div>
+      </div>     
+  );
+};
+
+const DungeonAbout = () =>{
+  return(
+     <div className="section">
+            <div className="front margin-0">
+                Dungeon Plumber
+            </div>
+            <div>
+                <div className="proj-head">  
+                 FreeCodeCamp’s curriculum included a <strong onClick={()=>window.open("https://www.freecodecamp.org/challenges/build-the-game-of-life")} title="Open in New Window">Roguelike Dungeon Crawler Game <i className="fa fa-external-link"/></strong>. I made one that does some pretty exciting stuff:
+                </div>
+                <div className="beige">
+                    ★ The rooms on each floor are generated randomly.<br/>
+                    ★ The user wins the game after beating floor 4, but can choose to continue playing until the map is full<br/>
+       	            ★  The user can turn the lights on or off, depending on how they want to play the game
+                </div>    
+            </div>
+      </div>     
+  );
+};
+
+const GameAbout= () =>{
+  return(
+     <div className="section">
+            <div className="front margin-0">
+                Game of Life
+            </div>
+            <div>
+                <div className="proj-head">  
+                 FreeCodeCamp’s curriculum included a <strong onClick={()=>window.open("https://www.freecodecamp.org/challenges/build-a-roguelike-dungeon-crawler-game")} title="Open in New Window">Game of Life <i className="fa fa-external-link"/></strong>. 
+                 <div className="beige">
+                    Users can adjust the speed of the generations, stop, reset, or randomize the board.
+                 </div>
+                </div>
+            </div>
+      </div>     
+  );
+};
+
+const CalcAbout= () =>{
+  return(
+     <div className="section">
+            <div className="front margin-0">
+                Calculator
+            </div>
+            <div>
+                <div className="proj-head">  
+                 One of FreeCodeCamp’s earliest projects is to build a four function <strong onClick={()=>window.open("https://www.freecodecamp.org/challenges/build-a-javascript-calculator")} title="Open in New Window">Calculator <i className="fa fa-external-link"/></strong>. I thought I’d make a new one with a few exciting upgrades:
+                </div>
+                <div className="beige">
+                    ★ Users can use the number pad on their computer keyboard to use the calculator without having to click the buttons.<br/>
+                    ★ Solved equations print out on the piece of computer paper to the right<br/>
+	        ★ Answers longer than the screen of the calculator will show an error.
+                </div>    
+            </div>
+      </div>     
+  );
+};

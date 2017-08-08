@@ -13105,7 +13105,7 @@ var App = function (_React$Component) {
         name: "codepen",
         link: "https://codepen.io/phoenix-farce/"
       }, {
-        name: "freecodecamp",
+        name: "free-code-camp",
         link: "https://www.freecodecamp.org/jvallexm"
       }]
     };
@@ -13125,10 +13125,9 @@ var App = function (_React$Component) {
           { id: 'the-middle', className: 'text-center container-fluid' },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__web_js__["a" /* default */], null),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(GeekCraftExpo, null),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__music_js__["a" /* default */], null),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Comix, null)
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__music_js__["a" /* default */], null)
         ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__contact_js__["a" /* default */], null)
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__contact_js__["a" /* default */], { myEmail: 'jvallexm (at) gmail (dot) com' })
       );
     }
   }]);
@@ -13975,37 +13974,9 @@ var Contact = function (_React$Component) {
             null,
             "Contact"
           ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "h3",
-            null,
-            this.state.message
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { className: this.state.email.name == "" && this.state.message != "" ? "width-100p error-border" : "width-100p",
-            name: "name",
-            placeholder: "Your Name",
-            value: this.state.email.name,
-            onChange: this.handleChange }),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { className: (this.state.email.email == "" || !/(\w+\.?\w+)@(\w+\.?\w+)\.((net)|(com)|(org)|(co\.uk)|(biz)|(edu)|(egg)|(io))/.test(this.state.email.email)) && this.state.message != "" ? "width-100p error-border" : "width-100p",
-            name: "email",
-            placeholder: "Your Email Address",
-            value: this.state.email.address,
-            onChange: this.handleChange }),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { className: this.state.email.subject == "" && this.state.message != "" ? "width-100p error-border" : "width-100p",
-            name: "subject",
-            placeholder: "Subject",
-            value: this.state.email.subject,
-            onChange: this.handleChange }),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("textarea", { className: this.state.email.message == "" && this.state.message != "" ? "width-100p error-border" : "width-100p",
-            name: "message",
-            placeholder: "Your Message",
-            value: this.state.email.message,
-            onChange: this.handleChange }),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "button",
-            { className: "btn btn-primary",
-              onClick: this.handleSubmit },
-            "Submit"
-          )
+          "Jennifer can be reached at ",
+          this.props.myEmail,
+          "."
         )
       );
     }
@@ -14013,6 +13984,42 @@ var Contact = function (_React$Component) {
 
   return Contact;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+/*            <h3>{this.state.message}</h3>
+            <input className={this.state.email.name =="" && 
+                                 this.state.message!=""
+                                 ? "width-100p error-border" : "width-100p"}
+                   name={"name"}
+                   placeholder={"Your Name"}
+                   value={this.state.email.name}
+                   onChange={this.handleChange}/>
+            <input className={(this.state.email.email =="" 
+                               || !/(\w+\.?\w+)@(\w+\.?\w+)\.((net)|(com)|(org)|(co\.uk)|(biz)|(edu)|(egg)|(io))/.test(this.state.email.email))&&
+                                 this.state.message!=""
+                                 ? "width-100p error-border" : "width-100p"}
+                   name={"email"}
+                   placeholder={"Your Email Address"}
+                   value={this.state.email.address}
+                   onChange={this.handleChange}/>
+            <input className={this.state.email.subject =="" &&
+                                 this.state.message!=""
+                                 ? "width-100p error-border" : "width-100p"}
+                   name={"subject"}
+                   placeholder={"Subject"}
+                   value={this.state.email.subject}
+                   onChange={this.handleChange}/>
+            <textarea className={this.state.email.message =="" &&
+                                 this.state.message!=""
+                                 ? "width-100p error-border" : "width-100p"}
+                   name={"message"}
+                   placeholder={"Your Message"}
+                   value={this.state.email.message}
+                   onChange={this.handleChange}/>
+            <button className="btn btn-primary"
+                    onClick={this.handleSubmit}>
+                Submit
+            </button>  */
+
 
 var _default = Contact;
 /* harmony default export */ __webpack_exports__["a"] = _default;
@@ -15278,7 +15285,8 @@ var SiteView = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (SiteView.__proto__ || Object.getPrototypeOf(SiteView)).call(this, props));
 
     _this.state = {
-      loaded: false
+      loaded: false,
+      about: false
     };
     return _this;
   }
@@ -15321,7 +15329,10 @@ var SiteView = function (_React$Component) {
                 { className: 'col-md-4' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   'button',
-                  { className: 'btn btn-nav' },
+                  { className: 'btn btn-nav',
+                    onClick: function onClick() {
+                      return _this2.setState({ about: !_this2.state.about });
+                    } },
                   'About This Project'
                 )
               ),
@@ -15340,6 +15351,7 @@ var SiteView = function (_React$Component) {
               )
             )
           ),
+          !this.state.about ? "" : this.props.title == "Pinterest Clone" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Pintr, null) : this.props.title == "Book Trading Club" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Book, null) : this.props.title == "Marvel Event Generator" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Marvl, null) : this.props.title == "Voting App" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Vote, null) : this.props.title == "Night Life Tracker" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Night, null) : this.props.title == "Dungeon Plumber" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(DungeonAbout, null) : this.props.title == "Game of Life" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(GameAbout, null) : this.props.title == "Calculator" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(CalcAbout, null) : "",
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
             { className: 'section' },
@@ -15389,6 +15401,308 @@ var SiteView = function (_React$Component) {
 
 var _default = SiteView;
 /* harmony default export */ __webpack_exports__["a"] = _default;
+
+
+var Pintr = function Pintr() {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: 'section' },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: 'pintr margin-0' },
+      'React-terest'
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'proj-head' },
+        'Part of FreeCodeCamp\u2019s curriculum included a ',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'strong',
+          { onClick: function onClick() {
+              return window.open("https://www.freecodecamp.org/challenges/build-a-pinterest-clone");
+            }, title: 'Open in New Window' },
+          'Pinterest Clone ',
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-external-link' })
+        ),
+        '.',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+        ' In addition to all of the requirements for that project, React-terest includes quite a few options:'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'beige' },
+        '\u2605 Users can click on the image of a post to see a larger version (if the image is larger than 250px wide)',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+        '\u2605 When authenticated users create a post, they can add up to three tags.',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+        '\u2605 Users can click on post tags to view all posts with that tag. ',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'i',
+          null,
+          '(I recommend the Wayne\u2019s World tag, it\u2019s excellect.)'
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+        '\u2605 Users can search by tag, title, or username and see a board made up of the results.',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+        '\u2605 Authenticated users can Favorite ',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-heart' }),
+        ' , Reblog ',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-exchange' }),
+        ' , and view the other user interactions ',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-comments' }),
+        ' .',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+        '\u2605 React-terest also utilizes web sockets to provide live updates when new posts are added, reblogged, updated, or deleted.'
+      )
+    )
+  );
+};
+
+var Book = function Book() {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: 'section' },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: 'book margin-0' },
+      'Book Stop N\' Swap'
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'proj-head' },
+        'FreeCodeCamp\u2019s curriculum included a ',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'strong',
+          { onClick: function onClick() {
+              return window.open("https://www.freecodecamp.org/challenges/manage-a-book-trading-club");
+            }, title: 'Open in New Window' },
+          'Book Trading Club ',
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-external-link' })
+        ),
+        '. Book Stop N\u2019 Swap has some additional exciting features:'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'beige' },
+        '\u2605 Authenticated users can view their pending trades, and cancel them if they decide they don\u2019t want to trade anymore.',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+        '\u2605 Users get live updates when they have a new pending trade ',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+        '\u2605 Users collections will be updated live when they exchange books',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+        '\u2605 All collections will receive live updates when a new book is added'
+      )
+    )
+  );
+};
+
+var Marvl = function Marvl() {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: 'section' },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: 'marvl margin-0' },
+      'Marvel Event Generator'
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'proj-head' },
+        'A project I made for fun, this Marvel Event Generator uses a custom database of characters I created with the help of the Marvel API to generate random events.'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'beige' },
+        '\u2605 Has 9 different event templates',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+        '\u2605 Pulls from a database of over 300 characters',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+        '\u2605 Keeps a live count of how many times users have generated a random event'
+      )
+    )
+  );
+};
+
+var Vote = function Vote() {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: 'section' },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: 'front margin-0' },
+      'Voting App'
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'proj-head' },
+        'Part of FreeCodeCamp\u2019s curriculum included a ',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'strong',
+          { onClick: function onClick() {
+              return window.open("https://www.freecodecamp.org/challenges/build-a-voting-app");
+            }, title: 'Open in New Window' },
+          'Voting App ',
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-external-link' })
+        ),
+        '.',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+        'This full stack app allows users to create and vote on polls, as well as share links to specific polls with their friends. It also shows charts of the voting results!'
+      )
+    )
+  );
+};
+
+var Night = function Night() {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: 'section' },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: 'front margin-0' },
+      'Nightlife Coordination'
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'proj-head' },
+        'FreeCodeCamp\u2019s curriculum included a ',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'strong',
+          { onClick: function onClick() {
+              return window.open("https://www.freecodecamp.org/challenges/build-a-nightlife-coordination-app");
+            }, title: 'Open in New Window' },
+          'Nightlife Coordination App ',
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-external-link' })
+        ),
+        '. ',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+        'Using the Yelp API users can search for bars in their area and mark themselves as \u201Cgoing\u201D or remove themselves from bars if they no longer want to go.'
+      )
+    )
+  );
+};
+
+var DungeonAbout = function DungeonAbout() {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: 'section' },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: 'front margin-0' },
+      'Dungeon Plumber'
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'proj-head' },
+        'FreeCodeCamp\u2019s curriculum included a ',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'strong',
+          { onClick: function onClick() {
+              return window.open("https://www.freecodecamp.org/challenges/build-the-game-of-life");
+            }, title: 'Open in New Window' },
+          'Roguelike Dungeon Crawler Game ',
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-external-link' })
+        ),
+        '. I made one that does some pretty exciting stuff:'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'beige' },
+        '\u2605 The rooms on each floor are generated randomly.',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+        '\u2605 The user wins the game after beating floor 4, but can choose to continue playing until the map is full',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+        '\u2605  The user can turn the lights on or off, depending on how they want to play the game'
+      )
+    )
+  );
+};
+
+var GameAbout = function GameAbout() {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: 'section' },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: 'front margin-0' },
+      'Game of Life'
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'proj-head' },
+        'FreeCodeCamp\u2019s curriculum included a ',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'strong',
+          { onClick: function onClick() {
+              return window.open("https://www.freecodecamp.org/challenges/build-a-roguelike-dungeon-crawler-game");
+            }, title: 'Open in New Window' },
+          'Game of Life ',
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-external-link' })
+        ),
+        '. Users can adjust the speed of the generations, stop, reset, or randomize the board.'
+      )
+    )
+  );
+};
+
+var CalcAbout = function CalcAbout() {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: 'section' },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { className: 'front margin-0' },
+      'Calculator'
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'proj-head' },
+        'One of FreeCodeCamp\u2019s earliest projects is to build a four function ',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'strong',
+          { onClick: function onClick() {
+              return window.open("https://www.freecodecamp.org/challenges/build-a-javascript-calculator");
+            }, title: 'Open in New Window' },
+          'Calculator ',
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-external-link' })
+        ),
+        '. I thought I\u2019d make a new one with a few exciting upgrades:'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'beige' },
+        '\u2605 Users can use the number pad on their computer keyboard to use the calculator without having to click the buttons.',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+        '\u2605 Solved equations print out on the piece of computer paper to the right',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+        '\u2605 Answers longer than the screen of the calculator will show an error.'
+      )
+    )
+  );
+};
 ;
 
 var _temp = function () {
@@ -15397,6 +15711,22 @@ var _temp = function () {
   }
 
   __REACT_HOT_LOADER__.register(SiteView, 'SiteView', '/home/ubuntu/workspace/src/containers/siteview.js');
+
+  __REACT_HOT_LOADER__.register(Pintr, 'Pintr', '/home/ubuntu/workspace/src/containers/siteview.js');
+
+  __REACT_HOT_LOADER__.register(Book, 'Book', '/home/ubuntu/workspace/src/containers/siteview.js');
+
+  __REACT_HOT_LOADER__.register(Marvl, 'Marvl', '/home/ubuntu/workspace/src/containers/siteview.js');
+
+  __REACT_HOT_LOADER__.register(Vote, 'Vote', '/home/ubuntu/workspace/src/containers/siteview.js');
+
+  __REACT_HOT_LOADER__.register(Night, 'Night', '/home/ubuntu/workspace/src/containers/siteview.js');
+
+  __REACT_HOT_LOADER__.register(DungeonAbout, 'DungeonAbout', '/home/ubuntu/workspace/src/containers/siteview.js');
+
+  __REACT_HOT_LOADER__.register(GameAbout, 'GameAbout', '/home/ubuntu/workspace/src/containers/siteview.js');
+
+  __REACT_HOT_LOADER__.register(CalcAbout, 'CalcAbout', '/home/ubuntu/workspace/src/containers/siteview.js');
 
   __REACT_HOT_LOADER__.register(_default, 'default', '/home/ubuntu/workspace/src/containers/siteview.js');
 }();
@@ -15668,7 +15998,7 @@ var WebDev = function (_React$Component) {
                                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                     "div",
                                                     { className: "front" },
-                                                    "Something Else"
+                                                    "Meteor Strikes"
                                                 )
                                             )
                                         )

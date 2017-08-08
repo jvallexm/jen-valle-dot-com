@@ -35,7 +35,14 @@ export default class Contact extends React.Component
      <div id={"contact"} className="text-center container-fluid">
         <div className="section">
             <h1>Contact</h1>
-            <h3>{this.state.message}</h3>
+            Jennifer can be reached at {this.props.myEmail}.
+        </div>   
+    </div>  
+    );
+  }
+}
+
+/*            <h3>{this.state.message}</h3>
             <input className={this.state.email.name =="" && 
                                  this.state.message!=""
                                  ? "width-100p error-border" : "width-100p"}
@@ -68,9 +75,4 @@ export default class Contact extends React.Component
             <button className="btn btn-primary"
                     onClick={this.handleSubmit}>
                 Submit
-            </button>  
-        </div>   
-    </div>  
-    );
-  }
-}
+            </button>  */

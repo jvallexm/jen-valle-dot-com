@@ -19,7 +19,7 @@ export default class App extends React.Component
           link: "https://codepen.io/phoenix-farce/"
         },
         {
-          name: "freecodecamp",
+          name: "free-code-camp",
           link: "https://www.freecodecamp.org/jvallexm"
         }
       ]
@@ -36,9 +36,8 @@ export default class App extends React.Component
                   <Web />
                   <GeekCraftExpo />
                   <Music />
-                  <Comix />
              </div>  
-             <Contact />
+             <Contact myEmail="jvallexm (at) gmail (dot) com" />
 
       </div>  
     );

@@ -51,7 +51,7 @@ export default class WebDev extends React.Component
                                   <div className="col-md-6">
                                       <div className="transparent-section grid-right-2 middle-text web-sec">
                                         <h2 className="pop-out">
-                                          Front End & Data Visualiztion
+                                          Web Development Projects
                                         </h2>
                                         <div className="row">
                                             <div className="col-sm-6 left">
@@ -100,7 +100,7 @@ export default class WebDev extends React.Component
                                             </div>
                                             <div className="col-sm-6 right">
                                                 <div className="front">
-                                                      Something Else
+                                                      ?????
                                                 </div>
                                             </div>  
                                         </div>  
