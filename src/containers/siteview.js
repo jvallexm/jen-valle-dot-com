@@ -2,6 +2,7 @@ import React from 'react';
 import Game from './gameoflife.js';
 import Dungeon from './dungeonplumber.js';
 import Calc from './calculator.js';
+import Simon from './simon.js';
 
 export default class SiteView extends React.Component
 {
@@ -15,7 +16,7 @@ export default class SiteView extends React.Component
   }
   componentWillMount()
   {
-    if(this.props.title == "Game of Life" || this.props.title == "Dungeon Plumber" || this.props.title == "Calculator")
+    if(this.props.title == "Game of Life" || this.props.title == "Dungeon Plumber" || this.props.title == "Calculator" || this.props.title == "Simon")
       this.setState({loaded: true});
   }
   render()
@@ -62,13 +63,15 @@ export default class SiteView extends React.Component
           ? <GameAbout />
           : this.props.title == "Calculator"
           ? <CalcAbout />
+          : this.props.title == "Simon"
+          ? <SimonAbout />
           : ""
         }
         <div className="section">
           {!this.state.loaded ? 
           <h1>Loading... <i className="fa fa-spinner fa-spin" /></h1>
           : ""}
-          { this.props.title != "Game of Life" && this.props.title != "Dungeon Plumber" && this.props.title != "Calculator"
+          { this.props.title != "Game of Life" && this.props.title != "Dungeon Plumber" && this.props.title != "Calculator" && this.props.title != "Simon"
             ? <iframe src={this.props.url}
                   className="web-view"
                   onLoad={()=>this.setState({loaded: true})}/>
@@ -84,6 +87,12 @@ export default class SiteView extends React.Component
                   <Dungeon />
                  </div>  
               </div>     
+            : this.props.title == "Simon"
+            ? <div>
+                 <div className="cal-body min-800">
+                    <Simon />
+                  </div>
+              </div>
             : <div>
                  <div className="cal-body">
                     <Calc />
@@ -248,3 +257,22 @@ const CalcAbout= () =>{
       </div>     
   );
 };
+
+const SimonAbout= () =>{
+  return(
+     <div className="section">
+            <div className="front margin-0">
+                Simon
+            </div>
+            <div>
+                <div className="proj-head">  
+                 Another early FreeCodeCamp project is is to build a <strong onClick={()=>window.open("https://www.freecodecamp.org/challenges/build-a-simon-game")} title="Open in New Window">Simon Game<i className="fa fa-external-link"/></strong>.
+                </div>
+                <div className="beige">
+                    Play with this retro 80's toy right here in your browser!
+                </div>    
+            </div>
+      </div>     
+  );
+};
+

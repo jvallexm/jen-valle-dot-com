@@ -97,9 +97,12 @@ export default class WebDev extends React.Component
                                                       Calculator
                                                 </div>
                                             </div>
-                                            <div className="col-sm-6 right">
+                                            <div className="col-sm-6 right"
+                                                 onClick={()=>this.props.show("Simon",
+                                                                           "https://jen-valle-night-life.herokuapp.com/",
+                                                                           "https://github.com/jvallexm/jen-valle-dot-com/blob/master/src/containers/simon.js")}>
                                                 <div className="front">
-                                                      ?????
+                                                    Simon
                                                 </div>
                                             </div>  
                                         </div>  
