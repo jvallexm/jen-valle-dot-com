@@ -21,6 +21,16 @@ export default class WebDev extends React.Component
                                         <h2 className="pop-out">
                                           Full Stack Projects
                                         </h2>
+                                        
+                                        <Project name={"Message Board"}
+                                                 projClass={"messg"}
+                                                 btnClass={"reverse-messg"} 
+                                                 gh={"https://github.com/jvallexm/message-board"}
+                                                 open={"https://jvalle-message-board.herokuapp.com/"}
+                                                 show={()=>this.props.show("Marvel Event Generator",
+                                                                           "https://wheel-of-bendis.herokuapp.com/",
+                                                                           "https://github.com/jvallexm/all-new-wheel-of-bendis")}/>
+                                        
                                         <Project name={"Pinterest Clone"}
                                                  projClass={"pintr"}
                                                  btnClass={"reverse-pintr"} 
@@ -37,14 +47,7 @@ export default class WebDev extends React.Component
                                                  show={()=>this.props.show("Book Trading Club",
                                                                            "https://jvalle-book-swap.herokuapp.com/",
                                                                            "https://github.com/jvallexm/fcc-book-trading-club")}/>
-                                       <Project name={"Marvel Event Generator"}
-                                                 projClass={"marvl"}
-                                                 btnClass={"reverse-marvl"} 
-                                                 gh={"https://github.com/jvallexm/all-new-wheel-of-bendis"}
-                                                 open={"https://wheel-of-bendis.herokuapp.com/"}
-                                                 show={()=>this.props.show("Marvel Event Generator",
-                                                                           "https://wheel-of-bendis.herokuapp.com/",
-                                                                           "https://github.com/jvallexm/all-new-wheel-of-bendis")}/>
+
                                       </div> 
                                   </div>
                                   <div className="col-md-6">
@@ -54,11 +57,11 @@ export default class WebDev extends React.Component
                                         </h2>
                                         <div className="row">
                                             <div className="col-sm-6 left">
-                                                <div className="front"
-                                                     onClick={()=>this.props.show("Voting App",
-                                                                           "https://blooming-mesa-17406.herokuapp.com/",
-                                                                           "https://github.com/jvallexm/fcc-voting-app")}>
-                                                      Voting App
+                                                <div className="front smaller middle-text"
+                                                     onClick={()=>this.props.show("Marvel Event Generator",
+                                                                           "https://wheel-of-bendis.herokuapp.com/",
+                                                                           "https://github.com/jvallexm/all-new-wheel-of-bendis")}>
+                                                      Marvel Event Generator
                                                 </div>
                                             </div>
                                             <div className="col-sm-6 right">
@@ -126,11 +129,12 @@ const Project = (props) =>{
                {props.name}
            </div>
            <div className="col-sm-2 left right">
+                {props.name=="Message Board" ? "" : 
                 <button title={"View on This Page"}
                          onClick={props.show}
                          className={"btn " + props.btnClass}>
                           <i className="fa fa-eye" />
-               </button>
+               </button>}
            </div>
            <div className="col-sm-2 left right">
                 <button title={"Open in New Window"}

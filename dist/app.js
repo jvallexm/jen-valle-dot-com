@@ -16327,6 +16327,14 @@ var WebDev = function (_React$Component) {
                                             { className: "pop-out" },
                                             "Full Stack Projects"
                                         ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Message Board",
+                                            projClass: "messg",
+                                            btnClass: "reverse-messg",
+                                            gh: "https://github.com/jvallexm/message-board",
+                                            open: "https://jvalle-message-board.herokuapp.com/",
+                                            show: function show() {
+                                                return _this2.props.show("Marvel Event Generator", "https://wheel-of-bendis.herokuapp.com/", "https://github.com/jvallexm/all-new-wheel-of-bendis");
+                                            } }),
                                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Pinterest Clone",
                                             projClass: "pintr",
                                             btnClass: "reverse-pintr",
@@ -16342,14 +16350,6 @@ var WebDev = function (_React$Component) {
                                             open: "https://jvalle-book-swap.herokuapp.com/",
                                             show: function show() {
                                                 return _this2.props.show("Book Trading Club", "https://jvalle-book-swap.herokuapp.com/", "https://github.com/jvallexm/fcc-book-trading-club");
-                                            } }),
-                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Marvel Event Generator",
-                                            projClass: "marvl",
-                                            btnClass: "reverse-marvl",
-                                            gh: "https://github.com/jvallexm/all-new-wheel-of-bendis",
-                                            open: "https://wheel-of-bendis.herokuapp.com/",
-                                            show: function show() {
-                                                return _this2.props.show("Marvel Event Generator", "https://wheel-of-bendis.herokuapp.com/", "https://github.com/jvallexm/all-new-wheel-of-bendis");
                                             } })
                                     )
                                 ),
@@ -16372,11 +16372,11 @@ var WebDev = function (_React$Component) {
                                                 { className: "col-sm-6 left" },
                                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                                     "div",
-                                                    { className: "front",
+                                                    { className: "front smaller middle-text",
                                                         onClick: function onClick() {
-                                                            return _this2.props.show("Voting App", "https://blooming-mesa-17406.herokuapp.com/", "https://github.com/jvallexm/fcc-voting-app");
+                                                            return _this2.props.show("Marvel Event Generator", "https://wheel-of-bendis.herokuapp.com/", "https://github.com/jvallexm/all-new-wheel-of-bendis");
                                                         } },
-                                                    "Voting App"
+                                                    "Marvel Event Generator"
                                                 )
                                             ),
                                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -16480,7 +16480,7 @@ var Project = function Project(props) {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
                 { className: "col-sm-2 left right" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                props.name == "Message Board" ? "" : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "button",
                     { title: "View on This Page",
                         onClick: props.show,
