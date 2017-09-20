@@ -13435,6 +13435,12 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
+var buttons2 = [[{ name: "Ans", type: "other" }, { name: "sin-1", type: "sci", smol: "-1" }, { name: "cos-1", type: "sci", smol: "-1" }, { name: "tan-1", type: "sci", smol: "-1" }, { name: "CE", type: "func" }], [{ name: "2nd", type: "letter" }, { name: "^", type: "other" }, { name: "(", type: "other" }, { name: ")", type: "other" }, { name: "÷", type: "ops" }], [{ name: "Del", type: "red" }, { name: "7", type: "num" }, { name: "8", type: "num" }, { name: "9", type: "num" }, { name: "×", type: "ops" }], [{ name: "log", type: "other" }, { name: "4", type: "num" }, { name: "5", type: "num" }, { name: "6", type: "num" }, { name: "-", type: "ops" }], [{ name: "ln", type: "other" }, { name: "1", type: "num" }, { name: "2", type: "num" }, { name: "3", type: "num" }, { name: "+", type: "ops" }], [{ name: "e", type: "other" }, { name: "0", type: "num" }, { name: ".", type: "num" }, { name: "=", type: "func" }, { name: "Enter", type: "other" }]];
+
+var buttons = [[{ name: "Shift", type: "func" }, { name: "sin", type: "sci" }, { name: "cos", type: "sci" }, { name: "tan", type: "sci" }, { name: "CE", type: "func" }], [{ name: "2nd", type: "letter" }, { name: "^", type: "other" }, { name: "(", type: "other" }, { name: ")", type: "other" }, { name: "÷", type: "ops" }], [{ name: "Del", type: "red" }, { name: "7", type: "num" }, { name: "8", type: "num" }, { name: "9", type: "num" }, { name: "×", type: "ops" }], [{ name: "√", type: "other" }, { name: "4", type: "num" }, { name: "5", type: "num" }, { name: "6", type: "num" }, { name: "-", type: "ops" }], [{ name: "π", type: "other" }, { name: "1", type: "num" }, { name: "2", type: "num" }, { name: "3", type: "num" }, { name: "+", type: "ops" }], [{ name: "e", type: "other" }, { name: "0", type: "num" }, { name: ".", type: "num" }, { name: "=", type: "func" }, { name: "Enter", type: "other" }]];
+
+var letters = [[{ name: "Shift", type: "other" }, { name: "A", type: "letter" }, { name: "B", type: "letter" }, { name: "C", type: "letter" }, { name: "AC", type: "red" }], [{ name: "D", type: "letter" }, { name: "E", type: "letter" }, { name: "F", type: "letter" }, { name: "G", type: "letter" }, { name: "H", type: "letter" }], [{ name: "I", type: "letter" }, { name: "J", type: "letter" }, { name: "K", type: "letter" }, { name: "L", type: "letter" }, { name: "M", type: "letter" }], [{ name: "N", type: "letter" }, { name: "O", type: "letter" }, { name: "P", type: "letter" }, { name: "Q", type: "letter" }, { name: "R", type: "letter" }], [{ name: "S", type: "letter" }, { name: "T", type: "letter" }, { name: "U", type: "letter" }, { name: "V", type: "letter" }, { name: "W", type: "letter" }], [{ name: "X", type: "letter" }, { name: "Y", type: "letter" }, { name: "Z", type: "letter" }, { name: "=", type: "func" }, { name: "Enter", type: "other" }]];
+
 var Calc = function (_React$Component) {
   _inherits(Calc, _React$Component);
 
@@ -13444,479 +13450,713 @@ var Calc = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (Calc.__proto__ || Object.getPrototypeOf(Calc)).call(this, props));
 
     _this.state = {
-      equation: "",
-      display: "",
-      results: [],
-      solved: false
+      buttons: buttons,
+      shifted: false,
+      second: false,
+      input: "",
+      error: "",
+      store: "",
+      vars: [{ name: "e", value: Math.E }, { name: "π", value: Math.PI }, { name: "X", value: "2" }],
+      output: []
     };
-    _this.handleChange = _this.handleChange.bind(_this);
-    _this.doMath = _this.doMath.bind(_this);
-    _this.thePaper = _this.thePaper.bind(_this);
+    _this.doTheMath = _this.doTheMath.bind(_this);
+    _this.error = _this.error.bind(_this);
+    _this.handleInput = _this.handleInput.bind(_this);
+    _this.handleSubmit = _this.handleSubmit.bind(_this);
+    _this.inputToScreen = _this.inputToScreen.bind(_this);
+    _this.solve = _this.solve.bind(_this);
     return _this;
   }
 
   _createClass(Calc, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      document.addEventListener('keydown', function (e) {
-        console.log(e.keyCode);
-        if (e.keyCode == 97 || e.keyCode == 49) {
-          e.target.name = "1";
-          _this2.handleChange(e);
-        }
-        if (e.keyCode == 98 || e.keyCode == 50) {
-          e.target.name = "2";
-          _this2.handleChange(e);
-        }
-        if (e.keyCode == 99 || e.keyCode == 51) {
-          e.target.name = "3";
-          _this2.handleChange(e);
-        }
-        if (e.keyCode == 100 || e.keyCode == 52) {
-          e.target.name = "4";
-          _this2.handleChange(e);
-        }
-        if (e.keyCode == 101 || e.keyCode == 53) {
-          e.target.name = "5";
-          _this2.handleChange(e);
-        }
-        if (e.keyCode == 102 || e.keyCode == 54) {
-          e.target.name = "6";
-          _this2.handleChange(e);
-        }
-        if (e.keyCode == 103 || e.keyCode == 55) {
-          e.target.name = "7";
-          _this2.handleChange(e);
-        }
-        if (e.keyCode == 104 || e.keyCode == 56) {
-          e.target.name = "8";
-          _this2.handleChange(e);
-        }
-        if (e.keyCode == 105 || e.keyCode == 57) {
-          e.target.name = "9";
-          _this2.handleChange(e);
-        }
-        if (e.keyCode == 96 || e.keyCode == 48) {
-          e.target.name = "0";
-          _this2.handleChange(e);
-        }
-        if (e.keyCode == 109) {
-          e.target.name = "-";
-          _this2.handleChange(e);
-        }
-        if (e.keyCode == 107) {
-          e.target.name = "+";
-          _this2.handleChange(e);
-        }
-        if (e.keyCode == 106) {
-          e.target.name = "*";
-          _this2.handleChange(e);
-        }
-        if (e.keyCode == 111) {
-          e.target.name = "/";
-          _this2.handleChange(e);
-        }
-        if (e.keyCode == 13) {
-          e.target.name = "=";
-          _this2.handleChange(e);
-        }
-        if (e.keyCode == 110) {
-          e.target.name = ".";
-          _this2.handleChange(e);
-        }
-      });
+    key: "error",
+    value: function error(str) {
+      this.setState({ error: str });
     }
   }, {
-    key: "thePaper",
-    value: function thePaper() {
-      var results = this.state.results;
-      var printOut = [];
-      for (var i = 0; i < results.length; i++) {
-        //console.log(results[i].equation);
-        var spacedEquation = results[i].equation.split(/(\d+\.?\d*)?/);
-        spacedEquation.shift();
-        spacedEquation.pop();
-        spacedEquation = " " + spacedEquation.join(" ");
-        if (spacedEquation.length > 32) {
-          var splitSpace = spacedEquation.split("");
-          var print = "";
-          for (var j = 0; j < splitSpace.length; j++) {
-            print += splitSpace[j];
-            if ((j + 1) % 32 == 0 || j + 1 == splitSpace.length) {
-              printOut.push({ total: false, print: print });
-              print = "";
+    key: "handleInput",
+    value: function handleInput(e) {
+      //console.log(e.target.value);
+      var input = this.state.input;
+      var assignTo = "";
+      if (e.target.value != "-" && this.opsCheck(e.target.value) && input.length == 0 || input == "-" && e.target.value == "-") {
+        if (this.state.output.length > 0) {
+          input += this.state.output[this.state.output.length - 1].line;
+        } else {
+          this.error("ERROR 1: INVALID EQUATION");
+          return;
+        }
+      }
+      if (this.state.error != "") this.setState({ error: "" });
+      if (input.indexOf("--") != -1 && e.target.value == "-" || this.opsCheck(input[input.length - 1]) && e.target.value == ")" || this.opsCheck(e.target.value) && e.target.value != "-" && input[input.length - 1] == "(" || input[input.ength - 1] != "-" && this.opsCheck(input[input.length - 1]) && this.opsCheck(e.target.value) && e.target.value != "-") {
+        this.error("ERROR 2: CONSECUTIVE OPERATORS");
+        return;
+      }
+      if (input.length == 0 && e.target.value == "." || input.length > 0 && !this.numCheck(input[input.length - 1]) && e.target.value == ".") input += "0";
+      switch (e.target.value) {
+        case "2nd":
+          {
+            if (!this.state.second) this.setState({ buttons: buttons2, second: true });else this.setState({ buttons: buttons, second: false });
+            return;
+          }
+        case "Ans":
+          {
+            //console.log("Trying to get answer");
+            if (this.state.output.length == 0) return;else if (this.state.output[this.state.output.length] != "NaN") {
+              input += this.state.output[this.state.output.length - 1].line;
+              this.setState({ input: input });
+              return;
+            }
+            return;
+          }
+        case "Shift":
+          {
+            if (!this.state.shifted) this.setState({ buttons: letters, shifted: true });else this.setState({ buttons: buttons, shifted: false });
+            return;
+          }
+        case "log":
+          {
+            input += "log(";
+            this.setState({ input: input });
+            return;
+          }
+        case "ln":
+          {
+            input += "ln(";
+            this.setState({ input: input });
+            return;
+          }
+        case "sin-1":
+          {
+            input += "sin-1(";
+            this.setState({ input: input });
+            return;
+          }
+        case "cos-1":
+          {
+            input += "cos-1(";
+            this.setState({ input: input });
+            return;
+          }
+        case "tan-1":
+          {
+            input += "tan-1(";
+            this.setState({ input: input });
+            return;
+          }
+        case "sin":
+          {
+            input += "sin(";
+            this.setState({ input: input });
+            return;
+          }
+        case "cos":
+          {
+            input += "cos(";
+            this.setState({ input: input });
+            return;
+          }
+        case "tan":
+          {
+            input += "tan(";
+            this.setState({ input: input });
+            return;
+          }
+        case "√":
+          {
+            input += "√(";
+            this.setState({ input: input });
+            return;
+          }
+        case "=":
+          {
+            if (this.state.input.indexOf("=") == -1) {
+              this.setState({ input: input + "=" });
+              return;
+            } else {
+              this.setState({ error: 'ERROR 3: MULTIPLE "="' });
+              return;
+            }
+          }
+        case "CE":
+          {
+            this.setState({ input: "" });
+            return;
+          }
+        case "AC":
+          {
+            this.setState({
+              error: "ALL VARIABLES RESET", input: "", output: [],
+              buttons: buttons,
+              shifted: false,
+              vars: [{ name: "e", value: Math.E }, { name: "π", value: Math.PI }]
+            });
+            return;
+          }
+        case "Last":
+          {
+            if (this.state.output.length == 0) return;else {
+              input += this.state.output[this.state.output.length - 1].line;
+              this.setState({ input: input });
+              return;
+            }
+          }
+        case "Del":
+          {
+            if (input.length > 0) {
+              if (input == "cos(" || input == "tan(" || input == "sin(" || input == "√(" || input == "log(" || input == "ln(" || input == "cos-1(" || input == "tan-1(" || input == "sin-1(") input = "";else if (input.substr(input.length - 6, input.length - 1) == "cos-1(" || input.substr(input.length - 6, input.length - 1) == "sin-1(" || input.substr(input.length - 6, input.length - 1) == "tan-1(") {
+                input = input.substr(0, input.length - 6);
+              } else if (input.substr(input.length - 4, input.length - 1) == "cos(" || input.substr(input.length - 4, input.length - 1) == "sin(" || input.substr(input.length - 4, input.length - 1) == "tan(" || input.substr(input.length - 4, input.length - 1) == "log(") {
+                input = input.substr(0, input.length - 4);
+              } else if (input.substr(input.length - 3, input.length - 1) == "ln(") {
+                input = input.substr(0, input.length - 3);
+              } else if (input.substr(input.length - 2, input.length - 1) == "√(") {
+                input = input.substr(0, input.length - 2);
+              } else {
+                input = input.substr(0, input.length - 1);
+              }
+              this.setState({ input: input });
+              return;
+            } else return;
+          }
+        case "Enter":
+          {
+            this.handleSubmit();
+            return;
+          }
+        default:
+          {
+            if (e.target.value == "-" && this.state.output.length > 0 && input.length == 0 && this.state.output[this.state.output.length - 1].line != "NaN") input += this.state.output[this.state.output.length - 1].line;
+            input += e.target.value;
+            if (/\d+\.\d+\./g.test(input)) {
+              this.error('ERROR 4: MULTIPLE "."');
+              return;
+            }
+            /*if(e.target.value==undefined)
+            {
+              console.log(e.target);
+              return;
+            }*/
+            this.setState({ input: input });
+            return;
+          }
+      }
+    }
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit() {
+      var input = this.state.input;
+      var assignTo = "";
+      if (input.indexOf(")") < input.indexOf("(") || input.lastIndexOf(")") < input.lastIndexOf("(")) {
+        this.error("ERROR 5: INVALID EXPRESSION");
+        return;
+      }
+      //Check for missing
+      var leftCount = 0;
+      var rightCount = 0;
+      for (var i = 0; i < input.length; i++) {
+        if (input[i] == "(") leftCount++;
+        if (input[i] == ")") rightCount++;
+      }
+      if (leftCount < rightCount) {
+        this.setState({ error: 'ERROR 6: MISSING "(" ' });
+        return;
+      }
+      if (leftCount > rightCount) {
+        this.setState({ error: 'ERROR 6: MISSING ")" ' });
+        return;
+      }
+      if (/[ABCDEFGHIJKLMNOPQRSTUVWXYZeπ]/g.test(input)) {
+        var letterCheck = input.split(/[^ABCDEFGHIJKLMNOPQRSTUVWXYZeπ]/);
+        //check for letter clusteres
+        var letterCount = 0;
+        var undefinedCount = 0;
+        var undefinedVar = "";
+        for (var l = 0; l < letterCheck.length; l++) {
+          if (letterCheck[l].length > 1) {
+            this.setState({ error: "ERROR 7: MISSING OPERATORS" });
+            return;
+          }
+          if (letterCheck[l] != "") {
+            var check = false;
+            for (var v = 0; v < this.state.vars.length; v++) {
+              if (this.state.vars[v].name == letterCheck[l]) check = true;
+            }
+            if (!check) {
+              undefinedCount++;
+              undefinedVar = letterCheck[l];
+            }
+            letterCount++;
+          }
+        }
+        if ((undefinedCount == 1 || letterCount == 1) && input.indexOf("=") != -1) {
+          console.log("TRYING TO ASSIGN VARIABLE");
+          var assignment = input.split("=");
+          if (assignment[0].length != 1 && assignment[1].length != 1) {
+            this.error("ERROR 8: INVALID ASSIGNEMENT");
+            return;
+          } else if (this.opsCheck(assignment[0]) || this.opsCheck(assignment[1]) || this.altOpsCheck(assignment[0]) || this.altOpsCheck(assignment[0])) {
+            this.error("ERROR 8: INVALID ASSIGNEMENT");
+            return;
+          } else if (assignment[0].length != 1 && assignment[1].length != 1 && (assignment[0].length == 1 && this.numCheck(assignment[0]) || assignment[1].length == 1 && this.numCheck(assignment[1]))) {
+            this.error("ERROR 8: INVALID ASSIGNEMENT");
+            return;
+          } else {
+            console.log("undefined var " + undefinedVar);
+            if (assignment[0].length == 1 && undefinedVar == assignment[0]) {
+              assignTo = assignment[0];
+              input = assignment[1];
+            } else if (undefinedVar == assignment[1]) {
+              assignTo = assignment[1];
+              input = assignment[0];
+            } else {
+              this.error("ERROR 9: INVALID ASSIGNMENT");
+              return;
             }
           }
         } else {
-          printOut.push({ total: false, print: spacedEquation });
+          for (var m = 0; m < letterCheck.length; m++) {
+            var _check = false;
+            if (letterCheck[m] == "") _check = true;
+            for (var n = 0; n < this.state.vars.length; n++) {
+              if (this.state.vars[n].name == letterCheck[m]) _check = true;
+            }
+            if (!_check) {
+              this.error("ERROR 10: " + letterCheck[m] + " IS UNDEFINED");
+              return;
+            }
+          }
         }
-        printOut.push({ total: true, print: "TOTAL: " + results[i].result });
+      } else if (input.indexOf("=") != -1) {
+        this.error("ERROR 11: INVALID ASSIGNMENT");
+        return;
       }
-      while (printOut.length < 22) {
-        printOut.unshift({ total: false, print: "" });
+      console.log("looks good to me!");
+      if (this.opsCheck(input[input.length - 1]) || this.altOpsCheck(input[input.length - 1]) && input[input.length - 1] != ")") {
+        this.error("ERROR 16: INVALID EXPRESSION");
+        return;
       }
-      while (printOut.length >= 20) {
-        printOut.shift();
+      var split = input.split("");
+      var arr = [];
+      var num = "";
+      //Put everything into an array
+      while (split.length > 0) {
+        var last = arr[arr.length - 1];
+        if (this.opsCheck(split[0]) || this.altOpsCheck(split[0])) {
+          if (num != "") {
+            arr.push(parseFloat(num));
+            num = "";
+          }
+          arr.push(split.shift());
+        } else if (this.numCheck(split[0]) || split[0] == ".") {
+          num += split.shift();
+        } else if (/[sct]/.test(split[0])) {
+          var op = split.shift();
+          op += split.shift();
+          op += split.shift();
+          if (split[0] == "-") {
+            op += split.shift();
+            op += split.shift();
+          }
+          arr.push(op);
+        } else if (split[0] == "l") {
+          var _op = split.shift();
+          _op += split.shift();
+          if (_op.indexOf("n") == -1) _op += split.shift();
+          arr.push(_op);
+        } else if (/[ABCDEFGHIJKLMNOPQRSTUVWXYZeπ]/.test(split[0])) {
+          var letter = split.shift();
+          if (num != "") {
+            arr.push(parseFloat(num));
+            num = "";
+            arr.push("×");
+          }
+          for (var _v = 0; _v < this.state.vars.length; _v++) {
+            if (this.state.vars[_v].name == letter) arr.push(this.state.vars[_v].value);
+          }
+          if (split[0] != undefined && (this.numCheck(split[0]) || split[0] == "(" || /[ABCDEFGHIJKLMNOPQRSTUVWXYZeπ]/.test(split[0]))) arr.push("×");
+        } else arr.push(split.shift());
+        var pushed = arr[arr.length - 1];
+        if (!this.opsCheck(pushed) && !this.altOpsCheck(pushed) && split[0] == "(" || pushed == ")" && split[0] == "(" || pushed == ")" && split.length > 0 && !this.opsCheck(split[0]) && !this.altOpsCheck(split[0]) || (typeof pushed == 'number' || num != "") && split[0] == "(") {
+          if (num != "") {
+            arr.push(parseFloat(num));
+            num = "";
+          }
+          arr.push("×");
+        }
       }
-      return printOut;
+      if (num != "") arr.push(parseFloat(num));
+      this.rpn(arr, assignTo);
+      //console.log(arr);
     }
   }, {
-    key: "doMath",
-    value: function doMath(str) {
-      var operators = str.split(/(\d+\.?\d*)?/);
-      if (operators[0] != "-") operators.shift();
-      operators.pop();
-      var total = 0;
-      while (operators.length > 0) {
-        if (/[\+\*\/-]/.test(operators[0])) {
-          var sign = operators[0];
-          operators.shift();
-          if (sign == "+") total += parseFloat(operators[0]);
-          if (sign == "-") total -= parseFloat(operators[0]);
-          if (sign == "/") total /= parseFloat(operators[0]);
-          if (sign == "*") total *= parseFloat(operators[0]);
-          operators.shift();
+    key: "rpn",
+    value: function rpn(arr, to) {
+      console.log("trying to reverse polish");
+      console.log(arr);
+      //https://en.wikipedia.org/wiki/Shunting-yard_algorithm
+      var queue = [];
+      var stack = [];
+      while (arr.length > 0) {
+        if (!this.opsCheck(arr[0]) && !this.altOpsCheck) {
+          queue.push(arr.shift());
+        } else if (this.PEDMAS(arr[0]) < 5) {
+          if (stack.length != 0) {
+            while (stack.length > 0 && this.PEDMAS(stack[stack.length - 1]) >= this.PEDMAS(arr[0])) {
+              queue.push(stack.pop());
+            }
+          }
+          stack.push(arr.shift());
+        }
+        //3+4*2/(1-5)^2^3 https://en.wikipedia.org/wiki/Reverse_Polish_notation
+        else {
+            if (arr[0] == ")") {
+              this.error("ERROR 12: INVALID EXPRESSION");
+              return;
+            }
+            stack.push(arr.shift());
+            while (stack.indexOf("(") != -1) {
+              while (arr[0] != ")") {
+                if (this.opsCheck(arr[0]) || this.altOpsCheck(arr[0])) {
+                  if (stack[stack.length - 1] != "(" && this.PEDMAS(arr[0]) < this.PEDMAS(stack[stack.length - 1])) queue.push(stack.pop());
+                  stack.push(arr.shift());
+                } else queue.push(arr.shift());
+              }
+              arr.shift();
+              while (stack[stack.length - 1] != "(") {
+                queue.push(stack.pop());
+              }
+              stack.pop();
+            }
+          }
+      }
+      while (stack.length > 0) {
+        queue.push(stack.pop());
+      }
+      console.log(queue);
+      this.solve(queue, to);
+    }
+  }, {
+    key: "doTheMath",
+    value: function doTheMath(a, b, operator) {
+      console.log("doing the math " + a + " " + operator + " " + b);
+      switch (operator) {
+        case "^":
+          return Math.pow(a, b);
+        case "÷":
+          {
+            if (b == 0) {
+              this.error("ERROR 13: DIVIDE BY 0");
+              return "ERROR 13: DIVIDE BY 0";
+            } else return a / b;
+          }
+        case "+":
+          return a + b;
+        case "-":
+          return a - b;
+        case "×":
+          return a * b;
+        default:
+          {
+            console.log("whoops, you broke it");
+            return false;
+          }
+      }
+    }
+  }, {
+    key: "solve",
+    value: function solve(arr, to) {
+      console.log("trying to solve");
+      var stack = [];
+      for (var i = 0; i < arr.length; i++) {
+        if (!this.opsCheck(arr[i]) && !this.altOpsCheck(arr[i])) stack.push(arr[i]);else if (this.altOpsCheck(arr[i])) {
+          if (stack.length > 0) stack[stack.length - 1] = this.doMoreMath(stack[stack.length - 1], arr[i]);else stack[0] = this.doMoreMath(0, arr[i]);
         } else {
-          total += parseFloat(operators[0]);
-          operators.shift();
+          var b = stack.pop();
+          var a = 0;
+          if (stack.length > 0) a = stack.pop();
+          stack.push(this.doTheMath(a, b, arr[i]));
         }
       }
-      console.log("Solution: " + total);
-      if (total % 1 != 0) total = parseFloat(total.toFixed(8));
-      if (total.toString().length > 14) this.setState({ display: "ERR. OVERFLOW", equation: "" });else {
-        var results = this.state.results;
-        results.push({ equation: this.state.equation + this.state.display, result: total });
-        this.setState({ display: total.toString(), equation: "", results: results, solved: true });
+      console.log(stack);
+      if (stack.length > 1 || this.state.error != "" || stack.length == 0) {
+        this.error("ERROR 14: INVALID EQUATION");
+      } else if (this.state.error == "") {
+        var eq = [];
+        var line = "";
+        for (var o = 0; o < this.state.input.length; o++) {
+          if (o < 29) line += this.state.input[o];else {
+            eq.push({ line: line, style: "left", type: "out" });
+            line = this.state.input[o];
+          }
+        }
+        if (line != "") eq.push({ line: line, style: "left", type: "out" });
+        eq.push({ line: stack[0].toString(), style: "right", type: "out" });
+        var output = this.state.output;
+        while (eq.length > 0) {
+          output.push(eq.shift());
+          if (output.length > 5) output.shift();
+        }
+        console.log(JSON.stringify(output));
+        var vars = this.state.vars;
+        if (to != "") {
+          console.log("assigning " + stack[0].toString() + " to " + to);
+          vars.push({ name: to, value: stack[0] });
+        }
+        this.setState({ output: output, input: "", vars: vars });
       }
     }
   }, {
-    key: "handleChange",
-    value: function handleChange(e) {
-      var total = 0;
-      if (e.target.name == "=") {
-        var wholeThing = this.state.equation + this.state.display;
-        if (/[\+\*\/-]/.test(wholeThing[wholeThing.length - 1])) return false;
-        if (wholeThing.length < 1) return false;
-        this.doMath(wholeThing);
-        return false;
+    key: "numCheck",
+    value: function numCheck(str) {
+      switch (str) {
+        case "9":
+          return true;
+        case "8":
+          return true;
+        case "7":
+          return true;
+        case "6":
+          return true;
+        case "5":
+          return true;
+        case "4":
+          return true;
+        case "3":
+          return true;
+        case "2":
+          return true;
+        case "1":
+          return true;
+        case "0":
+          return true;
+        default:
+          return false;
       }
-      if (e.target.name == "AC") {
-        this.setState({ display: "", equation: "" });
-      } else if (e.target.name == "CE") {
-        this.setState({ display: "" });
+    }
+  }, {
+    key: "PEDMAS",
+    value: function PEDMAS(str) {
+      switch (str) {
+        case "sin":
+          return 4;
+        case "cos":
+          return 4;
+        case "tan":
+          return 4;
+        case "sin-1":
+          return 4;
+        case "cos-1":
+          return 4;
+        case "tan-1":
+          return 4;
+        case "log":
+          return 4;
+        case "ln":
+          return 4;
+        case "√":
+          return 4;
+        case "^":
+          return 3;
+        case "÷":
+          return 2;
+        case "+":
+          return 1;
+        case "-":
+          return 1;
+        case "×":
+          return 2;
+        default:
+          return 5;
+      }
+    }
+  }, {
+    key: "altOpsCheck",
+    value: function altOpsCheck(str) {
+      switch (str) {
+        case "√":
+          return true;
+        case "(":
+          return true;
+        case ")":
+          return true;
+        case "sin":
+          return true;
+        case "cos":
+          return true;
+        case "tan":
+          return true;
+        case "sin-1":
+          return true;
+        case "cos-1":
+          return true;
+        case "tan-1":
+          return true;
+        case "log":
+          return true;
+        case "ln":
+          return true;
+        default:
+          return false;
+      }
+    }
+  }, {
+    key: "doMoreMath",
+    value: function doMoreMath(a, operator) {
+      console.log("doing more math " + operator + " of " + a);
+      switch (operator) {
+        case "√":
+          return Math.sqrt(a);
+        case "sin":
+          return Math.sin(a);
+        case "cos":
+          return Math.cos(a);
+        case "tan":
+          return Math.tan(a);
+        case "sin-1":
+          return Math.asin(a);
+        case "cos-1":
+          return Math.acos(a);
+        case "tan-1":
+          return Math.atan(a);
+        case "ln":
+          return Math.log(a);
+        case "log":
+          return Math.log(a) / Math.log(10);
+        default:
+          return false;
+      }
+    }
+  }, {
+    key: "opsCheck",
+    value: function opsCheck(str) {
+      switch (str) {
+        case "÷":
+          return true;
+        case "+":
+          return true;
+        case "-":
+          return true;
+        case "×":
+          return true;
+        case "^":
+          return true;
+        default:
+          return false;
+      }
+    }
+  }, {
+    key: "inputToScreen",
+    value: function inputToScreen() {
+      //7 lines
+      //30 character
+      var output = [];
+      for (var i = 0; i < this.state.output.length; i++) {
+        output.push(this.state.output[i]);
+      }
+      while (output.length > 6) {
+        output.shift();
+      }
+      var input = this.state.input;
+      var line = "";
+      for (var _i = 0; _i < input.length; _i++) {
+        if (line.length < 29) line += input[_i];else {
+          output.push({ line: line, style: "left", type: "in" });
+          if (output.length > 6 && output[0].type == "out") output.shift();
+          line = input[_i];
+        }
+      }
+      output.push({ line: line, style: "left", type: "in" });
+      if (output.length > 6 && output[0].type == "out") output.shift();
+      if (output.length <= 6) {
+        while (output.length < 6) {
+          output.push({ line: "" });
+        }
+        //console.log(output);
+        output.push({ line: this.state.error, type: "in", style: "left" });
+        return output;
       } else {
-        var display = this.state.display;
-        var equation = this.state.equation;
-        if (display == "ERR. OVERFLOW" || display == "NaN" || display == "Infinity") display = "";else if (display.length + 1 > 14 && !/[\+\*\/-]/.test(e.target.name)) {
-          this.setState({ display: "ERR. OVERFLOW", equation: "" });
-          return false;
-        }
-        if (/[\+\*\/-]/.test(e.target.name) && /[\+\*\/-]/.test(display)) {
-          var splitEq = equation.split("");
-          splitEq[splitEq.length - 1] = e.target.name;
-          equation = splitEq.join("");
-          this.setState({ display: e.target.name, equation: equation });
-          return false;
-        }
-        if (/[\+\*\/]/.test(e.target.name) && display.length == 0) return false;
-        if (/[\+\*\/-]/.test(e.target.name)) {
-          equation += display + e.target.name;
-          display = "";
-        }
-        if (/[\+\*\/-]/.test(display)) {
-          display = "";
-        }
-        if (display.length == 0 && e.target.name == ".") display += "0";
-        if (this.state.solved && !/[\+\*\/-]/.test(display)) {
-          display = e.target.name;
-          this.setState({ display: display, equation: equation, solved: false });
-        } else {
-          display += e.target.name;
-          this.setState({ display: display, equation: equation });
-        }
+        this.error("ERROR, OVERFLOW");
+        this.setState({ input: "" });
       }
     }
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
-        { className: "text-center container-fluid cal-mid " },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "game-space" }),
+        { className: "text-center container-fluid cal-body" },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "div",
-          { className: "row" },
+          "center",
+          null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
-            { className: "col-md-6" },
+            { className: "calc-pad" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "div",
-              { className: "paper" },
-              this.thePaper().map(function (d, i) {
-                return i % 2 == 0 ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  "div",
-                  { className: d.total ? "text-right evens" : "text-left evens", key: i },
-                  d.print
-                ) : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  "div",
-                  { className: d.total ? "text-right odds" : "text-left odds", key: i },
-                  d.print
-                );
-              })
-            )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            { className: "col-md-6" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              "div",
-              { className: "calc" },
+              { className: "calc-body text-center container-fluid" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
-                { className: "screen-pad" },
+                { className: "calc-logo calc-num" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "div",
-                  { className: "screen middle-text" },
+                  { className: "row" },
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "h1",
-                    { className: this.state.display.length < 1 ? "cal-h1 black-text" : "cal-h1" },
-                    this.state.display.length > 0 ? this.state.display : '*'
+                    "div",
+                    { className: "col-sm-6 text-left calc-brand" },
+                    "Cap'm Pedma's"
                   ),
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "h5",
-                    { className: this.state.equation.length < 1 ? "cal-h1 back black-text" : "cal-h1 back" },
-                    this.state.equation.length > 27 ? this.state.equation.substr(this.state.equation.length - 27, this.state.equation.length - 1) : this.state.equation.length > 0 ? this.state.equation : "*"
+                    "div",
+                    { className: "col-sm-6 text-right calc-brand" },
+                    "HMS-469"
                   )
                 )
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
-                { className: "cal-buttons" },
+                { className: "calc-shadow" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "div",
-                  { className: "row" },
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "col-sm-3 cal-col cal-left" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      "button",
-                      { className: "btn btn-block ac cal-btn",
-                        name: "AC",
-                        onClick: this.handleChange },
-                      "AC"
-                    )
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "col-sm-3 cal-col left cal-right" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      "button",
-                      { className: "btn btn-block ce cal-btn",
-                        name: "CE",
-                        onClick: this.handleChange },
-                      "CE"
-                    )
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "col-sm-3 cal-col cal-right" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      "button",
-                      { className: "btn btn-block func cal-btn",
-                        name: "/",
-                        onClick: this.handleChange },
-                      "/"
-                    )
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "col-sm-3 cal-col cal-left cal-right" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      "button",
-                      { className: "btn btn-block func cal-btn",
-                        name: "*",
-                        onClick: this.handleChange },
-                      "*"
-                    )
-                  )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  "div",
-                  { className: "row" },
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "col-sm-3 cal-col cal-left" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      "button",
-                      { className: "btn btn-block cal-btn",
-                        name: "7",
-                        onClick: this.handleChange },
-                      "7"
-                    )
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "col-sm-3 cal-col cal-left cal-right" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      "button",
-                      { className: "btn btn-block cal-btn",
-                        name: "8",
-                        onClick: this.handleChange },
-                      "8"
-                    )
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "col-sm-3 cal-col cal-left cal-right" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      "button",
-                      { className: "btn btn-block cal-btn",
-                        name: "9",
-                        onClick: this.handleChange },
-                      "9"
-                    )
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "col-sm-3 cal-col cal-right" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      "button",
-                      { className: "btn btn-block func cal-btn",
-                        name: "-",
-                        onClick: this.handleChange },
-                      "-"
-                    )
-                  )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  "div",
-                  { className: "row" },
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "col-sm-3 cal-col cal-left" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      "button",
-                      { className: "btn btn-block cal-btn",
-                        name: "4",
-                        onClick: this.handleChange },
-                      "4"
-                    )
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "col-sm-3 cal-col cal-left cal-right" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      "button",
-                      { className: "btn btn-block cal-btn",
-                        name: "5",
-                        onClick: this.handleChange },
-                      "5"
-                    )
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "col-sm-3 cal-col cal-left cal-right" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      "button",
-                      { className: "btn btn-block cal-btn",
-                        name: "6",
-                        onClick: this.handleChange },
-                      "6"
-                    )
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "col-sm-3 cal-col cal-right" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      "button",
-                      { className: "btn btn-block func cal-btn",
-                        name: "+",
-                        onClick: this.handleChange },
-                      "+"
-                    )
-                  )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  "div",
-                  { className: "row" },
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "col-sm-3 cal-col cal-left" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      "button",
-                      { className: "btn btn-block cal-btn",
-                        name: "1",
-                        onClick: this.handleChange },
-                      "1"
-                    )
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "col-sm-3 cal-col cal-left cal-right" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      "button",
-                      { className: "btn btn-block cal-btn",
-                        name: "2",
-                        onClick: this.handleChange },
-                      "2"
-                    )
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "col-sm-3 cal-col cal-left cal-right" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      "button",
-                      { className: "btn btn-block cal-btn",
-                        name: "3",
-                        onClick: this.handleChange },
-                      "3"
-                    )
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "col-sm-3 cal-col cal-right" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      "button",
-                      { className: "btn btn-block equals cal-btn",
-                        name: "=",
-                        onClick: this.handleChange },
-                      "="
-                    )
-                  )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  "div",
-                  { className: "row bot" },
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "col-sm-6 cal-col cal-left" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      "button",
-                      { className: "btn btn-block cal-btn",
-                        name: "0",
-                        onClick: this.handleChange },
-                      "0"
-                    )
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "col-sm-3 cal-col cal-left cal-right" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      "button",
-                      { className: "btn btn-block cal-btn",
-                        name: ".",
-                        onClick: this.handleChange },
-                      "."
-                    )
-                  )
+                  { className: "calc-screen" },
+                  this.inputToScreen().map(function (d, i) {
+                    return d.line != "" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      "div",
+                      { key: "line " + i, className: "calc-" + d.style },
+                      d.line
+                    ) : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null);
+                  })
                 )
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "calc-buttons" },
+                this.state.buttons.map(function (d, i) {
+                  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { key: "row " + i, className: "row" },
+                    d.map(function (dd, ii) {
+                      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "div",
+                        { className: "col calc-pos-" + ii },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                          "button",
+                          { className: "btn calc-btn calc-" + dd.type,
+                            value: dd.name,
+                            smol: dd.smol,
+                            onClick: _this2.handleInput },
+                          dd.name
+                        )
+                      );
+                    })
+                  );
+                })
               )
             )
           )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "game-space" })
+        )
       );
     }
   }]);
@@ -13932,6 +14172,12 @@ var _temp = function () {
   if (typeof __REACT_HOT_LOADER__ === 'undefined') {
     return;
   }
+
+  __REACT_HOT_LOADER__.register(buttons2, "buttons2", "/home/ubuntu/workspace/src/containers/calculator.js");
+
+  __REACT_HOT_LOADER__.register(buttons, "buttons", "/home/ubuntu/workspace/src/containers/calculator.js");
+
+  __REACT_HOT_LOADER__.register(letters, "letters", "/home/ubuntu/workspace/src/containers/calculator.js");
 
   __REACT_HOT_LOADER__.register(Calc, "Calc", "/home/ubuntu/workspace/src/containers/calculator.js");
 
@@ -16086,25 +16332,34 @@ var CalcAbout = function CalcAbout() {
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'proj-head' },
-        'One of FreeCodeCamp\u2019s earliest projects is to build a four function ',
+        'One of r/dailyprogrammer\'s challenges was a ',
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'strong',
           { onClick: function onClick() {
-              return window.open("https://www.freecodecamp.org/challenges/build-a-javascript-calculator");
+              return window.open("https://www.reddit.com/r/dailyprogrammer/comments/7096nu/20170915_challenge_331_hard_interactive/");
             }, title: 'Open in New Window' },
-          'Calculator ',
+          'Interactive Interpreter ',
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-external-link' })
         ),
-        '. I thought I\u2019d make a new one with a few exciting upgrades:'
+        '. After using the ',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'strong',
+          { onClick: function onClick() {
+              return window.open("https://en.wikipedia.org/wiki/Shunting-yard_algorithm");
+            } },
+          'Shunting-Yard Algorithm ',
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-external-link' })
+        ),
+        ' to complete the challenge, I used it to make a scientific calculator.'
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'beige' },
-        '\u2605 Users can use the number pad on their computer keyboard to use the calculator without having to click the buttons.',
+        '\u2605 Users enter in equations and receive an answer that follows order of operations.',
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-        '\u2605 Solved equations print out on the piece of computer paper to the right',
+        '\u2605 Users can store variables to be used later (Shift)',
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-        '\u2605 Answers longer than the screen of the calculator will show an error.'
+        '\u2605 Users will recieve an error if they enter an invalid equation.'
       )
     )
   );

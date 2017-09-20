@@ -620,124 +620,112 @@ iframe
   background-size: cover;
   border-radius: 10px;
 }
-.calc
-{
-  background-color: #e5e0bc;
-  width: 350px;
-  height: 468px;
-  border-radius: 20px;
-  box-shadow: 3px 3px 3px black,
-              -1px 1px 1px gray,
-              1px -1px 1px gray,
-              -1px -1px 1px gray;
-
-}
-.screen
-{
-  background-color: black;
-  width: 100%;
-  height: 100px;
-  border-radius: 10px;
-  text-align: right;
-}
-.paper
-{
-  margin-left: 25px;
-  background-color: #eaf2ea;
-  width: 350px;
-  height: 468px;
-  padding: 10px;
-  font-family: "Share Tech Mono";
-  box-shadow: 3px 0px 3px gray,
-              -3px 0px 3px gray;
-}
-.odds
-{
-  background-color: #d7edd5;
-  min-height: 24px;
-}
-.evens
-{
-  background-color: #dce2dc;
-  min-height: 24px;
-}
-.cal-mid
-{
-  max-width: 800px;
-}
-.cal-buttons
-{
-  margin-top: -30px;
-  padding: 30px;
-}
-.cal-col
-{
-  margin-top: 6px;
-}
-.cal-right
-{
-  margin-left: 0px;
-  padding-left: 3px;
-  margin-right: 0px;
-  padding-right: 3px;
-}
-.cal-left
-{
-  margin-right: 0px;
-  padding-right: 3px;
-  margin-left: 0px;
-  padding-left: 3px;
-}
-.cal-btn
-{
-  box-shadow: 1px 1px 1px black,
-              -1px 1px 1px #ccc7a7,
-              1px -1px 1px #ccc7a7,
-              -1px -1px 1px #ccc7a7;
-  height: 60px;
-  font-family: "Righteous";
-  background-color: white;
-}
-.screen-pad
-{
-  padding: 16px;
-  padding-bottom: 5px !important;
-}
-.equals
-{
-    height: 125px;
-}
-.bot
-{
-  margin-top: -65px;
-}
-.ce
-{
-  background-color: #79b773;
+.calc-func{
+  background-color: #524f87;
   color: white;
 }
-.ac
-{
-  background-color: #ad7070;
+.calc-smol{
+  vertical-align: top;
+  font-size: 60%;
+}
+.calc-sci{
+  background-color: #1e1e1e;
   color: white;
 }
-.equals
-{
-  background-color: #9a97c4;
-  color: white;
-}
-.func
-{
-  background-color: #7d98ce;
+.calc-ops{
+  background-color: #2053aa;
   color: white;
   font-size: 125%;
 }
-.cal-h1
-{
-  font-family: "Share Tech Mono";
-  color: green;
-  margin-right: 10px;
-  margin-left:10px;
+.calc-red{
+  background-color: #9b2929;
+  color: white;
+}
+.calc-num{
+  background-color: #b9baae;
+  color: black;
+}
+.calc-other{
+  background-color: #1e1e1e;
+  color: white;
+}
+.calc-letter{
+   background-color: #2053aa;
+   color: white;
+}
+.calc-pad{
+  padding: 35px;
+}
+.calc-pos-0{
+  padding-right: 0px;
+  margin-right: 0px;
+}
+.calc-pos-1,.calc-pos-2,.calc-pos-3,.calc-pos-4{
+  padding-right: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.calc-pos-5{
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.calc-btn{
+  margin-top: 5px;
+  width: 55px;
+  height: 45px;
+  padding-left: 0px;
+  padding-right: 0px;
+  font-family: "Saira";
+  box-shadow: 1px 1px 1px black;
+}
+.calc-buttons{
+  margin-top: 10px;
+  max-width: 300px;
+}
+.calc-screen{
+  border: 1px solid black;
+  width: 307px;
+  height: 172px;
+  margin-left: 4px;
+  margin-top: 10px;
+  background-color: #afafaf;
+  border-radius: 3px;
+  text-align: left;
+  padding: 5px;
+  padding-top: 3px;
+  padding-left: 3px;
+  font-family: "Roboto Mono";
+}
+.calc-logo{
+  margin: 3px;
+  margin-top: -4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #919187;
+  color: black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-shadow: 1px 1px 1px gray;
+  border: solid black 1px;
+}
+.calc-body{
+  background-color: #4f4f4f;
+  border: solid black 1px;
+  max-width: 345px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px black,
+              -1px 1px 1px black,
+              1px -1px 1px black,
+              -1px -1px 1px black;
+}
+.calc-right{
+  text-align: right;
+}
+.calc-brand{
+  font-family: "Lobster";
 }
 .middle-text
 {

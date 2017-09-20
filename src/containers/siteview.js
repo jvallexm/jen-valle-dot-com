@@ -246,12 +246,12 @@ const CalcAbout= () =>{
             </div>
             <div>
                 <div className="proj-head">  
-                 One of FreeCodeCamp’s earliest projects is to build a four function <strong onClick={()=>window.open("https://www.freecodecamp.org/challenges/build-a-javascript-calculator")} title="Open in New Window">Calculator <i className="fa fa-external-link"/></strong>. I thought I’d make a new one with a few exciting upgrades:
+                 One of r/dailyprogrammer's challenges was a <strong onClick={()=>window.open("https://www.reddit.com/r/dailyprogrammer/comments/7096nu/20170915_challenge_331_hard_interactive/")}title="Open in New Window" >Interactive Interpreter <i className="fa fa-external-link"/></strong>. After using the <strong onClick={()=>window.open("https://en.wikipedia.org/wiki/Shunting-yard_algorithm")}>Shunting-Yard Algorithm <i className="fa fa-external-link"/></strong> to complete the challenge, I used it to make a scientific calculator.
                 </div>
                 <div className="beige">
-                    ★ Users can use the number pad on their computer keyboard to use the calculator without having to click the buttons.<br/>
-                    ★ Solved equations print out on the piece of computer paper to the right<br/>
-	        ★ Answers longer than the screen of the calculator will show an error.
+                    ★ Users enter in equations and receive an answer that follows order of operations.<br/>
+                    ★ Users can store variables to be used later (Shift)<br/>
+	                ★ Users will recieve an error if they enter an invalid equation.
                 </div>    
             </div>
       </div>     
