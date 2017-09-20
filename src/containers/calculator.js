@@ -232,7 +232,7 @@ export default class Calc extends React.Component{
         }
         else
         {
-          this.setState({error: 'ERROR 3: MULTIPLE "="'})
+          this.setState({error: 'ERROR 3: MULTIPLE "="'});
           return;
         }
       }
@@ -597,29 +597,6 @@ export default class Calc extends React.Component{
     console.log(queue);
     this.solve(queue,to);
   }
-  doTheMath(a,b,operator)
-  {
-    console.log("doing the math " + a + " " + operator + " " + b);
-    switch(operator){
-       case "^": return Math.pow(a,b);
-       case "÷": {
-         if(b==0)
-         {
-           this.error("ERROR 13: DIVIDE BY 0");
-           return "ERROR 13: DIVIDE BY 0";
-         }
-         else  
-          return a/b;
-       }  
-       case "+": return a+b;
-       case "-": return a-b;
-       case "×": return a*b;
-      default : {
-        console.log("whoops, you broke it");
-        return false;
-      }  
-    }
-  }
   solve(arr,to)
   {
     console.log("trying to solve");
@@ -750,6 +727,29 @@ export default class Calc extends React.Component{
       case "log": return Math.log(a)/Math.log(10);
       default : return false;
     }    
+  }
+  doTheMath(a,b,operator)
+  {
+    console.log("doing the math " + a + " " + operator + " " + b);
+    switch(operator){
+       case "^": return Math.pow(a,b);
+       case "÷": {
+         if(b==0)
+         {
+           this.error("ERROR 13: DIVIDE BY 0");
+           return "ERROR 13: DIVIDE BY 0";
+         }
+         else  
+          return a/b;
+       }  
+       case "+": return a+b;
+       case "-": return a-b;
+       case "×": return a*b;
+      default : {
+        console.log("whoops, you broke it");
+        return false;
+      }  
+    }
   }
   opsCheck(str)
   {
