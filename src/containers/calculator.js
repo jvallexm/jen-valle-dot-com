@@ -469,6 +469,11 @@ export default class Calc extends React.Component{
       }
       else if(this.numCheck(split[0]) || split[0]== ".")
       {
+        if(split[0]=="." && num.indexOf(".")!=-1)
+        {
+          this.error('ERROR 17: MULTIPLE "."');
+          return;
+        }
         num+=split.shift();  
       }  
       else if(/[sct]/.test(split[0]))

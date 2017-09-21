@@ -13749,6 +13749,10 @@ var Calc = function (_React$Component) {
           }
           arr.push(split.shift());
         } else if (this.numCheck(split[0]) || split[0] == ".") {
+          if (split[0] == "." && num.indexOf(".") != -1) {
+            this.error('ERROR 17: MULTIPLE "."');
+            return;
+          }
           num += split.shift();
         } else if (/[sct]/.test(split[0])) {
           var op = split.shift();
@@ -13835,33 +13839,6 @@ var Calc = function (_React$Component) {
       }
       console.log(queue);
       this.solve(queue, to);
-    }
-  }, {
-    key: "doTheMath",
-    value: function doTheMath(a, b, operator) {
-      console.log("doing the math " + a + " " + operator + " " + b);
-      switch (operator) {
-        case "^":
-          return Math.pow(a, b);
-        case "÷":
-          {
-            if (b == 0) {
-              this.error("ERROR 13: DIVIDE BY 0");
-              return "ERROR 13: DIVIDE BY 0";
-            } else return a / b;
-          }
-        case "+":
-          return a + b;
-        case "-":
-          return a - b;
-        case "×":
-          return a * b;
-        default:
-          {
-            console.log("whoops, you broke it");
-            return false;
-          }
-      }
     }
   }, {
     key: "solve",
@@ -14025,6 +14002,33 @@ var Calc = function (_React$Component) {
           return Math.log(a) / Math.log(10);
         default:
           return false;
+      }
+    }
+  }, {
+    key: "doTheMath",
+    value: function doTheMath(a, b, operator) {
+      console.log("doing the math " + a + " " + operator + " " + b);
+      switch (operator) {
+        case "^":
+          return Math.pow(a, b);
+        case "÷":
+          {
+            if (b == 0) {
+              this.error("ERROR 13: DIVIDE BY 0");
+              return "ERROR 13: DIVIDE BY 0";
+            } else return a / b;
+          }
+        case "+":
+          return a + b;
+        case "-":
+          return a - b;
+        case "×":
+          return a * b;
+        default:
+          {
+            console.log("whoops, you broke it");
+            return false;
+          }
       }
     }
   }, {
