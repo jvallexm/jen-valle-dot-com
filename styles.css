@@ -74,6 +74,9 @@ body{
   padding: 20px;
   color:white;
 }
+.about-squeeze{
+  max-width: 800px;
+}
 .sec-squeeze{
   max-width: 1200px;
 }
@@ -427,7 +430,7 @@ body{
   max-width: 345px;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 3px 3px 3px black,
               -1px 1px 1px black,
               1px -1px 1px black,

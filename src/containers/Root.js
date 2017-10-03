@@ -10,6 +10,7 @@ export default class App extends React.Component{
     this.state = {
       gray: false,
       view: undefined,
+      viewName: undefined,
       buttons: [
         {
           name: "github",
@@ -30,11 +31,11 @@ export default class App extends React.Component{
   }
   closeOut()
   {
-    this.setState({gray: false, view: undefined});
+    this.setState({gray: false, view: undefined, viewName: undefined});
   }
-  grayOut(view)
+  grayOut(view,name)
   {
-    this.setState({gray: true, view: view});
+    this.setState({gray: true, view: view,viewName: name});
   }
   render()
   {
@@ -43,7 +44,7 @@ export default class App extends React.Component{
         {this.state.gray?
         <div id="gray-out">
               
-            <SiteView view={this.state.view} close={this.closeOut}/>
+            <SiteView view={this.state.view} name={this.state.viewName} close={this.closeOut}/>
 
         </div>  
         :""}  
@@ -85,7 +86,7 @@ export default class App extends React.Component{
 
 const About = ()=> {
   return(
-    <div id={"about"} className="text-center container-fluid sec-squeeze">
+    <div id={"about"} className="text-center container-fluid about-squeeze">
       <div>
         <h3>About</h3>
         Jennifer Valle is a web developer living in Durham, North Carolina. She works as the Social Media Director for #GeekCraftExpo. In her free time, she's a musician, amateur board game designer, and a comic book enthusiast. 
