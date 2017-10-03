@@ -29,6 +29,13 @@ export default class App extends React.Component{
     this.closeOut = this.closeOut.bind(this);
     this.grayOut  = this.grayOut.bind(this);
   }
+  componentDidMount()
+  {
+    document.addEventListener('keydown',(e)=>{
+      if(e.keyCode==27)
+        this.closeOut();
+    });
+  }
   closeOut()
   {
     this.setState({gray: false, view: undefined, viewName: undefined});

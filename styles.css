@@ -186,11 +186,12 @@ body{
 {
   background-color:#d0b5e2;
   border-radius: 10px;
+  height: 700px;
 }
 .game-box
 {
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   border: 1px #565656 solid;
 }
 .gradient
@@ -209,7 +210,7 @@ body{
 .game-h1
 {
   font-weight: bold;
-  font-family: 'permanent marker';
+  font-family: 'permanent marker'  !important;
 }
 .text-shadow-white
 {
@@ -222,7 +223,7 @@ body{
   margin-left: 5px;
   margin-right: 5px;
   color: white;
-  font-family: "permanent marker";
+  font-family: "permanent marker"  !important;
   box-shadow: 2px 2px 2px white;
 }
 .game-middle
@@ -232,6 +233,7 @@ body{
 .game-max
 {
   max-width: 625px;
+  max-height: 625px;
 }
 .game-space
 {
@@ -301,7 +303,7 @@ body{
 .dun-body
 {
   background-color:black;
-  font-family: 'VT323';
+  font-family: 'VT323'  !important;
   border-radius: 10px;
 }
 .dun-btn
@@ -333,7 +335,7 @@ body{
 {
   background-image: url(https://68.media.tumblr.com/83c7247f8eb2ace6fa312d206b96d664/tumblr_otv0imSaTL1wqft2so1_1280.jpg);
   background-size: cover;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .calc-func{
   background-color: #524f87;
@@ -391,7 +393,7 @@ body{
   height: 45px;
   padding-left: 0px;
   padding-right: 0px;
-  font-family: "Saira";
+  font-family: "Saira"  !important;
   box-shadow: 1px 1px 1px black;
 }
 .calc-buttons{
@@ -410,7 +412,7 @@ body{
   padding: 5px;
   padding-top: 3px;
   padding-left: 3px;
-  font-family: "Roboto Mono";
+  font-family: "Roboto Mono" !important;
 }
 .calc-logo{
   margin: 3px;
@@ -440,7 +442,7 @@ body{
   text-align: right;
 }
 .calc-brand{
-  font-family: "Lobster";
+  font-family: "Lobster"  !important;
 }
 .middle-text
 {
@@ -455,10 +457,6 @@ body{
 .margin-0
 {
   margin: 0 !important;
-}
-.beige
-{ 
-  border-radius: 10px;
 }
 .fa-heart
 {
