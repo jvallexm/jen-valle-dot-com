@@ -1,6 +1,7 @@
 import React from 'react';
 import Music from './modules/music.js';
 import { WebDev } from './modules/web.js';
+import { SiteView } from './modules/siteview.js';
 
 export default class App extends React.Component{
   constructor(props)
@@ -41,13 +42,9 @@ export default class App extends React.Component{
       <div id="whole-thing">
         {this.state.gray?
         <div id="gray-out">
-          <div className="site-wrapper text-center container-fluid">          
-             <div id="x-box">
-               <i className="fa fa-close"
-                  onClick={this.closeOut}/>
-             </div>    
-            <SiteView view={this.state.view}/>
-          </div>  
+              
+            <SiteView view={this.state.view} close={this.closeOut}/>
+
         </div>  
         :""}  
         <div id="head" className="section middle-text">
@@ -86,20 +83,7 @@ export default class App extends React.Component{
   }
 }
 
-class SiteView extends React.Component{
-  render()
-  {
-    return(
-      <div>
-        <iframe className="site-view"
-                    src="https://jen-valle-night-life.herokuapp.com/"/>
-
-      </div>   
-    )
-  }
-}
-
-const About = ()=>{
+const About = ()=> {
   return(
     <div id={"about"} className="text-center container-fluid sec-squeeze">
       <div>

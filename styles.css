@@ -17,7 +17,7 @@ body{
   position: fixed;
   background-color: rgba(200, 200, 200, .72);
   height: 100%;
-  width:100%;
+  min-width:100%;
   display: flex;
   justify-content: center;
   flex-direction: column;  
@@ -83,6 +83,14 @@ body{
 .head-squeeze{
   max-width: 1200px;
 }
+#x-box
+{
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  z-index: 10;
+  font-size: 125%;
+}
 .project{
   background-color: pink;
   min-height: 50px;
@@ -146,6 +154,7 @@ body{
 }
 .site-wrapper{
   background-color:white;
+  position: relative;
   padding: 20px;
   border-radius: 5px;
   width: 840px;
@@ -156,13 +165,7 @@ body{
 }
 .site-view{
   min-width: 800px;
-  min-height: 460px;
-  margin-bottom: -7px;
-}
-#x-box{
-  position: absolute;
-  top: calc(50% - 336px);
-  right: calc(50% - 414px);
+  min-height: 600px;
 }
 .smol{
   font-size: 90%;
