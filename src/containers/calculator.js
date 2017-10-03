@@ -518,7 +518,7 @@ export default class Calc extends React.Component{
       }
       else
         arr.push(split.shift());
-      let pushed = arr[arr.length-1]
+      let pushed = arr[arr.length-1];
       if( 
            (!this.opsCheck(pushed) && !this.altOpsCheck(pushed) && split[0]=="(")
         || ( pushed == ")" && split[0] == "(")
