@@ -13571,416 +13571,348 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 var SiteView = function (_React$Component) {
-    _inherits(SiteView, _React$Component);
+  _inherits(SiteView, _React$Component);
 
-    function SiteView(props) {
-        _classCallCheck(this, SiteView);
+  function SiteView(props) {
+    _classCallCheck(this, SiteView);
 
-        return _possibleConstructorReturn(this, (SiteView.__proto__ || Object.getPrototypeOf(SiteView)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (SiteView.__proto__ || Object.getPrototypeOf(SiteView)).call(this, props));
+
+    _this.state = {
+      loaded: false
+    };
+    return _this;
+  }
+
+  _createClass(SiteView, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "div",
+        { className: "site-wrapper text-center container-fluid" },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "div",
+          { id: "x-box" },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-close",
+            onClick: this.props.close })
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Night, null),
+        this.state.loaded ? "" : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "span",
+          null,
+          "Loading... ",
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-spinner fa-spin" })
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("iframe", { className: "site-view",
+          src: this.props.view,
+          onLoad: function onLoad() {
+            return _this2.setState({ loaded: true });
+          } })
+      );
     }
+  }]);
 
-    _createClass(SiteView, [{
-        key: "render",
-        value: function render() {
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "site-wrapper text-center container-fluid" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { id: "x-box" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-close",
-                        onClick: this.props.close })
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("iframe", { className: "site-view",
-                    src: "https://jen-valle-night-life.herokuapp.com/" })
-            );
-        }
-    }]);
-
-    return SiteView;
+  return SiteView;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
 var Pintr = function Pintr() {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        "div",
-        { className: "section" },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            { className: "pintr margin-0" },
-            "React-terest"
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "proj-head" },
-                "Part of FreeCodeCamp\u2019s curriculum included a ",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "strong",
-                    { onClick: function onClick() {
-                            return window.open("https://www.freecodecamp.org/challenges/build-a-pinterest-clone");
-                        }, title: "Open in New Window" },
-                    "Pinterest Clone ",
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-external-link" })
-                ),
-                ".",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
-                " In addition to all of the requirements for that project, React-terest includes quite a few options:"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "beige" },
-                "\u2605 Users can click on the image of a post to see a larger version (if the image is larger than 250px wide)",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
-                "\u2605 When authenticated users create a post, they can add up to three tags.",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
-                "\u2605 Users can click on post tags to view all posts with that tag. ",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "i",
-                    null,
-                    "(I recommend the Wayne\u2019s World tag, it\u2019s excellent.)"
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
-                "\u2605 Users can search by tag, title, or username and see a board made up of the results.",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
-                "\u2605 Authenticated users can Favorite ",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-heart" }),
-                " , Reblog ",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-exchange" }),
-                " , and view the other user interactions ",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-comments" }),
-                " .",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
-                "\u2605 React-terest also utilizes web sockets to provide live updates when new posts are added, reblogged, updated, or deleted."
-            )
-        )
-    );
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    "div",
+    { className: "pad-less" },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "div",
+      null,
+      "Part of FreeCodeCamp\u2019s curriculum included a ",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "strong",
+        { onClick: function onClick() {
+            return window.open("https://www.freecodecamp.org/challenges/build-a-pinterest-clone");
+          }, title: "Open in New Window" },
+        "Pinterest Clone ",
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-external-link" })
+      ),
+      ".",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+      " In addition to all of the requirements for that project, React-terest includes quite a few options:"
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "div",
+      { className: "smol" },
+      "\u2605 Users can click on the image of a post to see a larger version (if the image is larger than 250px wide)",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+      "\u2605 When authenticated users create a post, they can add up to three tags.",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+      "\u2605 Users can click on post tags to view all posts with that tag. ",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "i",
+        null,
+        "(I recommend the Wayne\u2019s World tag, it\u2019s excellent.)"
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+      "\u2605 Users can search by tag, title, or username and see a board made up of the results.",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+      "\u2605 Authenticated users can Favorite ",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-heart" }),
+      " , Reblog ",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-exchange" }),
+      " , and view the other user interactions ",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-comments" }),
+      " .",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+      "\u2605 React-terest also utilizes web sockets to provide live updates when new posts are added, reblogged, updated, or deleted."
+    )
+  );
 };
 
 var Book = function Book() {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    "div",
+    { className: "pad-less" },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "div",
+      null,
+      "FreeCodeCamp\u2019s curriculum included a ",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "strong",
+        { onClick: function onClick() {
+            return window.open("https://www.freecodecamp.org/challenges/manage-a-book-trading-club");
+          }, title: "Open in New Window" },
+        "Book Trading Club ",
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-external-link" })
+      ),
+      ". Book Stop N\u2019 Swap has some additional exciting features:",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
-        { className: "section" },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            { className: "book margin-0" },
-            "Book Stop N' Swap"
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "proj-head" },
-                "FreeCodeCamp\u2019s curriculum included a ",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "strong",
-                    { onClick: function onClick() {
-                            return window.open("https://www.freecodecamp.org/challenges/manage-a-book-trading-club");
-                        }, title: "Open in New Window" },
-                    "Book Trading Club ",
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-external-link" })
-                ),
-                ". Book Stop N\u2019 Swap has some additional exciting features:"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "beige" },
-                "\u2605 Authenticated users can view their pending trades, and cancel them if they decide they don\u2019t want to trade anymore.",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
-                "\u2605 Users get live updates when they have a new pending trade ",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
-                "\u2605 Users collections will be updated live when they exchange books",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
-                "\u2605 All collections will receive live updates when a new book is added"
-            )
-        )
-    );
+        { className: "smol" },
+        "\u2605 Authenticated users can view their pending trades, and cancel them if they decide they don\u2019t want to trade anymore.",
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+        "\u2605 Users get live updates when they have a new pending trade ",
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+        "\u2605 Users collections will be updated live when they exchange books",
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+        "\u2605 All collections will receive live updates when a new book is added"
+      )
+    )
+  );
 };
 
 var Marvl = function Marvl() {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    "div",
+    { className: "pad-less" },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "div",
+      null,
+      "A project I made for fun, this Marvel Event Generator uses a custom database of characters I created with the help of the Marvel API to generate random events.",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
-        { className: "section" },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            { className: "marvl margin-0" },
-            "Marvel Event Generator"
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "proj-head" },
-                "A project I made for fun, this Marvel Event Generator uses a custom database of characters I created with the help of the Marvel API to generate random events."
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "beige" },
-                "\u2605 Has 9 different event templates",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
-                "\u2605 Pulls from a database of over 300 characters",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
-                "\u2605 Keeps a live count of how many times users have generated a random event"
-            )
-        )
-    );
+        { className: "smol" },
+        "\u2605 Has 9 different event templates",
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+        "\u2605 Pulls from a database of over 300 characters",
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+        "\u2605 Keeps a live count of how many times users have generated a random event"
+      )
+    )
+  );
 };
 
 var Vote = function Vote() {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        "div",
-        { className: "section" },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            { className: "front margin-0" },
-            "Voting App"
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "proj-head" },
-                "Part of FreeCodeCamp\u2019s curriculum included a ",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "strong",
-                    { onClick: function onClick() {
-                            return window.open("https://www.freecodecamp.org/challenges/build-a-voting-app");
-                        }, title: "Open in New Window" },
-                    "Voting App ",
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-external-link" })
-                ),
-                ".",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "beige" },
-                    "This full stack app allows users to create and vote on polls, as well as share links to specific polls with their friends. It also shows charts of the voting results!"
-                )
-            )
-        )
-    );
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    "div",
+    { className: "pad-less" },
+    "Part of FreeCodeCamp\u2019s curriculum included a ",
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "strong",
+      { onClick: function onClick() {
+          return window.open("https://www.freecodecamp.org/challenges/build-a-voting-app");
+        }, title: "Open in New Window" },
+      "Voting App ",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-external-link" })
+    ),
+    ".",
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "div",
+      { className: "smol" },
+      "This full stack app allows users to create and vote on polls, as well as share links to specific polls with their friends. It also shows charts of the voting results!"
+    )
+  );
 };
 
 var Night = function Night() {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    "div",
+    { className: "pad-less" },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "div",
+      null,
+      "FreeCodeCamp\u2019s curriculum included a ",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "strong",
+        { onClick: function onClick() {
+            return window.open("https://www.freecodecamp.org/challenges/build-a-nightlife-coordination-app");
+          }, title: "Open in New Window" },
+        "Nightlife Coordination App ",
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-external-link" })
+      ),
+      ".",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
-        { className: "section" },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            { className: "front margin-0" },
-            "Nightlife Coordination"
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "proj-head" },
-                "FreeCodeCamp\u2019s curriculum included a ",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "strong",
-                    { onClick: function onClick() {
-                            return window.open("https://www.freecodecamp.org/challenges/build-a-nightlife-coordination-app");
-                        }, title: "Open in New Window" },
-                    "Nightlife Coordination App ",
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-external-link" })
-                ),
-                ".",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "beige" },
-                    "Using the Yelp API users can search for bars in their area and mark themselves as \u201Cgoing\u201D or remove themselves from bars if they no longer want to go."
-                )
-            )
-        )
-    );
+        { className: "smol" },
+        "Using the Yelp API users can search for bars in their area and mark themselves as \u201Cgoing\u201D or remove themselves from bars if they no longer want to go."
+      )
+    )
+  );
 };
 
 var DungeonAbout = function DungeonAbout() {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    "div",
+    { className: "pad-less" },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "div",
+      null,
+      "FreeCodeCamp\u2019s curriculum included a ",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "strong",
+        { onClick: function onClick() {
+            return window.open("https://www.freecodecamp.org/challenges/build-the-game-of-life");
+          }, title: "Open in New Window" },
+        "Roguelike Dungeon Crawler Game ",
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-external-link" })
+      ),
+      ". I made one that does some pretty exciting stuff:",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
-        { className: "section" },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            { className: "front margin-0" },
-            "Dungeon Plumber"
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "proj-head" },
-                "FreeCodeCamp\u2019s curriculum included a ",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "strong",
-                    { onClick: function onClick() {
-                            return window.open("https://www.freecodecamp.org/challenges/build-the-game-of-life");
-                        }, title: "Open in New Window" },
-                    "Roguelike Dungeon Crawler Game ",
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-external-link" })
-                ),
-                ". I made one that does some pretty exciting stuff:"
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "beige" },
-                "\u2605 The rooms on each floor are generated randomly.",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
-                "\u2605 The user wins the game after beating floor 4, but can choose to continue playing until the map is full",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
-                "\u2605  The user can turn the lights on or off, depending on how they want to play the game"
-            )
-        )
-    );
+        { className: "smol" },
+        "\u2605 The rooms on each floor are generated randomly.",
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+        "\u2605 The user wins the game after beating floor 4, but can choose to continue playing until the map is full",
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+        "\u2605  The user can turn the lights on or off, depending on how they want to play the game"
+      )
+    )
+  );
 };
 
 var GameAbout = function GameAbout() {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    "div",
+    { className: "pad-less" },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "div",
+      null,
+      "FreeCodeCamp\u2019s curriculum included a ",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "strong",
+        { onClick: function onClick() {
+            return window.open("https://www.freecodecamp.org/challenges/build-a-roguelike-dungeon-crawler-game");
+          }, title: "Open in New Window" },
+        "Game of Life ",
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-external-link" })
+      ),
+      ".",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
-        { className: "section" },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            { className: "front margin-0" },
-            "Game of Life"
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "proj-head" },
-                "FreeCodeCamp\u2019s curriculum included a ",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "strong",
-                    { onClick: function onClick() {
-                            return window.open("https://www.freecodecamp.org/challenges/build-a-roguelike-dungeon-crawler-game");
-                        }, title: "Open in New Window" },
-                    "Game of Life ",
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-external-link" })
-                ),
-                ".",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "beige" },
-                    "Users can adjust the speed of the generations, stop, reset, or randomize the board."
-                )
-            )
-        )
-    );
+        { className: "smol" },
+        "Users can adjust the speed of the generations, stop, reset, or randomize the board."
+      )
+    )
+  );
 };
 
 var CalcAbout = function CalcAbout() {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    "div",
+    { className: "pad-less" },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "div",
+      null,
+      "One of r/dailyprogrammer's challenges was a ",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "strong",
+        { onClick: function onClick() {
+            return window.open("https://www.reddit.com/r/dailyprogrammer/comments/7096nu/20170915_challenge_331_hard_interactive/");
+          }, title: "Open in New Window" },
+        "Interactive Interpreter ",
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-external-link" })
+      ),
+      ". After using the ",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "strong",
+        { onClick: function onClick() {
+            return window.open("https://en.wikipedia.org/wiki/Shunting-yard_algorithm");
+          } },
+        "Shunting-Yard Algorithm ",
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-external-link" })
+      ),
+      " to complete the challenge, I used it to make a scientific calculator.",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
-        { className: "section" },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            { className: "front margin-0" },
-            "Calculator"
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "proj-head" },
-                "One of r/dailyprogrammer's challenges was a ",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "strong",
-                    { onClick: function onClick() {
-                            return window.open("https://www.reddit.com/r/dailyprogrammer/comments/7096nu/20170915_challenge_331_hard_interactive/");
-                        }, title: "Open in New Window" },
-                    "Interactive Interpreter ",
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-external-link" })
-                ),
-                ". After using the ",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "strong",
-                    { onClick: function onClick() {
-                            return window.open("https://en.wikipedia.org/wiki/Shunting-yard_algorithm");
-                        } },
-                    "Shunting-Yard Algorithm ",
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-external-link" })
-                ),
-                " to complete the challenge, I used it to make a scientific calculator."
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "beige" },
-                "\u2605 Users enter in equations and receive an answer that follows order of operations.",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
-                "\u2605 Users can store variables to be used later (Shift)",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
-                "\u2605 Users will recieve an error if they enter an invalid equation."
-            )
-        )
-    );
+        { className: "smol" },
+        "\u2605 Users enter in equations and receive an answer that follows order of operations.",
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+        "\u2605 Users can store variables to be used later (Shift)",
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+        "\u2605 Users will recieve an error if they enter an invalid equation."
+      )
+    )
+  );
 };
 
 var SimonAbout = function SimonAbout() {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    "div",
+    { className: "pad-less" },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "div",
+      null,
+      "Another early FreeCodeCamp project is is to build a ",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "strong",
+        { onClick: function onClick() {
+            return window.open("https://www.freecodecamp.org/challenges/build-a-simon-game");
+          }, title: "Open in New Window" },
+        "Simon Game",
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-external-link" })
+      ),
+      ".",
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
-        { className: "section" },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            { className: "front margin-0" },
-            "Simon"
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "proj-head" },
-                "Another early FreeCodeCamp project is is to build a ",
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "strong",
-                    { onClick: function onClick() {
-                            return window.open("https://www.freecodecamp.org/challenges/build-a-simon-game");
-                        }, title: "Open in New Window" },
-                    "Simon Game",
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-external-link" })
-                ),
-                "."
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "beige" },
-                "Play with this retro 80's toy right here in your browser!"
-            )
-        )
-    );
+        { className: "smol" },
+        "Play with this retro 80's toy right here in your browser!"
+      )
+    )
+  );
 };
 ;
 
 var _temp = function () {
-    if (typeof __REACT_HOT_LOADER__ === 'undefined') {
-        return;
-    }
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
 
-    __REACT_HOT_LOADER__.register(SiteView, "SiteView", "/home/ubuntu/workspace/src/containers/modules/siteview.js");
+  __REACT_HOT_LOADER__.register(SiteView, "SiteView", "/home/ubuntu/workspace/src/containers/modules/siteview.js");
 
-    __REACT_HOT_LOADER__.register(Pintr, "Pintr", "/home/ubuntu/workspace/src/containers/modules/siteview.js");
+  __REACT_HOT_LOADER__.register(Pintr, "Pintr", "/home/ubuntu/workspace/src/containers/modules/siteview.js");
 
-    __REACT_HOT_LOADER__.register(Book, "Book", "/home/ubuntu/workspace/src/containers/modules/siteview.js");
+  __REACT_HOT_LOADER__.register(Book, "Book", "/home/ubuntu/workspace/src/containers/modules/siteview.js");
 
-    __REACT_HOT_LOADER__.register(Marvl, "Marvl", "/home/ubuntu/workspace/src/containers/modules/siteview.js");
+  __REACT_HOT_LOADER__.register(Marvl, "Marvl", "/home/ubuntu/workspace/src/containers/modules/siteview.js");
 
-    __REACT_HOT_LOADER__.register(Vote, "Vote", "/home/ubuntu/workspace/src/containers/modules/siteview.js");
+  __REACT_HOT_LOADER__.register(Vote, "Vote", "/home/ubuntu/workspace/src/containers/modules/siteview.js");
 
-    __REACT_HOT_LOADER__.register(Night, "Night", "/home/ubuntu/workspace/src/containers/modules/siteview.js");
+  __REACT_HOT_LOADER__.register(Night, "Night", "/home/ubuntu/workspace/src/containers/modules/siteview.js");
 
-    __REACT_HOT_LOADER__.register(DungeonAbout, "DungeonAbout", "/home/ubuntu/workspace/src/containers/modules/siteview.js");
+  __REACT_HOT_LOADER__.register(DungeonAbout, "DungeonAbout", "/home/ubuntu/workspace/src/containers/modules/siteview.js");
 
-    __REACT_HOT_LOADER__.register(GameAbout, "GameAbout", "/home/ubuntu/workspace/src/containers/modules/siteview.js");
+  __REACT_HOT_LOADER__.register(GameAbout, "GameAbout", "/home/ubuntu/workspace/src/containers/modules/siteview.js");
 
-    __REACT_HOT_LOADER__.register(CalcAbout, "CalcAbout", "/home/ubuntu/workspace/src/containers/modules/siteview.js");
+  __REACT_HOT_LOADER__.register(CalcAbout, "CalcAbout", "/home/ubuntu/workspace/src/containers/modules/siteview.js");
 
-    __REACT_HOT_LOADER__.register(SimonAbout, "SimonAbout", "/home/ubuntu/workspace/src/containers/modules/siteview.js");
+  __REACT_HOT_LOADER__.register(SimonAbout, "SimonAbout", "/home/ubuntu/workspace/src/containers/modules/siteview.js");
 }();
 
 ;
@@ -14087,7 +14019,7 @@ var WebDev = function (_React$Component) {
             "div",
             { className: "col" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Nightlife Tracker", grayOut: function grayOut() {
-                return _this2.props.grayOut("https://jen-valle-night-life.herokuapp.com/");
+                return _this2.props.grayOut("https://jen-valle-night-life.herokuapp.com/", true);
               } })
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
