@@ -1,4 +1,6 @@
 import React from 'react';
+import Music from './modules/music.js';
+import WebDev from './modules/web.js';
 
 export default class App extends React.Component{
   constructor(props)
@@ -84,93 +86,10 @@ class SiteView extends React.Component{
   {
     return(
       <div>
-      <Pintr />
-      <iframe className="site-view"
-                  src="https://jen-valle-night-life.herokuapp.com/"/>
+        <iframe className="site-view"
+                    src="https://jen-valle-night-life.herokuapp.com/"/>
 
       </div>   
-    )
-  }
-}
-
-const Break = () =>{
-  return(
-    <div className="break"/>
-  );
-}
-
-const Project = (props) =>{
-  return(
-    <div className={"project middle-text " + props.bg}>
-      {props.name}
-    </div>  
-  );
-}
-
-class WebDev extends React.Component{
-  constructor(props)
-  {
-    super(props);
-    this.state={
-      views: [
-        {
-         name: "Anonymous Message Board",
-         link: "open",
-         func: ()=>{window.open("https://jvalle-message-board.herokuapp.com/")}
-        }
-      ]
-    };
-  }
-  render()
-  {
-    return(
-      <div className="text-center container-fluid sec-squeeze">
-        <h1 className="sec-head">Web Development</h1>
-        <div className="row">
-          <div className="col">
-            <h3 className="black-shadow">Full Stack Projects</h3>
-          </div>  
-        </div>  
-        <div className="row proj-row">
-          <div className="col">
-             <Project name="Anonymous Message Board" bg="anon"/>
-          </div>
-          <div className="col">
-             <Project name="Pinterest Clone" bg="pint"/>
-          </div>  
-          <div className="col">
-             <Project name="Book Trading Club" bg="book"/>
-          </div>  
-        </div>
-        <div className="row">
-          <div className="col">
-            <h3 className="black-shadow">Other Projects</h3>
-          </div>  
-        </div>  
-        <div className="row other-proj-row">
-          <div className="col">
-             <Project name="Marvel Event Generator"/>
-          </div>
-          <div className="col">
-             <Project name="Nightlife Tracker"/>
-          </div>  
-          <div className="col">
-             <Project name="Scientific Calculator"/>
-          </div>  
-        </div>
-       <div className="row">
-          <div className="col">
-             <Project name="Conway's Game of Life"/>
-          </div>
-          <div className="col">
-             <Project name="Dungeon Plumber"/>
-          </div>  
-          <div className="col">
-             <Project name="Simon"/>
-          </div>  
-        </div>
-      </div>
-      
     )
   }
 }
@@ -185,6 +104,13 @@ const About = ()=>{
     </div>  
   );
 }
+
+const Break = () =>{
+  return(
+    <div className="break"/>
+  );
+}
+
 
 const Contact = ()=>{
   return(
@@ -283,50 +209,11 @@ const Header = (props) =>{
   );
 }
 
-class Music extends React.Component
-{
-  constructor(props)
-  {
-    super(props);
-    this.state={
-      ggr: false,
-      aed: false
-    }
-  }
-  render()
-  {
-    return(
-      <div className="text-center container-fluid">
-        <div>
-          <h1 className="black-shadow">Music</h1>
-        </div>
-        <div className="row mus-row">
-          {this.state.ggr ? 
-          <div className="col middle-text">
-            <iframe className="mus-iframe" height="400" src="https://www.youtube.com/embed/416N-wtfWcI" frameborder="0" allowfullscreen/>  
-          </div>    
-          :  
-          <div className="col mus-col mus-iframe middle-text">
-            <h2 className="black-shadow">Gamma Gamma Ray</h2>
-            <div className="btn-mus">
-            <button className="btn btn-head"
-                    onClick={()=>this.setState({ggr: true})}>Watch <i className="fa fa-youtube-play"/></button>
-            </div>  
-          </div>}  
-          {this.state.aed            
-           ? <div className="col middle-text">
-            <iframe className="mus-iframe" height="400" src="https://bandcamp.com/EmbeddedPlayer/album=4210021228/size=large/bgcol=333333/linkcol=ffffff/minimal=true/track=1049768388/transparent=true/" seamless><a href="http://avocadoeatindogs.bandcamp.com/album/second-chance-ii">Second Chance II by Avocado Eatin&#39; Dogs</a></iframe>
-            </div>  
-           : <div className="col mus-col mus-iframe middle-text">
 
-                <h2 className="black-shadow">Solo</h2>
-                <div className="btn-mus">
-                <button className="btn btn-head"
-                        onClick={()=>this.setState({aed:true})}>Listen <i className="fa fa-play-circle"/></button>
-                </div>  
-          </div>}  
-        </div>  
-      </div>  
-    );
-  }
+const Project = (props) =>{
+  return(
+    <div className={"project middle-text " + props.bg}>
+      {props.name}
+    </div>  
+  );
 }
