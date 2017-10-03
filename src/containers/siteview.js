@@ -67,7 +67,7 @@ export default class SiteView extends React.Component
           ? <SimonAbout />
           : ""
         }
-        <div className="section">
+        <div>
           {!this.state.loaded ? 
           <h1>Loading... <i className="fa fa-spinner fa-spin" /></h1>
           : ""}

@@ -1,6 +1,6 @@
 import React from 'react';
 import Music from './modules/music.js';
-import WebDev from './modules/web.js';
+import { WebDev } from './modules/web.js';
 
 export default class App extends React.Component{
   constructor(props)
@@ -25,10 +25,15 @@ export default class App extends React.Component{
       ]
     };
     this.closeOut = this.closeOut.bind(this);
+    this.grayOut  = this.grayOut.bind(this);
   }
   closeOut()
   {
     this.setState({gray: false, view: undefined});
+  }
+  grayOut(view)
+  {
+    this.setState({gray: true, view: view});
   }
   render()
   {
@@ -52,7 +57,7 @@ export default class App extends React.Component{
           <About />
         </div>  
         <div className="section web middle-text">
-          <WebDev />
+          <WebDev grayOut={this.grayOut}/>
         </div>  
         <Break />
         <div className="section gce middle-text">
@@ -210,10 +215,3 @@ const Header = (props) =>{
 }
 
 
-const Project = (props) =>{
-  return(
-    <div className={"project middle-text " + props.bg}>
-      {props.name}
-    </div>  
-  );
-}
