@@ -22,10 +22,10 @@ export class WebDev extends React.Component{
              <Project name="Anonymous Message Board" bg="anon" grayOut={()=>window.open("https://jvalle-message-board.herokuapp.com/")}/>
           </div>
           <div className="col">
-             <Project name="Pinterest Clone" bg="pint" grayOut={()=>this.props.grayOut("https://jvalle-pinterest-clone.herokuapp.com/","Pinterest Clone")}/>
+             <Project name="Pinterest Clone" bg="pint" grayOut={()=>this.props.grayOut("https://jvalle-pinterest-clone.herokuapp.com/","Pinterest Clone","https://github.com/jvallexm/fcc-pinterest-clone")}/>
           </div>  
           <div className="col">
-             <Project name="Book Trading Club" bg="book" grayOut={()=>this.props.grayOut("https://jvalle-book-swap.herokuapp.com/","Book Trading Club")}/>
+             <Project name="Book Trading Club" bg="book" grayOut={()=>this.props.grayOut("https://jvalle-book-swap.herokuapp.com/","Book Trading Club","https://github.com/jvallexm/fcc-book-trading-club")}/>
           </div>  
         </div>
         <div className="row">
@@ -35,24 +35,24 @@ export class WebDev extends React.Component{
         </div>  
         <div className="row other-proj-row">
           <div className="col">
-             <Project name="Marvel Event Generator" grayOut={()=>this.props.grayOut("https://wheel-of-bendis.herokuapp.com/","Marvel Event Generator")}/>
+             <Project name="Marvel Event Generator" grayOut={()=>this.props.grayOut("https://wheel-of-bendis.herokuapp.com/","Marvel Event Generator","https://github.com/jvallexm/all-new-wheel-of-bendis")}/>
           </div>
           <div className="col">
-             <Project name="Night Life Tracker" grayOut={()=>this.props.grayOut("https://jen-valle-night-life.herokuapp.com/","Night Life Tracker")}/>
+             <Project name="Night Life Tracker" grayOut={()=>this.props.grayOut("https://jen-valle-night-life.herokuapp.com/","Night Life Tracker","https://github.com/jvallexm/fcc-nightlife-tracker")}/>
           </div>  
           <div className="col">
-             <Project name="Scientific Calculator" grayOut={()=>this.props.grayOut("Calculator","Calculator")}/>
+             <Project name="Scientific Calculator" grayOut={()=>this.props.grayOut("Calculator","Calculator","https://github.com/jvallexm/jen-valle-dot-com/blob/master/src/containers/projects/calculator.js")}/>
           </div>  
         </div>
        <div className="row">
           <div className="col">
-             <Project name="Conway's Game of Life" grayOut={()=>this.props.grayOut("Game of Life","Game of Life")}/>
+             <Project name="Conway's Game of Life" grayOut={()=>this.props.grayOut("Game of Life","Game of Life","https://github.com/jvallexm/jen-valle-dot-com/blob/master/src/containers/projects/gameoflife.js")}/>
           </div>
           <div className="col">
-             <Project name="Dungeon Plumber" grayOut={()=>this.props.grayOut("https://codepen.io/phoenix-farce/full/awwzEy","Dungeon Plumber")}/>
+             <Project name="Dungeon Plumber" grayOut={()=>this.props.grayOut("https://codepen.io/phoenix-farce/full/awwzEy","Dungeon Plumber","https://github.com/jvallexm/jen-valle-dot-com/blob/master/src/containers/projects/dungeonplumber.js")}/>
           </div>  
           <div className="col">
-             <Project name="Simon" grayOut={()=>this.props.grayOut("Simon","Simon")}/>
+             <Project name="Simon" grayOut={()=>this.props.grayOut("Simon","Simon","https://github.com/jvallexm/jen-valle-dot-com/blob/master/src/containers/projects/simon.js")}/>
           </div>  
         </div>
       </div>

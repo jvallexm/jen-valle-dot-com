@@ -11,6 +11,7 @@ export default class App extends React.Component{
       gray: false,
       view: undefined,
       viewName: undefined,
+      gh: undefined,
       buttons: [
         {
           name: "github",
@@ -38,11 +39,11 @@ export default class App extends React.Component{
   }
   closeOut()
   {
-    this.setState({gray: false, view: undefined, viewName: undefined});
+    this.setState({gray: false, view: undefined, viewName: undefined, gh: undefined});
   }
-  grayOut(view,name)
+  grayOut(view,name,gh)
   {
-    this.setState({gray: true, view: view,viewName: name});
+    this.setState({gray: true, view: view,viewName: name, gh: gh});
   }
   render()
   {
@@ -51,7 +52,7 @@ export default class App extends React.Component{
         {this.state.gray?
         <div id="gray-out">
               
-            <SiteView view={this.state.view} name={this.state.viewName} close={this.closeOut}/>
+            <SiteView view={this.state.view} name={this.state.viewName} close={this.closeOut} gh={this.state.gh}/>
 
         </div>  
         :""}  
@@ -81,7 +82,7 @@ export default class App extends React.Component{
         <div className="about">
           <Contact />
         </div>  
-        <div className="text-center container-fluid"
+        <div className="text-center container-fluid pointer"
              onClick={()=>window.scroll(0,0)}>
          Back to Top <i className="fa fa-arrow-up"/>
         </div>

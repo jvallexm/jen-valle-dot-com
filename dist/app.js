@@ -13101,6 +13101,7 @@ var App = function (_React$Component) {
       gray: false,
       view: undefined,
       viewName: undefined,
+      gh: undefined,
       buttons: [{
         name: "github",
         link: "https://github.com/jvallexm"
@@ -13129,12 +13130,12 @@ var App = function (_React$Component) {
   }, {
     key: 'closeOut',
     value: function closeOut() {
-      this.setState({ gray: false, view: undefined, viewName: undefined });
+      this.setState({ gray: false, view: undefined, viewName: undefined, gh: undefined });
     }
   }, {
     key: 'grayOut',
-    value: function grayOut(view, name) {
-      this.setState({ gray: true, view: view, viewName: name });
+    value: function grayOut(view, name, gh) {
+      this.setState({ gray: true, view: view, viewName: name, gh: gh });
     }
   }, {
     key: 'render',
@@ -13145,7 +13146,7 @@ var App = function (_React$Component) {
         this.state.gray ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
           { id: 'gray-out' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__modules_siteview_js__["a" /* SiteView */], { view: this.state.view, name: this.state.viewName, close: this.closeOut })
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__modules_siteview_js__["a" /* SiteView */], { view: this.state.view, name: this.state.viewName, close: this.closeOut, gh: this.state.gh })
         ) : "",
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
@@ -13191,7 +13192,7 @@ var App = function (_React$Component) {
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
-          { className: 'text-center container-fluid',
+          { className: 'text-center container-fluid pointer',
             onClick: function onClick() {
               return window.scroll(0, 0);
             } },
@@ -13621,6 +13622,16 @@ var SiteView = function (_React$Component) {
             onClick: this.props.close })
         ),
         this.props.name == "Pinterest Clone" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Pintr, null) : this.props.name == "Book Trading Club" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Book, null) : this.props.name == "Marvel Event Generator" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Marvl, null) : this.props.name == "Voting App" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Vote, null) : this.props.name == "Night Life Tracker" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Night, null) : this.props.name == "Dungeon Plumber" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(DungeonAbout, null) : this.props.name == "Game of Life" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(GameAbout, null) : this.props.name == "Calculator" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(CalcAbout, null) : this.props.name == "Simon" ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(SimonAbout, null) : "Whoops, you broke it",
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'button',
+          { className: 'btn btn-black',
+            onClick: function onClick() {
+              return window.open(_this2.props.gh);
+            } },
+          'View on Github ',
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-github' })
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
         this.state.loaded ? "" : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'span',
           null,
@@ -13649,7 +13660,7 @@ var Pintr = function Pintr() {
       'Part of FreeCodeCamp\u2019s curriculum included a ',
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'strong',
-        { onClick: function onClick() {
+        { className: 'pointer', onClick: function onClick() {
             return window.open("https://www.freecodecamp.org/challenges/build-a-pinterest-clone");
           }, title: 'Open in New Window' },
         'Pinterest Clone ',
@@ -13698,7 +13709,7 @@ var Book = function Book() {
       'FreeCodeCamp\u2019s curriculum included a ',
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'strong',
-        { onClick: function onClick() {
+        { className: 'pointer', onClick: function onClick() {
             return window.open("https://www.freecodecamp.org/challenges/manage-a-book-trading-club");
           }, title: 'Open in New Window' },
         'Book Trading Club ',
@@ -13748,7 +13759,7 @@ var Vote = function Vote() {
     'Part of FreeCodeCamp\u2019s curriculum included a ',
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'strong',
-      { onClick: function onClick() {
+      { className: 'pointer', onClick: function onClick() {
           return window.open("https://www.freecodecamp.org/challenges/build-a-voting-app");
         }, title: 'Open in New Window' },
       'Voting App ',
@@ -13773,7 +13784,7 @@ var Night = function Night() {
       'FreeCodeCamp\u2019s curriculum included a ',
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'strong',
-        { onClick: function onClick() {
+        { className: 'pointer', onClick: function onClick() {
             return window.open("https://www.freecodecamp.org/challenges/build-a-nightlife-coordination-app");
           }, title: 'Open in New Window' },
         'Nightlife Coordination App ',
@@ -13799,7 +13810,7 @@ var DungeonAbout = function DungeonAbout() {
       'FreeCodeCamp\u2019s curriculum included a ',
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'strong',
-        { onClick: function onClick() {
+        { className: 'pointer', onClick: function onClick() {
             return window.open("https://www.freecodecamp.org/challenges/build-the-game-of-life");
           }, title: 'Open in New Window' },
         'Roguelike Dungeon Crawler Game ',
@@ -13829,7 +13840,7 @@ var GameAbout = function GameAbout() {
       'FreeCodeCamp\u2019s curriculum included a ',
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'strong',
-        { onClick: function onClick() {
+        { className: 'pointer', onClick: function onClick() {
             return window.open("https://www.freecodecamp.org/challenges/build-a-roguelike-dungeon-crawler-game");
           }, title: 'Open in New Window' },
         'Game of Life ',
@@ -13855,7 +13866,7 @@ var CalcAbout = function CalcAbout() {
       'One of r/dailyprogrammer\'s challenges was a ',
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'strong',
-        { onClick: function onClick() {
+        { className: 'pointer', onClick: function onClick() {
             return window.open("https://www.reddit.com/r/dailyprogrammer/comments/7096nu/20170915_challenge_331_hard_interactive/");
           }, title: 'Open in New Window' },
         'Interactive Interpreter ',
@@ -13866,7 +13877,7 @@ var CalcAbout = function CalcAbout() {
         'strong',
         { onClick: function onClick() {
             return window.open("https://en.wikipedia.org/wiki/Shunting-yard_algorithm");
-          } },
+          }, className: 'pointer' },
         'Shunting-Yard Algorithm ',
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-external-link' })
       ),
@@ -13894,7 +13905,7 @@ var SimonAbout = function SimonAbout() {
       'Another early FreeCodeCamp project is is to build a ',
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'strong',
-        { onClick: function onClick() {
+        { className: 'pointer', onClick: function onClick() {
             return window.open("https://www.freecodecamp.org/challenges/build-a-simon-game");
           }, title: 'Open in New Window' },
         'Simon Game',
@@ -14009,14 +14020,14 @@ var WebDev = function (_React$Component) {
             "div",
             { className: "col" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Pinterest Clone", bg: "pint", grayOut: function grayOut() {
-                return _this2.props.grayOut("https://jvalle-pinterest-clone.herokuapp.com/", "Pinterest Clone");
+                return _this2.props.grayOut("https://jvalle-pinterest-clone.herokuapp.com/", "Pinterest Clone", "https://github.com/jvallexm/fcc-pinterest-clone");
               } })
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
             { className: "col" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Book Trading Club", bg: "book", grayOut: function grayOut() {
-                return _this2.props.grayOut("https://jvalle-book-swap.herokuapp.com/", "Book Trading Club");
+                return _this2.props.grayOut("https://jvalle-book-swap.herokuapp.com/", "Book Trading Club", "https://github.com/jvallexm/fcc-book-trading-club");
               } })
           )
         ),
@@ -14040,21 +14051,21 @@ var WebDev = function (_React$Component) {
             "div",
             { className: "col" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Marvel Event Generator", grayOut: function grayOut() {
-                return _this2.props.grayOut("https://wheel-of-bendis.herokuapp.com/", "Marvel Event Generator");
+                return _this2.props.grayOut("https://wheel-of-bendis.herokuapp.com/", "Marvel Event Generator", "https://github.com/jvallexm/all-new-wheel-of-bendis");
               } })
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
             { className: "col" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Night Life Tracker", grayOut: function grayOut() {
-                return _this2.props.grayOut("https://jen-valle-night-life.herokuapp.com/", "Night Life Tracker");
+                return _this2.props.grayOut("https://jen-valle-night-life.herokuapp.com/", "Night Life Tracker", "https://github.com/jvallexm/fcc-nightlife-tracker");
               } })
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
             { className: "col" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Scientific Calculator", grayOut: function grayOut() {
-                return _this2.props.grayOut("Calculator", "Calculator");
+                return _this2.props.grayOut("Calculator", "Calculator", "https://github.com/jvallexm/jen-valle-dot-com/blob/master/src/containers/projects/calculator.js");
               } })
           )
         ),
@@ -14065,21 +14076,21 @@ var WebDev = function (_React$Component) {
             "div",
             { className: "col" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Conway's Game of Life", grayOut: function grayOut() {
-                return _this2.props.grayOut("Game of Life", "Game of Life");
+                return _this2.props.grayOut("Game of Life", "Game of Life", "https://github.com/jvallexm/jen-valle-dot-com/blob/master/src/containers/projects/gameoflife.js");
               } })
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
             { className: "col" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Dungeon Plumber", grayOut: function grayOut() {
-                return _this2.props.grayOut("https://codepen.io/phoenix-farce/full/awwzEy", "Dungeon Plumber");
+                return _this2.props.grayOut("https://codepen.io/phoenix-farce/full/awwzEy", "Dungeon Plumber", "https://github.com/jvallexm/jen-valle-dot-com/blob/master/src/containers/projects/dungeonplumber.js");
               } })
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
             { className: "col" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Simon", grayOut: function grayOut() {
-                return _this2.props.grayOut("Simon", "Simon");
+                return _this2.props.grayOut("Simon", "Simon", "https://github.com/jvallexm/jen-valle-dot-com/blob/master/src/containers/projects/simon.js");
               } })
           )
         )

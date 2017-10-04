@@ -46,7 +46,8 @@ export class SiteView extends React.Component{
           ? <SimonAbout />
           : "Whoops, you broke it"
         }
-        
+        <button className="btn btn-black"
+                onClick={()=>window.open(this.props.gh)}>View on Github <i className="fa fa-github"/></button><br/>
         {this.state.loaded ? "" : <span>Loading... <i className="fa fa-spinner fa-spin" /></span> }
         { this.props.view.indexOf("://") > -1 
         ? <iframe className="site-view"
@@ -71,7 +72,7 @@ const Pintr = () =>{
   return(
             <div className="pad-less">
             <div>
-            Part of FreeCodeCamp’s curriculum included a <strong onClick={()=>window.open("https://www.freecodecamp.org/challenges/build-a-pinterest-clone")} title="Open in New Window">Pinterest Clone <i className="fa fa-external-link"/></strong>.<br/> In addition to all of the requirements for that project, React-terest includes quite a few options:</div>
+            Part of FreeCodeCamp’s curriculum included a <strong className="pointer" onClick={()=>window.open("https://www.freecodecamp.org/challenges/build-a-pinterest-clone")} title="Open in New Window">Pinterest Clone <i className="fa fa-external-link"/></strong>.<br/> In addition to all of the requirements for that project, React-terest includes quite a few options:</div>
             <div className="smol">
                 ★ Users can click on the image of a post to see a larger version (if the image is larger than 250px wide)<br/>
                 ★ When authenticated users create a post, they can add up to three tags.<br/> 
@@ -87,7 +88,7 @@ const Book = () =>{
   return(
      <div className="pad-less">
             <div>
-                 FreeCodeCamp’s curriculum included a <strong onClick={()=>window.open("https://www.freecodecamp.org/challenges/manage-a-book-trading-club")} title="Open in New Window">Book Trading Club <i className="fa fa-external-link"/></strong>. Book Stop N’ Swap has some additional exciting features:
+                 FreeCodeCamp’s curriculum included a <strong className="pointer" onClick={()=>window.open("https://www.freecodecamp.org/challenges/manage-a-book-trading-club")} title="Open in New Window">Book Trading Club <i className="fa fa-external-link"/></strong>. Book Stop N’ Swap has some additional exciting features:
                 <div className="smol">
                     ★ Authenticated users can view their pending trades, and cancel them if they decide they don’t want to trade anymore.<br/>
                     ★ Users get live updates when they have a new pending trade <br/>
@@ -117,7 +118,7 @@ const Marvl= () =>{
 const Vote = () =>{
   return(
             <div className="pad-less">
-            Part of FreeCodeCamp’s curriculum included a <strong onClick={()=>window.open("https://www.freecodecamp.org/challenges/build-a-voting-app")} title="Open in New Window">Voting App <i className="fa fa-external-link"/></strong>.
+            Part of FreeCodeCamp’s curriculum included a <strong className="pointer" onClick={()=>window.open("https://www.freecodecamp.org/challenges/build-a-voting-app")} title="Open in New Window">Voting App <i className="fa fa-external-link"/></strong>.
             <div className="smol">
 		            This full stack app allows users to create and vote on polls, as well as share links to specific polls with their friends. It also shows charts of the voting results!
 		        </div>    
@@ -130,7 +131,7 @@ const Night = () =>{
      <div className="pad-less">
             <div>
  
-                 FreeCodeCamp’s curriculum included a <strong onClick={()=>window.open("https://www.freecodecamp.org/challenges/build-a-nightlife-coordination-app")} title="Open in New Window">Nightlife Coordination App <i className="fa fa-external-link"/></strong>. 
+                 FreeCodeCamp’s curriculum included a <strong className="pointer" onClick={()=>window.open("https://www.freecodecamp.org/challenges/build-a-nightlife-coordination-app")} title="Open in New Window">Nightlife Coordination App <i className="fa fa-external-link"/></strong>. 
                   <div className="smol">
 	     Using the Yelp API users can search for bars in their area and mark themselves as “going” or remove themselves from bars if they no longer want to go.
 	                  </div>
@@ -143,7 +144,7 @@ const DungeonAbout = () =>{
   return(
      <div className="pad-less">
             <div>
-                 FreeCodeCamp’s curriculum included a <strong onClick={()=>window.open("https://www.freecodecamp.org/challenges/build-the-game-of-life")} title="Open in New Window">Roguelike Dungeon Crawler Game <i className="fa fa-external-link"/></strong>. I made one that does some pretty exciting stuff:
+                 FreeCodeCamp’s curriculum included a <strong  className="pointer" onClick={()=>window.open("https://www.freecodecamp.org/challenges/build-the-game-of-life")} title="Open in New Window">Roguelike Dungeon Crawler Game <i className="fa fa-external-link"/></strong>. I made one that does some pretty exciting stuff:
                 <div className="smol">
                     ★ The rooms on each floor are generated randomly.<br/>
                     ★ The user wins the game after beating floor 4, but can choose to continue playing until the map is full<br/>
@@ -159,7 +160,7 @@ const GameAbout= () =>{
      <div className="pad-less">
             <div>
 
-                 FreeCodeCamp’s curriculum included a <strong onClick={()=>window.open("https://www.freecodecamp.org/challenges/build-a-roguelike-dungeon-crawler-game")} title="Open in New Window">Game of Life <i className="fa fa-external-link"/></strong>. 
+                 FreeCodeCamp’s curriculum included a <strong className="pointer" onClick={()=>window.open("https://www.freecodecamp.org/challenges/build-a-roguelike-dungeon-crawler-game")} title="Open in New Window">Game of Life <i className="fa fa-external-link"/></strong>. 
                  <div className="smol">
                     Users can adjust the speed of the generations, stop, reset, or randomize the board.
                  </div>
@@ -172,7 +173,7 @@ const CalcAbout= () =>{
   return(
      <div className="pad-less">
             <div>
-                 One of r/dailyprogrammer's challenges was a <strong onClick={()=>window.open("https://www.reddit.com/r/dailyprogrammer/comments/7096nu/20170915_challenge_331_hard_interactive/")}title="Open in New Window" >Interactive Interpreter <i className="fa fa-external-link"/></strong>. After using the <strong onClick={()=>window.open("https://en.wikipedia.org/wiki/Shunting-yard_algorithm")}>Shunting-Yard Algorithm <i className="fa fa-external-link"/></strong> to complete the challenge, I used it to make a scientific calculator.
+                 One of r/dailyprogrammer's challenges was a <strong className="pointer" onClick={()=>window.open("https://www.reddit.com/r/dailyprogrammer/comments/7096nu/20170915_challenge_331_hard_interactive/")}title="Open in New Window" >Interactive Interpreter <i className="fa fa-external-link"/></strong>. After using the <strong onClick={()=>window.open("https://en.wikipedia.org/wiki/Shunting-yard_algorithm")} className="pointer" >Shunting-Yard Algorithm <i className="fa fa-external-link"/></strong> to complete the challenge, I used it to make a scientific calculator.
                 <div className="smol">
                     ★ Users enter in equations and receive an answer that follows order of operations.<br/>
                     ★ Users can store variables to be used later (Shift)<br/>
@@ -187,7 +188,7 @@ const SimonAbout= () =>{
   return(
      <div className="pad-less">
              <div>
-                 Another early FreeCodeCamp project is is to build a <strong onClick={()=>window.open("https://www.freecodecamp.org/challenges/build-a-simon-game")} title="Open in New Window">Simon Game<i className="fa fa-external-link"/></strong>.
+                 Another early FreeCodeCamp project is is to build a <strong  className="pointer"  onClick={()=>window.open("https://www.freecodecamp.org/challenges/build-a-simon-game")} title="Open in New Window">Simon Game<i className="fa fa-external-link"/></strong>.
                 <div className="smol">
                     Play with this retro 80's toy right here in your browser!
                 </div>    
