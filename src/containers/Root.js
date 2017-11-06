@@ -184,7 +184,7 @@ const Header = (props) =>{
               <img 
                 title={"Art by Christine Viverka"}
                 className="my-face"
-                src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/14332959_10200785530306119_8045203739980004545_n.jpg?oh=cae33aa3a527ec59d4bbe765efc5588e&oe=59F9A5B6" />
+                src="/myface.jpg" />
           </div> 
           <div className="col middle-text col-head">
                 <h1>Jennifer Valle</h1>
