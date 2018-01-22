@@ -174,7 +174,7 @@ body{
 }
 .site-view{
   min-width: 800px;
-  min-height: 600px;
+  min-height: 400px;
 }
 .smol{
   font-size: 90%;
@@ -405,6 +405,9 @@ body{
 .calc-buttons{
   margin-top: 10px;
   max-width: 300px;
+}
+.calc-buttons{
+  active:
 }
 .calc-screen{
   border: 1px solid black;
