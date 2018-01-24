@@ -13105,12 +13105,14 @@ var App = function (_React$Component) {
       buttons: [{
         name: "github",
         link: "https://github.com/jvallexm"
-      }, {
-        name: "codepen",
-        link: "https://codepen.io/phoenix-farce/"
-      }, {
-        name: "free-code-camp",
-        link: "https://www.freecodecamp.org/jvallexm"
+      },
+      /* {
+         name: "codepen",
+         link: "https://codepen.io/phoenix-farce/"
+       },*/
+      {
+        name: "linkedin",
+        link: "https://www.linkedin.com/in/jennifer-valle"
       }]
     };
     _this.closeOut = _this.closeOut.bind(_this);
@@ -13319,7 +13321,7 @@ var GeekCraftExpo = function GeekCraftExpo() {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'h4',
           null,
-          'Exhibitor space for our holiday show is SOLD OUT but you can fill out a waitlist application on our website!'
+          'GeekCraft Expo RDU is looking for exhibitors for our May 13th Market! You can fill out an application here:'
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
@@ -13328,7 +13330,7 @@ var GeekCraftExpo = function GeekCraftExpo() {
             'button',
             { className: 'btn btn-head',
               onClick: function onClick() {
-                return window.open("http://www.geekcraftexpo.com/exhibitor-app-gce-rdu-2017");
+                return window.open("http://www.geekcraftexpo.com/exhibitor-app-gce-rdu-2018");
               } },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('i', { className: 'fa fa-external-link' })
           ),
