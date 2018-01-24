@@ -14011,21 +14011,21 @@ var WebDev = function (_React$Component) {
           { className: "row proj-row" },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
-            { className: "col" },
+            { className: "col-md-4" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Anonymous Message Board", bg: "anon", grayOut: function grayOut() {
                 return window.open("https://jvalle-message-board.herokuapp.com/");
               } })
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
-            { className: "col" },
+            { className: "col-md-4" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Pinterest Clone", bg: "pint", grayOut: function grayOut() {
                 return _this2.props.grayOut("https://jvalle-pinterest-clone.herokuapp.com/", "Pinterest Clone", "https://github.com/jvallexm/fcc-pinterest-clone");
               } })
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
-            { className: "col" },
+            { className: "col-md-4" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Book Trading Club", bg: "book", grayOut: function grayOut() {
                 return _this2.props.grayOut("https://jvalle-book-swap.herokuapp.com/", "Book Trading Club", "https://github.com/jvallexm/fcc-book-trading-club");
               } })
@@ -14040,7 +14040,7 @@ var WebDev = function (_React$Component) {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "h3",
               { className: "black-shadow" },
-              "Other Projects"
+              "Front End Development Projects"
             )
           )
         ),
@@ -14049,21 +14049,21 @@ var WebDev = function (_React$Component) {
           { className: "row other-proj-row" },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
-            { className: "col" },
+            { className: "col-md-4" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Marvel Event Generator", grayOut: function grayOut() {
                 return _this2.props.grayOut("https://wheel-of-bendis.herokuapp.com/", "Marvel Event Generator", "https://github.com/jvallexm/all-new-wheel-of-bendis");
               } })
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
-            { className: "col" },
+            { className: "col-md-4" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Night Life Tracker", grayOut: function grayOut() {
                 return _this2.props.grayOut("https://jen-valle-night-life.herokuapp.com/", "Night Life Tracker", "https://github.com/jvallexm/fcc-nightlife-tracker");
               } })
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
-            { className: "col" },
+            { className: "col-md-4" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Scientific Calculator", grayOut: function grayOut() {
                 return _this2.props.grayOut("Calculator", "Calculator", "https://github.com/jvallexm/jen-valle-dot-com/blob/master/src/containers/projects/calculator.js");
               } })
@@ -14074,21 +14074,21 @@ var WebDev = function (_React$Component) {
           { className: "row" },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
-            { className: "col" },
+            { className: "col-md-4" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Conway's Game of Life", grayOut: function grayOut() {
                 return _this2.props.grayOut("Game of Life", "Game of Life", "https://github.com/jvallexm/jen-valle-dot-com/blob/master/src/containers/projects/gameoflife.js");
               } })
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
-            { className: "col" },
+            { className: "col-md-4" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Dungeon Plumber", grayOut: function grayOut() {
                 return _this2.props.grayOut("https://codepen.io/phoenix-farce/full/awwzEy", "Dungeon Plumber", "https://github.com/jvallexm/jen-valle-dot-com/blob/master/src/containers/projects/dungeonplumber.js");
               } })
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
-            { className: "col" },
+            { className: "col-md-4" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { name: "Simon", grayOut: function grayOut() {
                 return _this2.props.grayOut("Simon", "Simon", "https://github.com/jvallexm/jen-valle-dot-com/blob/master/src/containers/projects/simon.js");
               } })
