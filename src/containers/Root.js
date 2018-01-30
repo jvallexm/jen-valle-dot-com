@@ -27,21 +27,21 @@ export default class App extends React.Component{
                     text  = {aboutMessageBoard}
                     site  = {"https://jvalle-message-board.herokuapp.com/"}
                     gh    = {"https://github.com/jvallexm/message-board"}
-                    img   = {"https://78.media.tumblr.com/a998c2dae535dc45c8c2d51e6ff8fff6/tumblr_p3691wrOPj1wz4oalo1_500.png"}/>
+                    img   = {"assets/images/books.png"}/>
           <Project  isLeft = {false}
                     bg = {"pins"}
                     title = {"React-trest"}
                     text  = {aboutPinterestClone}
-                    site  = {"https://http://jvalle-pinterest-clone.herokuapp.com/"}
+                    site  = {"https://jvalle-pinterest-clone.herokuapp.com/"}
                     gh    = {"https://github.com/jvallexm/fcc-pinterest-clone"}
-                    img   = {"https://78.media.tumblr.com/a998c2dae535dc45c8c2d51e6ff8fff6/tumblr_p3691wrOPj1wz4oalo1_500.png"}/>
+                    img   = {"assets/images/books.png"}/>
           <Project  isLeft = {true}
                     bg = {"books"}
                     title = {"Book Stop n' Swap"}
                     text  = {aboutBookSwap}
-                    site  = {"https://jvalle-book-swap.herokuapp.com/"}
                     gh    = {"https://github.com/jvallexm/fcc-book-trading-club"}
-                    img   = {"https://78.media.tumblr.com/a998c2dae535dc45c8c2d51e6ff8fff6/tumblr_p3691wrOPj1wz4oalo1_500.png"}/>
+                    site  = {"https://jvalle-book-swap.herokuapp.com/"}
+                    img   = {"assets/images/books.png"}/>
           
           {/* Front End Header */}
           <FrontEndHeader />
@@ -173,7 +173,7 @@ const Project = (props) =>{
                                       title = {props.title}
                                       text  = {props.text}
                                       site  = {props.site}
-                                      gh    = {props.site}/>       
+                                      gh    = {props.gh}/>       
                     </div>
                     :
                     <div className="row">
@@ -182,7 +182,7 @@ const Project = (props) =>{
                                       title = {props.title}
                                       text  = {props.text}
                                       site  = {props.site}
-                                      gh    = {props.site}/>  
+                                      gh    = {props.gh}/>  
                         <ProjectImage img   = {props.img}
                                       alt   = {props.title}/>     
                     </div>}

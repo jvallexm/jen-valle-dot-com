@@ -129,13 +129,13 @@ header{
   position: absolute;
 }
 .project-content{
-   max-width: 800px;
+   max-width: 900px;
 }
 .proj-col{
   padding: 10px; 
 }
 .project{
-  height: 300px;
+  min-height: 300px;
   background-color: white;
   border-radius: 5px;
   box-shadow: 2px 2px 2px black;
@@ -245,4 +245,7 @@ iframe{
   width: 100%;
   height: 300px;
   border:none;
+}
+img{
+  width: 100%;
 }
