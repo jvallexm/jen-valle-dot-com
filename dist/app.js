@@ -13152,7 +13152,7 @@ var Header = function Header() {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "div",
           { className: "col-sm-6" },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { id: "my-face", src: "http://www.jennifer-valle.com/myface.jpg" })
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { id: "my-face", src: "assets/images/myface.jpg" })
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "div",
@@ -13468,7 +13468,7 @@ var SocialMedia = function SocialMedia() {
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
             { className: "col-md-6" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { id: "gce-video" })
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("iframe", { src: "assets/videos/gce.mp4", frameborder: "0" })
           )
         )
       )

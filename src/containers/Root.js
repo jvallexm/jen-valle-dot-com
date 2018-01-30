@@ -66,7 +66,7 @@ const Header = () => {
                 
                   {/* My Face  */}
                   <div className = "col-sm-6">
-                      <img id="my-face" src="http://www.jennifer-valle.com/myface.jpg"/>
+                      <img id="my-face" src="assets/images/myface.jpg"/>
                   </div>
                   
                  {/* Title and Quick Links */}
@@ -269,7 +269,7 @@ const SocialMedia = () =>{
                          </div>
                       </div>
                       <div className="col-md-6">
-                         <div id="gce-video"/>
+                         <iframe src="assets/videos/gce.mp4" frameborder="0"/>
                       </div>
                    </div>
                  </div>
