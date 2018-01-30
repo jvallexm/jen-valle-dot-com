@@ -161,7 +161,8 @@ const ProjectAbout = (props) =>{
 
 const Project = (props) =>{
   return(
-     <section id={"project-" + props.bg} className="text-center container-fluid project-main">            
+     <section id={"project-" + props.bg} className="text-center container-fluid project-main">         
+               <div className="gray"/>
                <div className="text-center container-fluid project-content">
                     {props.isLeft ?
                     <div className="row">
