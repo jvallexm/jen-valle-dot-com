@@ -1,0 +1,213 @@
+body{
+  font-family: "Fjalla One";
+}
+.middle-text{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Header Styles */
+
+header{
+  background-image: url(https://68.media.tumblr.com/65304a67224e0108188ff073ed6629b7/tumblr_otrpyfBJSE1wqft2so1_1280.jpg);
+  background-repeat:no-repeat;
+  background-poisition: center;
+  background-size: cover;
+  text-shadow: 3px 3px 3px black;
+  padding: 60px;
+}
+#my-face
+{
+  max-width: 300px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px white,
+              -1px 1px 1px white,
+              1px -1px 1px white,
+              -1px -1px 1px white;
+}
+#subtitle{
+  margin-top: -5px;
+  color: white;
+}
+#my-name{
+  font-size: 350%;
+  color: white;
+}
+#head-content{
+  max-width: 800px;
+}
+#title{
+  height: 300px;
+}
+.btn-header{
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: white;
+  margin: 0px 3px 0px 3px;
+  font-size: 120%;
+  box-shadow: 2px 2px 2px black;
+}
+
+/* About Styles */
+
+#about{
+  max-width: 600px;
+  padding: 40px;
+}
+.about-text{
+  font-family: "Vidaloka";
+  font-size: 125%;
+}
+
+/* Full Stack Styles */
+
+#full-stack{
+  
+  background-image: url(https://68.media.tumblr.com/f1aea74bae4001814263e5ec3922cffe/tumblr_oudhj3PJuV1wqft2so1_1280.jpg);
+   background-repeat:no-repeat;
+   background-position: center;
+   background-size: cover;
+   color: white;
+   padding: 20px;
+   text-shadow: 3px 3px 3px black;
+}
+
+.pointer{
+  cursor            : pointer; 
+  cursor            : hand;
+}
+
+#test-project{
+   background-image: url(https://68.media.tumblr.com/65304a67224e0108188ff073ed6629b7/tumblr_otrpyfBJSE1wqft2so1_1280.jpg);
+  background-repeat:no-repeat;
+  background-poisition: center;
+  background-size: cover;
+  padding: 20px 0px 20px 0px;
+}
+#project-message{
+  background-image: url(https://78.media.tumblr.com/726eb6079e6f96c6d87ce2bc83affc4d/tumblr_p39znh9oil1wz4oalo1_1280.jpg);
+  background-repeat:no-repeat;
+  background-poisition: center;
+  background-size: cover;
+  padding: 20px 0px 20px 0px;
+}
+#project-pins{
+  
+  padding: 20px 0px 20px 0px;
+  background-image: url(https://78.media.tumblr.com/3d72f2ea5f605b41876e8ca73a089a81/tumblr_p3a0t3rmNZ1wz4oalo1_1280.jpg);
+  background-repeat:no-repeat;
+ 
+  background-size: cover;
+}
+#project-books{
+  background-image: url(https://78.media.tumblr.com/9e11b7185b57af997335f91967d931d8/tumblr_p39wpkAuZZ1wz4oalo1_1280.jpg);
+  padding: 20px 0px 20px 0px;
+  background-repeat:no-repeat;
+  background-poisition: center;
+  background-size: cover;
+}
+.obi{
+  background-color: white; 
+  padding: 20px;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.project-main{
+  /*margin: 10px 0px 10px 0px;*/
+}
+.project-content{
+   max-width: 800px;
+}
+.proj-col{
+  padding: 10px; 
+}
+.project{
+  height: 300px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px black;
+  position: relative;
+}
+.project-text{
+  padding: 10px;
+  font-size: 125%;
+}
+.project-title-left{
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+.project-title-right{
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.project-links{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+}
+
+/* Front End Styles */
+#front-end{
+  background-color: red;
+  margin-top: 10px;
+}
+#front-end-content{
+  padding: 40px;
+  max-width: 1000px;
+}
+.obi{
+  background-color: green;
+  width: 100%;
+  padding: 5px 10px 5px 10px;
+  position: absolute;
+  bottom: 5%;
+  left: 5px;
+  color: white;
+}
+
+/* GeekCraft Expo Styles */
+
+#gce
+{
+  margin-top: 10px;
+  background-position: center;
+  background-image: url(http://www.jennifer-valle.com/myshow.jpg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  color: white;
+  padding: 10px;
+}
+#gce-content{
+  max-width: 800px;
+}
+#gce-filter{
+  background-color: rgba(244,244,244,.55);
+  min-height: 200px;
+  border-radius: 5px;
+  padding: 20px;
+}
+#gce-title{
+    margin-top: 0px;
+    text-shadow: 3px 3px 3px black;
+}
+#gce-video{
+  height: 300px;
+  width: 400px;
+  background-color: black;
+}
+#gce-text{
+  color: black;
+}
+.gce-p{
+  font-size: 110%;
+}
+#contact{
+  max-width: 600px;
+}
+#contact-text{
+  margin: 30px 0px 30px 0px;
+}
