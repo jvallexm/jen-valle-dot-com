@@ -42,3 +42,6 @@ jspm_packages
 .env
 
 old
+
+npm-shrinkwrap.json
+.editorconfig
