@@ -45,4 +45,4 @@ old
 
 npm-shrinkwrap.json
 
-.editorconfig
+*.editorconfig
