@@ -242,7 +242,7 @@ const FrontEndProjectPanel = () =>{
 
 const SocialMedia = () =>{
   return(
-              <section id="gce" className="text-center container-fluid">
+          <section id="gce" className="text-center container-fluid">
               <div id="gce-filter">
                  <div id="gce-content" className="text-center container-fluid">
                    <h1 id="gce-title">Social Media</h1>
@@ -270,7 +270,7 @@ const SocialMedia = () =>{
                          </div>
                       </div>
                       <div className="col-md-6">
-                         <iframe src="assets/videos/gce.mp4" frameborder="0"/>
+                         
                       </div>
                    </div>
                  </div>

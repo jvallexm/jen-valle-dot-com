@@ -64,7 +64,7 @@ header{
 
 #full-stack{
   
-  background-image: url(https://68.media.tumblr.com/f1aea74bae4001814263e5ec3922cffe/tumblr_oudhj3PJuV1wqft2so1_1280.jpg);
+  background-image: url(../backgrounds/keys.jpg);
    background-repeat:no-repeat;
    background-position: center;
    background-size: cover;
@@ -185,7 +185,7 @@ header{
 {
   margin-top: 10px;
   background-position: center;
-  background-image: url(../images/gce.jpg);
+  background-image: url(../backgrounds/gce.jpg);
   background-repeat:no-repeat;
   background-size: cover;
   color: white;

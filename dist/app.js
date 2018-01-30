@@ -13295,6 +13295,7 @@ var Project = function Project(props) {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     "section",
     { id: "project-" + props.bg, className: "text-center container-fluid project-main" },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "gray" }),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       "div",
       { className: "text-center container-fluid project-content" },
@@ -13465,11 +13466,7 @@ var SocialMedia = function SocialMedia() {
               )
             )
           ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "div",
-            { className: "col-md-6" },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("iframe", { src: "assets/videos/gce.mp4", frameborder: "0" })
-          )
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "col-md-6" })
         )
       )
     )
