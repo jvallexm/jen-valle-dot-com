@@ -13113,15 +13113,15 @@ var App = function (_React$Component) {
           bg: "pins",
           title: "React-trest",
           text: aboutPinterestClone,
-          site: "https://jvalle-message-board.herokuapp.com/",
-          gh: "https://github.com/jvallexm/message-board",
+          site: "https://http://jvalle-pinterest-clone.herokuapp.com/",
+          gh: "https://github.com/jvallexm/fcc-pinterest-clone",
           img: "https://78.media.tumblr.com/a998c2dae535dc45c8c2d51e6ff8fff6/tumblr_p3691wrOPj1wz4oalo1_500.png" }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { isLeft: true,
           bg: "books",
           title: "Book Stop n' Swap",
           text: aboutBookSwap,
-          site: "https://jvalle-message-board.herokuapp.com/",
-          gh: "https://github.com/jvallexm/message-board",
+          site: "https://jvalle-book-swap.herokuapp.com/",
+          gh: "https://github.com/jvallexm/fcc-book-trading-club",
           img: "https://78.media.tumblr.com/a998c2dae535dc45c8c2d51e6ff8fff6/tumblr_p3691wrOPj1wz4oalo1_500.png" }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FrontEndHeader, null),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FrontEndProjectPanel, null),
@@ -13337,7 +13337,7 @@ var FrontEndProject = function FrontEndProject(props) {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "h4",
           null,
-          "Hot Poppers"
+          props.title
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "div",
@@ -13369,10 +13369,11 @@ var FrontEndHeader = function FrontEndHeader() {
 
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     "section",
-    { id: "full-stack", className: "text-center container-fluid" },
+    { id: "front-end-header", className: "text-center container-fluid" },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "front-gray" }),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       "h1",
-      null,
+      { id: "front-pop" },
       "Front End Projects"
     )
   );
@@ -13383,15 +13384,22 @@ var FrontEndProjectPanel = function FrontEndProjectPanel() {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     "section",
     { id: "front-end", className: "text-center container-fluid" },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "gray" }),
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       "div",
       { className: "text-center container-fluid", id: "front-end-content" },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
         { className: "row" },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FrontEndProject, null),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FrontEndProject, null),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FrontEndProject, null)
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FrontEndProject, { title: "Bandcram",
+          site: "https://jvallexm.github.io/bandcram",
+          gh: "https://github.com/jvallexm/bandcram" }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FrontEndProject, { title: "Hot Poppers",
+          site: "",
+          gh: "" }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FrontEndProject, { title: "Hot Poppers",
+          site: "",
+          gh: "" })
       )
     )
   );

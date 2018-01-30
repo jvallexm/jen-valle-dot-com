@@ -32,15 +32,15 @@ export default class App extends React.Component{
                     bg = {"pins"}
                     title = {"React-trest"}
                     text  = {aboutPinterestClone}
-                    site  = {"https://jvalle-message-board.herokuapp.com/"}
-                    gh    = {"https://github.com/jvallexm/message-board"}
+                    site  = {"https://http://jvalle-pinterest-clone.herokuapp.com/"}
+                    gh    = {"https://github.com/jvallexm/fcc-pinterest-clone"}
                     img   = {"https://78.media.tumblr.com/a998c2dae535dc45c8c2d51e6ff8fff6/tumblr_p3691wrOPj1wz4oalo1_500.png"}/>
           <Project  isLeft = {true}
                     bg = {"books"}
                     title = {"Book Stop n' Swap"}
                     text  = {aboutBookSwap}
-                    site  = {"https://jvalle-message-board.herokuapp.com/"}
-                    gh    = {"https://github.com/jvallexm/message-board"}
+                    site  = {"https://jvalle-book-swap.herokuapp.com/"}
+                    gh    = {"https://github.com/jvallexm/fcc-book-trading-club"}
                     img   = {"https://78.media.tumblr.com/a998c2dae535dc45c8c2d51e6ff8fff6/tumblr_p3691wrOPj1wz4oalo1_500.png"}/>
           
           {/* Front End Header */}
@@ -198,7 +198,7 @@ const FrontEndProject = (props) =>{
        <div className="col-md-4">
             <div className="project">
                 <div className="obi">
-                    <h4>Hot Poppers</h4>
+                    <h4>{props.title}</h4>
 
                     <div className="row">
                               <div className="col-sm-6 pointer" onClick={()=>window.open(props.site)}>
@@ -219,8 +219,9 @@ const FrontEndHeader = () =>{
      /* JSX */
         
       return (
-        <section id="full-stack" className="text-center container-fluid">
-              <h1>Front End Projects</h1>
+        <section id="front-end-header" className="text-center container-fluid">
+            <div className="front-gray" />
+            <h1 id="front-pop">Front End Projects</h1>
         </section>
       )
         /*JSX */
@@ -229,11 +230,18 @@ const FrontEndHeader = () =>{
 const FrontEndProjectPanel = () =>{
   return(
             <section id="front-end" className="text-center container-fluid">
+                <div className="gray" />
                 <div className="text-center container-fluid" id="front-end-content">
                    <div className="row">
-                       <FrontEndProject />
-                       <FrontEndProject />
-                       <FrontEndProject />
+                       <FrontEndProject title={"Bandcram"}
+                                        site={"https://jvallexm.github.io/bandcram"}
+                                        gh={"https://github.com/jvallexm/bandcram"}/>
+                       <FrontEndProject title={"Hot Poppers"}
+                                        site={""}
+                                        gh={""}/>
+                       <FrontEndProject title={"Hot Poppers"}
+                                        site={""}
+                                        gh={""}/>
                    </div>
                 </div> 
              </section>
