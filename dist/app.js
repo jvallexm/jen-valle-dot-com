@@ -13123,8 +13123,6 @@ var App = function (_React$Component) {
           gh: "https://github.com/jvallexm/fcc-book-trading-club",
           site: "https://jvalle-book-swap.herokuapp.com/",
           img: "assets/images/books.png" }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FrontEndHeader, null),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FrontEndProjectPanel, null),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(SocialMedia, null),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Music, null),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Contact, null)
@@ -13525,7 +13523,7 @@ var Music = function (_React$Component3) {
     var _this4 = _possibleConstructorReturn(this, (Music.__proto__ || Object.getPrototypeOf(Music)).call(this, props));
 
     _this4.state = {
-      loadVideo: false
+      src: null
     };
     return _this4;
   }
@@ -13533,6 +13531,8 @@ var Music = function (_React$Component3) {
   _createClass(Music, [{
     key: "render",
     value: function render() {
+      var _this5 = this;
+
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "section",
         { id: "music", className: "text-center container-fluid" },
@@ -13550,8 +13550,51 @@ var Music = function (_React$Component3) {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "div",
               { className: "row" },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "col-md-6" }),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "col-md-6" })
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "col-md-6 min-300" },
+                this.state.src === null ? "" : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("iframe", { src: this.state.src })
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                "div",
+                { className: "col-md-6" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  "div",
+                  { id: "music-text", className: "text-left middle-text" },
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    null,
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      "h3",
+                      null,
+                      "Gamma Gamma Ray"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      "button",
+                      { className: "btn btn-header btn-music",
+                        onClick: function onClick() {
+                          return _this5.setState({ src: "https://www.youtube.com/embed/416N-wtfWcI" });
+                        } },
+                      "Watch ",
+                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-youtube-play" })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      "h3",
+                      null,
+                      "Solo"
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      "button",
+                      { className: "btn btn-header btn-music",
+                        onClick: function onClick() {
+                          return _this5.setState({ src: "https://bandcamp.com/EmbeddedPlayer/album=4210021228/size=large/bgcol=333333/linkcol=ffffff/minimal=true/track=1049768388/transparent=true/" });
+                        } },
+                      "Listen ",
+                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-play-circle-o" })
+                    )
+                  )
+                )
+              )
             )
           )
         )

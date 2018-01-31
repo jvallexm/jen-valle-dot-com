@@ -43,10 +43,10 @@ export default class App extends React.Component{
                     site   = {"https://jvalle-book-swap.herokuapp.com/"}
                     img    = {"assets/images/books.png"}/>
           
-          {/* Front End Header */}
-          <FrontEndHeader />
-          {/* Front End Projects */}
-          <FrontEndProjectPanel />         
+          {/* Front End Header 
+          <FrontEndHeader /> */}
+          {/* Front End Projects 
+          <FrontEndProjectPanel /> */}     
           {/* Social Media */}
           <SocialMedia />
           {/* Music */}
@@ -308,7 +308,7 @@ class Music extends React.Component{
   constructor(props){
       super(props);
       this.state = {
-          loadVideo: false
+          src: null
       };
   }
   render(){
@@ -318,10 +318,31 @@ class Music extends React.Component{
                      <div id="music-content" className="sec-content text-center container-fluid">
                        <h1 className="sec-title">Music</h1>
                        <div className="row">
-                          <div className="col-md-6">
+                          <div className="col-md-6 min-300">
+                             {   this.state.src === null
+                               ? ""
+                               : <iframe src={this.state.src}/> }
                           </div>
                           <div className="col-md-6">
+                             <div id="music-text" className="text-left middle-text">
+                                <div>
+                                <h3>Gamma Gamma Ray</h3>
+                                
+                                    <button className="btn btn-header btn-music" 
+                                            onClick={()=>this.setState({src: "https://www.youtube.com/embed/416N-wtfWcI"})}>
+                                        Watch <i className="fa fa-youtube-play"/>
+                                    </button>
+                                
+                                <h3>Solo</h3>
+                                
+                                    <button className="btn btn-header btn-music" 
+                                            onClick={()=>this.setState({src: "https://bandcamp.com/EmbeddedPlayer/album=4210021228/size=large/bgcol=333333/linkcol=ffffff/minimal=true/track=1049768388/transparent=true/"})}>
+                                        Listen <i className="fa fa-play-circle-o"/>
+                                    </button>
+                                </div>
+                             </div>
                           </div>
+                          
                        </div>
                      </div>
                   </div>

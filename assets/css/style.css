@@ -265,3 +265,13 @@ img{
   color: white;
   padding: 10px;
 }
+#music-text{
+  margin-top: 20px;
+  color: black;
+}
+.min-300{
+  min-height: 300px;
+}
+.btn-music{
+  max-width: 85px;
+}
