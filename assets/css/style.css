@@ -264,6 +264,7 @@ img{
   background-size: cover;
   color: white;
   padding: 10px;
+  position: relative;
 }
 #music-text{
   margin-top: 20px;
@@ -274,4 +275,10 @@ img{
 }
 .btn-music{
   max-width: 85px;
+}
+#photo-by{
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: black;
 }

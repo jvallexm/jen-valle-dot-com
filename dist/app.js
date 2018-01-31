@@ -13605,6 +13605,11 @@ var Music = function (_React$Component3) {
                 )
               )
             )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "div",
+            { id: "photo-by" },
+            "Photo by Riley Dehority"
           )
         )
       );

@@ -323,7 +323,7 @@ class Music extends React.Component{
               <section id="music" className="text-center container-fluid">
                   <div className="filter">
                      <div id="music-content" className="sec-content text-center container-fluid">
-                       <h1 className="sec-title">Music</h1>
+                      <h1 className="sec-title">Music</h1>
                        <div className="row">
                           <div className="col-md-6 min-300">
                              {   this.state.src === null
@@ -351,6 +351,9 @@ class Music extends React.Component{
                           </div>
                           
                        </div>
+                     </div>
+                     <div id="photo-by">
+                         Photo by Riley Dehority
                      </div>
                   </div>
                 
