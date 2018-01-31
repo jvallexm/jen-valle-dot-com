@@ -270,7 +270,7 @@ class SocialMedia extends React.Component{
                      <div id="gce-content" className="sec-content text-center container-fluid">
                        <h1 className="sec-title">Social Media</h1>
                        <div className="row">
-                          <div className="col-md-6">
+                          <div className="col-sm-6">
                              <div id="gce-text" className="text-right middle-text">
                                 <h2>GeekCraft Expo</h2>
                                 <p className="gce-p">GeekCraft Expo puts on pop-up handmade markets that exclusively showcase handmade geek goods crafted by local artisans across the country!</p> 
@@ -295,7 +295,7 @@ class SocialMedia extends React.Component{
                                </div>
                              </div>
                           </div>
-                          <div className="col-md-6">
+                          <div className="col-sm-6">
                              <div id="gce-video">
                              { this.state.loadVideo
                              ? <iframe src="assets/videos/gce.mp4" />
@@ -327,12 +327,12 @@ class Music extends React.Component{
                      <div id="music-content" className="sec-content text-center container-fluid">
                       <h1 className="sec-title">Music</h1>
                        <div className="row">
-                          <div className="col-md-6 min-300">
+                          <div className="col-sm-6 min-300">
                              {   this.state.src === null
                                ? ""
                                : <iframe src={this.state.src}/> }
                           </div>
-                          <div className="col-md-6">
+                          <div className="col-sm-6">
                              <div id="music-text" className="text-left middle-text">
                                 <div>
                                 <h3>Gamma Gamma Ray</h3>
@@ -355,7 +355,7 @@ class Music extends React.Component{
                        </div>
                      </div>
                      <div id="photo-by">
-                         Photo by Riley Dehority
+                         <h6>Photo by Riley Dehority</h6>
                      </div>
                   </div>
                 
