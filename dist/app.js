@@ -13171,16 +13171,20 @@ var Header = function Header() {
             { id: "head-buttons" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "button",
-              { className: "btn btn-header", onClick: function onClick() {
+              { className: "btn btn-header",
+                onClick: function onClick() {
                   return window.open("https://www.linkedin.com/in/jennifer-valle/");
-                } },
+                },
+                title: "Connect on LinkedIn" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-github" })
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "button",
-              { className: "btn btn-header", onClick: function onClick() {
+              { className: "btn btn-header",
+                onClick: function onClick() {
                   return window.open("https://github.com/jvallexm");
-                } },
+                },
+                title: "Fork me on GitHub" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-linkedin" })
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -13471,7 +13475,8 @@ var SocialMedia = function (_React$Component2) {
                       { className: "btn btn-header",
                         onClick: function onClick() {
                           return window.open("http://www.facebook.com/geekcraftexpo");
-                        } },
+                        },
+                        title: "GeekCraft Expo on Facebook" },
                       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-facebook" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -13479,7 +13484,8 @@ var SocialMedia = function (_React$Component2) {
                       { className: "btn btn-header",
                         onClick: function onClick() {
                           return window.open('https://www.instagram.com/geekcraftexpo/');
-                        } },
+                        },
+                        title: "GeekCraft Expo on Instagram" },
                       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-instagram" })
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -13487,7 +13493,8 @@ var SocialMedia = function (_React$Component2) {
                       { className: "btn btn-header",
                         onClick: function onClick() {
                           return window.open('https://twitter.com/geekcraftexpo');
-                        } },
+                        },
+                        title: "GeekCraft Expo on Twitter" },
                       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-twitter" })
                     )
                   )
