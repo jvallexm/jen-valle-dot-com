@@ -13448,7 +13448,7 @@ var SocialMedia = function (_React$Component2) {
               { className: "row" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
-                { className: "col-md-6" },
+                { className: "col-sm-6" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "div",
                   { id: "gce-text", className: "text-right middle-text" },
@@ -13502,7 +13502,7 @@ var SocialMedia = function (_React$Component2) {
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
-                { className: "col-md-6" },
+                { className: "col-sm-6" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "div",
                   { id: "gce-video" },
@@ -13561,12 +13561,12 @@ var Music = function (_React$Component3) {
               { className: "row" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
-                { className: "col-md-6 min-300" },
+                { className: "col-sm-6 min-300" },
                 this.state.src === null ? "" : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("iframe", { src: this.state.src })
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
-                { className: "col-md-6" },
+                { className: "col-sm-6" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "div",
                   { id: "music-text", className: "text-left middle-text" },
@@ -13609,7 +13609,11 @@ var Music = function (_React$Component3) {
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
             { id: "photo-by" },
-            "Photo by Riley Dehority"
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "h6",
+              null,
+              "Photo by Riley Dehority"
+            )
           )
         )
       );
