@@ -21,27 +21,27 @@ export default class App extends React.Component{
           {/* Full Stack Header */}
           <FullStackHeader />
           {/* Full Stack Projects */}
-          <Project  bg = {"message"}
+          <Project  bg     = {"message"}
                     isLeft = {true}
-                    title = {"Anonymous Message Board"}
-                    text  = {aboutMessageBoard}
-                    site  = {"https://jvalle-message-board.herokuapp.com/"}
-                    gh    = {"https://github.com/jvallexm/message-board"}
-                    img   = {"assets/images/books.png"}/>
+                    title  = {"Anonymous Message Board"}
+                    text   = {aboutMessageBoard}
+                    site   = {"https://jvalle-message-board.herokuapp.com/"}
+                    gh     = {"https://github.com/jvallexm/message-board"}
+                    img    = {"assets/images/message.png"}/>
           <Project  isLeft = {false}
-                    bg = {"pins"}
-                    title = {"React-trest"}
-                    text  = {aboutPinterestClone}
-                    site  = {"https://jvalle-pinterest-clone.herokuapp.com/"}
-                    gh    = {"https://github.com/jvallexm/fcc-pinterest-clone"}
-                    img   = {"assets/images/books.png"}/>
+                    bg     = {"pins"}
+                    title  = {"React-trest"}
+                    text   = {aboutPinterestClone}
+                    site   = {"https://jvalle-pinterest-clone.herokuapp.com/"}
+                    gh     = {"https://github.com/jvallexm/fcc-pinterest-clone"}
+                    img    = {"assets/images/pins.png"}/>
           <Project  isLeft = {true}
-                    bg = {"books"}
-                    title = {"Book Stop n' Swap"}
-                    text  = {aboutBookSwap}
-                    gh    = {"https://github.com/jvallexm/fcc-book-trading-club"}
-                    site  = {"https://jvalle-book-swap.herokuapp.com/"}
-                    img   = {"assets/images/books.png"}/>
+                    bg     = {"books"}
+                    title  = {"Book Stop n' Swap"}
+                    text   = {aboutBookSwap}
+                    gh     = {"https://github.com/jvallexm/fcc-book-trading-club"}
+                    site   = {"https://jvalle-book-swap.herokuapp.com/"}
+                    img    = {"assets/images/books.png"}/>
           
           {/* Front End Header */}
           <FrontEndHeader />
@@ -49,6 +49,8 @@ export default class App extends React.Component{
           <FrontEndProjectPanel />         
           {/* Social Media */}
           <SocialMedia />
+          {/* Music */}
+          <Music />
           {/* Contact */}
           <Contact />
         
@@ -258,9 +260,9 @@ class SocialMedia extends React.Component{
   render(){
       return(
               <section id="gce" className="text-center container-fluid">
-                  <div id="gce-filter">
-                     <div id="gce-content" className="text-center container-fluid">
-                       <h1 id="gce-title">Social Media</h1>
+                  <div className="filter">
+                     <div id="gce-content" className="sec-content text-center container-fluid">
+                       <h1 className="sec-title">Social Media</h1>
                        <div className="row">
                           <div className="col-md-6">
                              <div id="gce-text" className="text-right middle-text">
@@ -288,7 +290,9 @@ class SocialMedia extends React.Component{
                              <div id="gce-video">
                              { this.state.loadVideo
                              ? <iframe src="assets/videos/gce.mp4" />
-                             : <img src="assets/images/videoph.png" onClick={()=>this.setState({loadVideo: true})}/> }
+                             : <img src="assets/images/videoph.png" 
+                                    className="squish"
+                                    onClick={()=>this.setState({loadVideo: true})}/> }
                              </div>
                           </div>
                        </div>
@@ -310,9 +314,9 @@ class Music extends React.Component{
   render(){
       return(
               <section id="music" className="text-center container-fluid">
-                  <div id="gce-filter">
-                     <div id="gce-content" className="text-center container-fluid">
-                       <h1 id="gce-title">Music</h1>
+                  <div className="filter">
+                     <div id="music-content" className="sec-content text-center container-fluid">
+                       <h1 className="sec-title">Music</h1>
                        <div className="row">
                           <div className="col-md-6">
                           </div>

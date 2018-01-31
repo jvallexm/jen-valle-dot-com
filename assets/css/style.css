@@ -210,21 +210,21 @@ header{
   color: white;
   padding: 10px;
 }
-#gce-content{
+.sec-content{
   max-width: 800px;
 }
-#gce-filter{
+.filter{
   background-color: rgba(255,255,255,.6);
   min-height: 200px;
   border-radius: 5px;
   padding: 20px;
 }
-#gce-title{
+.sec-title{
     margin-top: 0px;
     text-shadow: 3px 3px 3px black;
 }
 #gce-video{
-  height: 300px;
+  max-height: 300px;
   width: 400px;
   background-color: black;
 }
@@ -248,6 +248,9 @@ iframe{
 }
 img{
   width: 100%;
+}
+.squish{
+  height: 100%;
 }
 
 /* Music Styles */

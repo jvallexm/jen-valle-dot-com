@@ -13108,14 +13108,14 @@ var App = function (_React$Component) {
           text: aboutMessageBoard,
           site: "https://jvalle-message-board.herokuapp.com/",
           gh: "https://github.com/jvallexm/message-board",
-          img: "assets/images/books.png" }),
+          img: "assets/images/message.png" }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { isLeft: false,
           bg: "pins",
           title: "React-trest",
           text: aboutPinterestClone,
           site: "https://jvalle-pinterest-clone.herokuapp.com/",
           gh: "https://github.com/jvallexm/fcc-pinterest-clone",
-          img: "assets/images/books.png" }),
+          img: "assets/images/pins.png" }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Project, { isLeft: true,
           bg: "books",
           title: "Book Stop n' Swap",
@@ -13126,6 +13126,7 @@ var App = function (_React$Component) {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FrontEndHeader, null),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FrontEndProjectPanel, null),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(SocialMedia, null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Music, null),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Contact, null)
       );
       /* JSX */
@@ -13429,13 +13430,13 @@ var SocialMedia = function (_React$Component2) {
         { id: "gce", className: "text-center container-fluid" },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "div",
-          { id: "gce-filter" },
+          { className: "filter" },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
-            { id: "gce-content", className: "text-center container-fluid" },
+            { id: "gce-content", className: "sec-content text-center container-fluid" },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "h1",
-              { id: "gce-title" },
+              { className: "sec-title" },
               "Social Media"
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -13498,7 +13499,9 @@ var SocialMedia = function (_React$Component2) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   "div",
                   { id: "gce-video" },
-                  this.state.loadVideo ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("iframe", { src: "assets/videos/gce.mp4" }) : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "assets/images/videoph.png", onClick: function onClick() {
+                  this.state.loadVideo ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("iframe", { src: "assets/videos/gce.mp4" }) : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "assets/images/videoph.png",
+                    className: "squish",
+                    onClick: function onClick() {
                       return _this3.setState({ loadVideo: true });
                     } })
                 )
@@ -13511,6 +13514,52 @@ var SocialMedia = function (_React$Component2) {
   }]);
 
   return SocialMedia;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+var Music = function (_React$Component3) {
+  _inherits(Music, _React$Component3);
+
+  function Music(props) {
+    _classCallCheck(this, Music);
+
+    var _this4 = _possibleConstructorReturn(this, (Music.__proto__ || Object.getPrototypeOf(Music)).call(this, props));
+
+    _this4.state = {
+      loadVideo: false
+    };
+    return _this4;
+  }
+
+  _createClass(Music, [{
+    key: "render",
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "section",
+        { id: "music", className: "text-center container-fluid" },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "div",
+          { className: "filter" },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "div",
+            { id: "music-content", className: "sec-content text-center container-fluid" },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "h1",
+              { className: "sec-title" },
+              "Music"
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "div",
+              { className: "row" },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "col-md-6" }),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "col-md-6" })
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Music;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
 var Contact = function Contact() {
@@ -13571,6 +13620,8 @@ var _temp = function () {
   __REACT_HOT_LOADER__.register(FrontEndProjectPanel, "FrontEndProjectPanel", "/home/ubuntu/workspace/src/containers/Root.js");
 
   __REACT_HOT_LOADER__.register(SocialMedia, "SocialMedia", "/home/ubuntu/workspace/src/containers/Root.js");
+
+  __REACT_HOT_LOADER__.register(Music, "Music", "/home/ubuntu/workspace/src/containers/Root.js");
 
   __REACT_HOT_LOADER__.register(Contact, "Contact", "/home/ubuntu/workspace/src/containers/Root.js");
 
