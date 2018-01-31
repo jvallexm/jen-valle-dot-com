@@ -263,7 +263,7 @@ class SocialMedia extends React.Component{
   render(){
       return(
               <section id="gce" className="text-center container-fluid">
-                  <div className="filter">
+                  <div id="gce-filter" className="filter">
                      <div id="gce-content" className="sec-content text-center container-fluid">
                        <h1 className="sec-title">Social Media</h1>
                        <div className="row">

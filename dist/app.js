@@ -13218,9 +13218,7 @@ var About = function About() {
   );
 };
 
-var aboutMessageBoard = 'Built with a Node.js and Express.js back end, MongoDB, and a React.js front end, this Message board allows users to post and comment via the front end UI or by making custom API calls. Uses Socket.io to provide live updating.';
-
-var aboutPinterestClone = "Back end created with Node.js and Express and a MongoDB database to post and User Data. Utilizes a React.js front and adnd Masonry.js to create a dynamic grid. Socket.io provides users with live updates of new posts, likes, and reblogs";
+var aboutPinterestClone = "Back end created with Node.js and Express and a MongoDB database to post and User Data. Utilizes a React.js front and and Masonry.js to create a dynamic grid. Socket.io provides users with live updates of new posts, likes, and reblogs";
 
 var aboutBookSwap = "Uses a Node.js and Express back end with items stored in a MongoDB database. Users can sign in with Facebook in the React.js front end. Utilizes the Google Books API to search for books. Provides users with live trading updates using Socket.io";
 
@@ -13434,7 +13432,7 @@ var SocialMedia = function (_React$Component2) {
         { id: "gce", className: "text-center container-fluid" },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "div",
-          { className: "filter" },
+          { id: "gce-filter", className: "filter" },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
             { id: "gce-content", className: "sec-content text-center container-fluid" },
@@ -13465,7 +13463,7 @@ var SocialMedia = function (_React$Component2) {
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "p",
                     { className: "gce-p" },
-                    "As the Social Meida Director of GeekCraft Expo, Jennifer is responsible for maintaining the Facebook, Twitter, and Instagram accounts. She also works to create engaging Social Media Ads, like this one!"
+                    "As the Social Media Director of GeekCraft Expo, Jennifer is responsible for maintaining the Facebook, Twitter, and Instagram accounts. She also works to create engaging Social Media Ads, like this one!"
                   ),
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "div",
@@ -13655,8 +13653,6 @@ var _temp = function () {
   __REACT_HOT_LOADER__.register(Header, "Header", "/home/ubuntu/workspace/src/containers/Root.js");
 
   __REACT_HOT_LOADER__.register(About, "About", "/home/ubuntu/workspace/src/containers/Root.js");
-
-  __REACT_HOT_LOADER__.register(aboutMessageBoard, "aboutMessageBoard", "/home/ubuntu/workspace/src/containers/Root.js");
 
   __REACT_HOT_LOADER__.register(aboutPinterestClone, "aboutPinterestClone", "/home/ubuntu/workspace/src/containers/Root.js");
 
