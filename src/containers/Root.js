@@ -116,6 +116,9 @@ const aboutPinterestClone=`Back end created with Node.js and Express and a Mongo
 
 const aboutBookSwap=`Uses a Node.js and Express back end with items stored in a MongoDB database. Users can sign in with Facebook in the React.js front end. Utilizes the Google Books API to search for books. Provides users with live trading updates using Socket.io`;
 
+const aboutMessageBoard='Built with a Node.js and Express.js back end, MongoDB, and a React.js front end, this Message board allows users to post and comment via the front end UI or by making custom API calls. Uses Socket.io to provide live updating';
+
+
 const FullStackHeader = () =>{
      /* JSX */
         
