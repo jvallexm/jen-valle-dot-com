@@ -78,14 +78,18 @@ const Header = () => {
                     
                         {/* Link Buttons */}
                         <div id="head-buttons">
-                             <button className="btn btn-header" onClick={()=>window.open(`https://www.linkedin.com/in/jennifer-valle/`)}>
+                             <button className="btn btn-header" 
+                                     onClick={()=>window.open(`https://www.linkedin.com/in/jennifer-valle/`)}
+                                     title={"Connect on LinkedIn"}>
                                  <i className="fa fa-github"/>
                              </button>
-                             <button className="btn btn-header" onClick={()=>window.open(`https://github.com/jvallexm`)}>
+                             <button className="btn btn-header" 
+                                     onClick={()=>window.open(`https://github.com/jvallexm`)}
+                                     title={"Fork me on GitHub"}>
                                  <i className="fa fa-linkedin"/>
                              </button>
                              <button className="btn btn-header">
-                                 <i className="fa fa-envelope"/>
+                                 <i className="fa fa-envelope" onClick={()=>window.open("mailto:jvallexm@gmail.com")}/>
                              </button>
                         </div>
                         
@@ -272,15 +276,18 @@ class SocialMedia extends React.Component{
                                <div id="gce-buttons">
                                   
                                  <button className="btn btn-header"
-                                         onClick={()=>window.open("http://www.facebook.com/geekcraftexpo")}>
+                                         onClick={()=>window.open("http://www.facebook.com/geekcraftexpo")}
+                                         title={"GeekCraft Expo on Facebook"}>
                                      <i className="fa fa-facebook"/>
                                  </button>
                                  <button className="btn btn-header"
-                                         onClick={()=>window.open('https://www.instagram.com/geekcraftexpo/')}>
+                                         onClick={()=>window.open('https://www.instagram.com/geekcraftexpo/')}
+                                         title={"GeekCraft Expo on Instagram"}>
                                      <i className="fa fa-instagram"/>
                                  </button>
                                  <button className="btn btn-header"
-                                         onClick={()=>window.open('https://twitter.com/geekcraftexpo')}>
+                                         onClick={()=>window.open('https://twitter.com/geekcraftexpo')}
+                                         title={"GeekCraft Expo on Twitter"}>
                                      <i className="fa fa-twitter"/>
                                  </button>
                                </div>

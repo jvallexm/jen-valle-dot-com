@@ -13186,7 +13186,9 @@ var Header = function Header() {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "button",
               { className: "btn btn-header" },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-envelope" })
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-envelope", onClick: function onClick() {
+                  return window.open("mailto:jvallexm@gmail.com");
+                } })
             )
           )
         )
