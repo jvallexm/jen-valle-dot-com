@@ -13405,81 +13405,113 @@ var FrontEndProjectPanel = function FrontEndProjectPanel() {
   );
 };
 
-var SocialMedia = function SocialMedia() {
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    "section",
-    { id: "gce", className: "text-center container-fluid" },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      "div",
-      { id: "gce-filter" },
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        "div",
-        { id: "gce-content", className: "text-center container-fluid" },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "h1",
-          { id: "gce-title" },
-          "Social Media"
-        ),
+var SocialMedia = function (_React$Component2) {
+  _inherits(SocialMedia, _React$Component2);
+
+  function SocialMedia(props) {
+    _classCallCheck(this, SocialMedia);
+
+    var _this2 = _possibleConstructorReturn(this, (SocialMedia.__proto__ || Object.getPrototypeOf(SocialMedia)).call(this, props));
+
+    _this2.state = {
+      loadVideo: false
+    };
+    return _this2;
+  }
+
+  _createClass(SocialMedia, [{
+    key: "render",
+    value: function render() {
+      var _this3 = this;
+
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "section",
+        { id: "gce", className: "text-center container-fluid" },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "div",
-          { className: "row" },
+          { id: "gce-filter" },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "div",
-            { className: "col-md-6" },
+            { id: "gce-content", className: "text-center container-fluid" },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              "h1",
+              { id: "gce-title" },
+              "Social Media"
+            ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "div",
-              { id: "gce-text", className: "text-right middle-text" },
+              { className: "row" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "h2",
-                null,
-                "GeekCraft Expo"
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "p",
-                { className: "gce-p" },
-                "GeekCraft Expo puts on pop-up handmade markets that exclusively showcase handmade geek goods crafted by local artisans across the country!"
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "p",
-                { className: "gce-p" },
-                "As the Social Meida Director of GeekCraft Expo, Jennifer is responsible for maintaining the Facebook, Twitter, and Instagram accounts. She also works to create engaging Social Media Ads, like this one!"
+                "div",
+                { className: "col-md-6" },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  "div",
+                  { id: "gce-text", className: "text-right middle-text" },
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "h2",
+                    null,
+                    "GeekCraft Expo"
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "p",
+                    { className: "gce-p" },
+                    "GeekCraft Expo puts on pop-up handmade markets that exclusively showcase handmade geek goods crafted by local artisans across the country!"
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "p",
+                    { className: "gce-p" },
+                    "As the Social Meida Director of GeekCraft Expo, Jennifer is responsible for maintaining the Facebook, Twitter, and Instagram accounts. She also works to create engaging Social Media Ads, like this one!"
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "div",
+                    { id: "gce-buttons" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      "button",
+                      { className: "btn btn-header",
+                        onClick: function onClick() {
+                          return window.open("http://www.facebook.com/geekcraftexpo");
+                        } },
+                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-facebook" })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      "button",
+                      { className: "btn btn-header",
+                        onClick: function onClick() {
+                          return window.open('https://www.instagram.com/geekcraftexpo/');
+                        } },
+                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-instagram" })
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      "button",
+                      { className: "btn btn-header",
+                        onClick: function onClick() {
+                          return window.open('https://twitter.com/geekcraftexpo');
+                        } },
+                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-twitter" })
+                    )
+                  )
+                )
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
-                { id: "gce-buttons" },
+                { className: "col-md-6" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  "button",
-                  { className: "btn btn-header",
-                    onClick: function onClick() {
-                      return window.open("http://www.facebook.com/geekcraftexpo");
-                    } },
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-facebook" })
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  "button",
-                  { className: "btn btn-header",
-                    onClick: function onClick() {
-                      return window.open('https://www.instagram.com/geekcraftexpo/');
-                    } },
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-instagram" })
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  "button",
-                  { className: "btn btn-header",
-                    onClick: function onClick() {
-                      return window.open('https://twitter.com/geekcraftexpo');
-                    } },
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-twitter" })
+                  "div",
+                  { id: "gce-video" },
+                  this.state.loadVideo ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("iframe", { src: "assets/videos/gce.mp4" }) : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "assets/images/videoph.png", onClick: function onClick() {
+                      return _this3.setState({ loadVideo: true });
+                    } })
                 )
               )
             )
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "col-md-6" })
+          )
         )
-      )
-    )
-  );
-};
+      );
+    }
+  }]);
+
+  return SocialMedia;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
 var Contact = function Contact() {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(

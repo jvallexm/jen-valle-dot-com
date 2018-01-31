@@ -214,7 +214,7 @@ header{
   max-width: 800px;
 }
 #gce-filter{
-  background-color: rgba(244,244,244,.55);
+  background-color: rgba(255,255,255,.6);
   min-height: 200px;
   border-radius: 5px;
   padding: 20px;
@@ -248,4 +248,17 @@ iframe{
 }
 img{
   width: 100%;
+}
+
+/* Music Styles */
+
+#music
+{
+  margin-top: 10px;
+  background-position: center;
+  background-image: url(../images/myband.jpg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  color: white;
+  padding: 10px;
 }
