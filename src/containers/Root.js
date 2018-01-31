@@ -111,9 +111,8 @@ const About = () =>{
     )
 }
 
-const aboutMessageBoard='Built with a Node.js and Express.js back end, MongoDB, and a React.js front end, this Message board allows users to post and comment via the front end UI or by making custom API calls. Uses Socket.io to provide live updating.';
 
-const aboutPinterestClone=`Back end created with Node.js and Express and a MongoDB database to post and User Data. Utilizes a React.js front and adnd Masonry.js to create a dynamic grid. Socket.io provides users with live updates of new posts, likes, and reblogs`;
+const aboutPinterestClone=`Back end created with Node.js and Express and a MongoDB database to post and User Data. Utilizes a React.js front and and Masonry.js to create a dynamic grid. Socket.io provides users with live updates of new posts, likes, and reblogs`;
 
 const aboutBookSwap=`Uses a Node.js and Express back end with items stored in a MongoDB database. Users can sign in with Facebook in the React.js front end. Utilizes the Google Books API to search for books. Provides users with live trading updates using Socket.io`;
 
@@ -272,7 +271,7 @@ class SocialMedia extends React.Component{
                              <div id="gce-text" className="text-right middle-text">
                                 <h2>GeekCraft Expo</h2>
                                 <p className="gce-p">GeekCraft Expo puts on pop-up handmade markets that exclusively showcase handmade geek goods crafted by local artisans across the country!</p> 
-                                <p className="gce-p">As the Social Meida Director of GeekCraft Expo, Jennifer is responsible for maintaining the Facebook, Twitter, and Instagram accounts. She also works to create engaging Social Media Ads, like this one!</p>
+                                <p className="gce-p">As the Social Media Director of GeekCraft Expo, Jennifer is responsible for maintaining the Facebook, Twitter, and Instagram accounts. She also works to create engaging Social Media Ads, like this one!</p>
                                <div id="gce-buttons">
                                   
                                  <button className="btn btn-header"
