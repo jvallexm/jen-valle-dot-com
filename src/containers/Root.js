@@ -43,10 +43,11 @@ export default class App extends React.Component{
                     site   = {"https://jvalle-book-swap.herokuapp.com/"}
                     img    = {"assets/images/books.png"}/>
           
-          {/* Front End Header 
+          {/* Front End Header */}
           <FrontEndHeader />
-           Front End Projects 
+          {/* Front End Projects 
           <FrontEndProjectPanel />     */}
+          
           {/* Social Media */}
           <SocialMedia />
           {/* Music */}
@@ -124,7 +125,7 @@ const FullStackHeader = () =>{
         
       return (
         <section id="full-stack" className="text-center container-fluid">
-              <h1>Full Stack Projects</h1>
+              <h1>Business</h1>
         </section>
       )
         /*JSX */
@@ -144,12 +145,12 @@ const ProjectAbout = (props) =>{
                 <div className="project project-text middle-text">
                   
                     {/* Project Title */}
-                    <div className={props.isLeft ? "project-title-left" : "project-title-right"}>
+                    <div className="project-title">
                          <h3>{props.title}</h3>
                     </div>
                    
                     {/* Project Text */}
-                    <p className={props.isLeft ? "text-left" : "text-right"}>{props.text}</p>
+                    <p className="text-cente">{props.text}</p>
                   
                     {/* Project Links */}
                     <div className="project-links text-center">
@@ -229,7 +230,7 @@ const FrontEndHeader = () =>{
       return (
         <section id="front-end-header" className="text-center container-fluid">
             <div className="front-gray" />
-            <h1 id="front-pop">Front End Projects</h1>
+            <h1 id="front-pop">Personal</h1>
         </section>
       )
         /*JSX */

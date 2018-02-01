@@ -13123,6 +13123,7 @@ var App = function (_React$Component) {
           gh: "https://github.com/jvallexm/fcc-book-trading-club",
           site: "https://jvalle-book-swap.herokuapp.com/",
           img: "assets/images/books.png" }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FrontEndHeader, null),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(SocialMedia, null),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Music, null),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Contact, null)
@@ -13233,7 +13234,7 @@ var FullStackHeader = function FullStackHeader() {
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       "h1",
       null,
-      "Full Stack Projects"
+      "Business"
     )
   );
   /*JSX */
@@ -13256,7 +13257,7 @@ var ProjectAbout = function ProjectAbout(props) {
       { className: "project project-text middle-text" },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "div",
-        { className: props.isLeft ? "project-title-left" : "project-title-right" },
+        { className: "project-title" },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "h3",
           null,
@@ -13265,7 +13266,7 @@ var ProjectAbout = function ProjectAbout(props) {
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         "p",
-        { className: props.isLeft ? "text-left" : "text-right" },
+        { className: "text-cente" },
         props.text
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -13379,7 +13380,7 @@ var FrontEndHeader = function FrontEndHeader() {
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       "h1",
       { id: "front-pop" },
-      "Front End Projects"
+      "Personal"
     )
   );
   /*JSX */
