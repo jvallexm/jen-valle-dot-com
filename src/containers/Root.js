@@ -44,9 +44,9 @@ export default class App extends React.Component{
                     img    = {"assets/images/books.png"}/>
           
           {/* Front End Header 
-          <FrontEndHeader /> */}
-          {/* Front End Projects 
-          <FrontEndProjectPanel /> */}     
+          <FrontEndHeader />
+           Front End Projects 
+          <FrontEndProjectPanel />     */}
           {/* Social Media */}
           <SocialMedia />
           {/* Music */}
