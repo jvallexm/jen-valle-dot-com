@@ -13174,18 +13174,18 @@ var Header = function Header() {
               "button",
               { className: "btn btn-header",
                 onClick: function onClick() {
-                  return window.open("https://www.linkedin.com/in/jennifer-valle/");
+                  return window.open("https://github.com/jvallexm");
                 },
-                title: "Connect on LinkedIn" },
+                title: "Fork me on GitHub" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-github" })
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               "button",
               { className: "btn btn-header",
                 onClick: function onClick() {
-                  return window.open("https://github.com/jvallexm");
+                  return window.open("https://www.linkedin.com/in/jennifer-valle/");
                 },
-                title: "Fork me on GitHub" },
+                title: "Connect on LinkedIn" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("i", { className: "fa fa-linkedin" })
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(

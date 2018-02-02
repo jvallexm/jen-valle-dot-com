@@ -79,16 +79,18 @@ const Header = () => {
                     
                         {/* Link Buttons */}
                         <div id="head-buttons">
-                             <button className="btn btn-header" 
-                                     onClick={()=>window.open(`https://www.linkedin.com/in/jennifer-valle/`)}
-                                     title={"Connect on LinkedIn"}>
+            
+                          <button className="btn btn-header" 
+                                     onClick={()=>window.open(`https://github.com/jvallexm`)}
+                                     title={"Fork me on GitHub"}>
                                  <i className="fa fa-github"/>
                              </button>
                              <button className="btn btn-header" 
-                                     onClick={()=>window.open(`https://github.com/jvallexm`)}
-                                     title={"Fork me on GitHub"}>
+                                     onClick={()=>window.open(`https://www.linkedin.com/in/jennifer-valle/`)}
+                                     title={"Connect on LinkedIn"}>
                                  <i className="fa fa-linkedin"/>
                              </button>
+
                              <button className="btn btn-header">
                                  <i className="fa fa-envelope" onClick={()=>window.open("mailto:jvallexm@gmail.com")}/>
                              </button>
