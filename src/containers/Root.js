@@ -29,19 +29,19 @@ export default class App extends React.Component{
                     gh     = {"https://github.com/jvallexm/message-board"}
                     img    = {"assets/images/message.png"}/>
           <Project  isLeft = {false}
+                    bg     = {"books"}
+                    title  = {"Ok Whatever"}
+                    text   = {aboutBookSwap}
+                    gh     = {"https://github.com/jvallexm/okwhatever"}
+                    site   = {"https://okwhatever.herokuapp.com/"}
+                    img    = {"assets/images/okwhatever.png"}/>
+          <Project  isLeft = {true}
                     bg     = {"pins"}
                     title  = {"React-trest"}
                     text   = {aboutPinterestClone}
                     site   = {"https://jvalle-pinterest-clone.herokuapp.com/"}
                     gh     = {"https://github.com/jvallexm/fcc-pinterest-clone"}
                     img    = {"assets/images/pins.png"}/>
-          <Project  isLeft = {true}
-                    bg     = {"books"}
-                    title  = {"Book Stop n' Swap"}
-                    text   = {aboutBookSwap}
-                    gh     = {"https://github.com/jvallexm/fcc-book-trading-club"}
-                    site   = {"https://jvalle-book-swap.herokuapp.com/"}
-                    img    = {"assets/images/books.png"}/>
           
           {/* Front End Header */}
           <FrontEndHeader />
@@ -117,7 +117,7 @@ const About = () =>{
 
 const aboutPinterestClone=`Back end created with Node.js and Express and a MongoDB database to post and User Data. Utilizes a React.js front and and Masonry.js to create a dynamic grid. Socket.io provides users with live updates of new posts, likes, and reblogs`;
 
-const aboutBookSwap=`Uses a Node.js and Express back end with items stored in a MongoDB database. Users can sign in with Facebook in the React.js front end. Utilizes the Google Books API to search for books. Provides users with live trading updates using Socket.io`;
+const aboutBookSwap=`Created by an Agile development team, Ok Whatever uses a Node.js and Express back end and creates dynamic pages using Handlebars.js and a MySQL database. Users can create accounts with Google, view matches, send messages, and get live message updates from Socket.io`;
 
 const aboutMessageBoard='Built with a Node.js and Express.js back end, MongoDB, and a React.js front end, this Message board allows users to post and comment via the front end UI or by making custom API calls. Uses Socket.io to provide live updating';
 
@@ -338,6 +338,15 @@ class Music extends React.Component{
                           <div className="col-sm-6">
                              <div id="music-text" className="text-left middle-text">
                                 <div>
+                                
+                                <h3>Snake Shaming</h3>
+                                
+                                    <button className="btn btn-header btn-music" 
+                                            onClick={()=>this.setState({src: "https://bandcamp.com/EmbeddedPlayer/album=2641279869/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"})}>
+                                        Listen <i className="fa fa-play-circle-o"/>
+                                    </button>
+                                </div>
+                                
                                 <h3>Gamma Gamma Ray</h3>
                                 
                                     <button className="btn btn-header btn-music" 
@@ -345,13 +354,7 @@ class Music extends React.Component{
                                         Watch <i className="fa fa-youtube-play"/>
                                     </button>
                                 
-                                <h3>Solo</h3>
-                                
-                                    <button className="btn btn-header btn-music" 
-                                            onClick={()=>this.setState({src: "https://bandcamp.com/EmbeddedPlayer/album=4210021228/size=large/bgcol=333333/linkcol=ffffff/minimal=true/track=1049768388/transparent=true/"})}>
-                                        Listen <i className="fa fa-play-circle-o"/>
-                                    </button>
-                                </div>
+
                              </div>
                           </div>
                           
